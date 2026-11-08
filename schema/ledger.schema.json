@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ZGTR/perf-ledger/schema/ledger.schema.json",
+  "title": "perf-ledger ledger (schema 1)",
+  "type": "object",
+  "required": ["schema", "experiments"],
+  "properties": {
+    "schema": { "const": 1 },
+    "experiments": { "type": "array", "items": { "$ref": "#/$defs/experiment" } },
+    "runs": { "type": "array", "items": { "$ref": "#/$defs/run" } }
+  },
+  "$defs": {
+    "experiment": {
+      "type": "object",
+      "required": ["id", "date", "title", "decision"],
+      "properties": {
+        "id": { "type": "string", "description": "e.g. EXP-012; unique in the ledger" },
+        "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "title": { "type": "string", "minLength": 1 },
+        "area": { "type": "string" },
+        "hypothesis": { "type": "string" },
+        "method": { "type": "string" },
+        "before": { "type": "string" },
+        "after": { "type": "string" },
+        "decision": { "type": "string", "description": "starts with kept | rejected | neutral | open | superseded, then any detail" },
+        "evidence": { "type": "string" },
+        "commit": { "type": ["string", "null"] },
+        "pr": { "type": ["string", "null"] },
+        "ab": {
+          "type": "object",
+          "required": ["before", "after", "cells"],
+          "properties": {
+            "before": { "type": "string" },
+            "after": { "type": "string" },
+            "cells": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  { "type": "object", "required": ["key", "text"], "properties": { "key": { "type": "string" }, "text": { "type": "string" } } },
+                  { "type": "string", "description": "legacy \"key: text\" form, read as { key, text }" }
+                ]
+              }
+            }
+          }
+        },
+        "results": { "type": "array", "items": { "type": "string" }, "description": "raw result files, relative to the ledger" }
+      }
+    },
+    "run": {
+      "type": "object",
+      "required": ["id", "date", "title", "results"],
+      "properties": {
+        "id": { "type": "string" }, "date": { "type": "string" }, "title": { "type": "string" },
+        "pr": { "type": ["string", "null"] }, "results": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

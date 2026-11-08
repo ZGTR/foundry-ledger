@@ -1,0 +1,21 @@
+{
+  "ledger": "ledger.json",
+  "markdown": "LEDGER.md",
+  "results": "experiments/results",
+  "title": "Performance experiment ledger",
+  "intro": "Every performance experiment on a web + native 2D stage (a kids' game engine), kept or rejected, so later work starts from what was already measured. Numbers come from the project's perf suite on a 4-vCPU cloud VM with Chromium CPU throttling (6x = low-end phone, 3x = mid-range): compare within one row, not across rows run on different days.",
+  "bench": {
+    "label": "label",
+    "sources": [
+      { "rows": "opens", "key": ["device", "theme"], "keySuffix": "open", "metrics": { "world open": "openMs" } },
+      { "rows": "rows", "key": ["device", "theme", "scenario"], "metrics": { "dropped": "droppedPct", "input p95": "inputLatencyMs.p95", "heap": "memory.jsHeapMB", "nodes": "memory.domNodes" } }
+    ]
+  },
+  "metrics": [
+    { "name": "world open", "unit": "ms", "digits": 1 },
+    { "name": "dropped", "unit": "%", "digits": 2 },
+    { "name": "input p95", "unit": "ms", "digits": 1 },
+    { "name": "heap", "unit": "MB", "digits": 2 },
+    { "name": "nodes", "digits": 0 }
+  ]
+}

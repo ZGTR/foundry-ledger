@@ -1,0 +1,25 @@
+{
+  "name": "perf-ledger",
+  "version": "0.1.0",
+  "description": "A ledger of performance experiments, kept or rejected: record each one with its hypothesis, method, before/after numbers and evidence, keep the raw results, and render a reviewable LEDGER.md. Merges ledgers from parallel branches without id collisions.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Mohammad Shaker",
+  "keywords": ["performance", "benchmark", "experiments", "ledger", "a/b", "web-performance", "profiling"],
+  "bin": { "perf-ledger": "dist/src/cli/main.js" },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": { ".": { "types": "./dist/src/index.d.ts", "import": "./dist/src/index.js" } },
+  "files": ["dist/src", "schema", "README.md", "LICENSE"],
+  "engines": { "node": ">=18.18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "typescript": "5.7.2"
+  }
+}
