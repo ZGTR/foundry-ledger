@@ -7,15 +7,58 @@
   "bench": {
     "label": "label",
     "sources": [
-      { "rows": "opens", "key": ["device", "theme"], "keySuffix": "open", "metrics": { "world open": "openMs" } },
-      { "rows": "rows", "key": ["device", "theme", "scenario"], "metrics": { "dropped": "droppedPct", "input p95": "inputLatencyMs.p95", "heap": "memory.jsHeapMB", "nodes": "memory.domNodes" } }
+      {
+        "rows": "opens",
+        "key": [
+          "device",
+          "theme"
+        ],
+        "keySuffix": "open",
+        "metrics": {
+          "world open": "openMs"
+        }
+      },
+      {
+        "rows": "rows",
+        "key": [
+          "device",
+          "theme",
+          "scenario"
+        ],
+        "metrics": {
+          "dropped": "droppedPct",
+          "input p95": "inputLatencyMs.p95",
+          "heap": "memory.jsHeapMB",
+          "nodes": "memory.domNodes"
+        }
+      }
     ]
   },
   "metrics": [
-    { "name": "world open", "unit": "ms", "digits": 1 },
-    { "name": "dropped", "unit": "%", "digits": 2 },
-    { "name": "input p95", "unit": "ms", "digits": 1 },
-    { "name": "heap", "unit": "MB", "digits": 2 },
-    { "name": "nodes", "digits": 0 }
-  ]
+    {
+      "name": "world open",
+      "unit": "ms",
+      "digits": 1
+    },
+    {
+      "name": "dropped",
+      "unit": "%",
+      "digits": 2
+    },
+    {
+      "name": "input p95",
+      "unit": "ms",
+      "digits": 1
+    },
+    {
+      "name": "heap",
+      "unit": "MB",
+      "digits": 2
+    },
+    {
+      "name": "nodes",
+      "digits": 0
+    }
+  ],
+  "completeFrom": "EXP-039"
 }

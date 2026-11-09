@@ -1,0 +1,340 @@
+{
+ "kind": "node",
+ "machine": "linux-x64 node v22.23.4",
+ "viewport": [
+  390,
+  760
+ ],
+ "themes": [
+  "playground",
+  "market",
+  "zoo"
+ ],
+ "rows": [
+  {
+   "scenario": "idle",
+   "why": "no input: breathing, ambience, life (the floor every other case adds to)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.243,
+    "p95": 0.514,
+    "p99": 0.84,
+    "max": 0.991
+   },
+   "renderMs": {
+    "mean": 0.479,
+    "p95": 0.859,
+    "p99": 1.212,
+    "max": 2.631
+   },
+   "allocsPerFrame": {
+    "mean": 31,
+    "p95": 32
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 0.639
+   }
+  },
+  {
+   "scenario": "drag-slow",
+   "why": "a careful child: 2 px per frame, hover and spotlight on the whole time",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.549,
+    "p95": 0.791,
+    "p99": 1.576,
+    "max": 26.965
+   },
+   "renderMs": {
+    "mean": 0.588,
+    "p95": 0.897,
+    "p99": 1.45,
+    "max": 2.219
+   },
+   "allocsPerFrame": {
+    "mean": 37,
+    "p95": 42
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 1.096
+   }
+  },
+  {
+   "scenario": "drag-fast",
+   "why": "a wild zigzag: 40 px per frame across the view",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.508,
+    "p95": 0.649,
+    "p99": 1.528,
+    "max": 21.766
+   },
+   "renderMs": {
+    "mean": 0.601,
+    "p95": 0.902,
+    "p99": 1.42,
+    "max": 2.823
+   },
+   "allocsPerFrame": {
+    "mean": 38,
+    "p95": 44
+   },
+   "worstTheme": {
+    "theme": "zoo",
+    "p95": 0.682
+   }
+  },
+  {
+   "scenario": "drag-120hz",
+   "why": "a 120 Hz phone: two pointer events per frame",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.626,
+    "p95": 0.89,
+    "p99": 1.592,
+    "max": 25.163
+   },
+   "renderMs": {
+    "mean": 0.567,
+    "p95": 0.81,
+    "p99": 1.453,
+    "max": 4.117
+   },
+   "allocsPerFrame": {
+    "mean": 37,
+    "p95": 42
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 1.101
+   }
+  },
+  {
+   "scenario": "drag-240hz",
+   "why": "an iPad digitiser: four pointer events per frame",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.9,
+    "p95": 1.423,
+    "p99": 2.114,
+    "max": 26.232
+   },
+   "renderMs": {
+    "mean": 0.584,
+    "p95": 0.942,
+    "p99": 1.507,
+    "max": 2.338
+   },
+   "allocsPerFrame": {
+    "mean": 37,
+    "p95": 42
+   },
+   "worstTheme": {
+    "theme": "zoo",
+    "p95": 1.56
+   }
+  },
+  {
+   "scenario": "drag-over-targets",
+   "why": "carry one object over every other object in view (hover target changes each visit)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.391,
+    "p95": 0.717,
+    "p99": 1.331,
+    "max": 31.415
+   },
+   "renderMs": {
+    "mean": 0.424,
+    "p95": 0.725,
+    "p99": 1.255,
+    "max": 2.971
+   },
+   "allocsPerFrame": {
+    "mean": 35,
+    "p95": 42
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 1.074
+   }
+  },
+  {
+   "scenario": "drag-hold",
+   "why": "grab and hold nearly still for 6 s (spotlight + beckon pulses, finger jitter)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.448,
+    "p95": 0.618,
+    "p99": 1.201,
+    "max": 21.52
+   },
+   "renderMs": {
+    "mean": 0.441,
+    "p95": 0.664,
+    "p99": 1.38,
+    "max": 2.918
+   },
+   "allocsPerFrame": {
+    "mean": 36,
+    "p95": 41
+   },
+   "worstTheme": {
+    "theme": "zoo",
+    "p95": 0.67
+   }
+  },
+  {
+   "scenario": "throw-spam",
+   "why": "grab, flick, release every 18 frames (landings, haptics, particles)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.438,
+    "p95": 0.79,
+    "p99": 1.326,
+    "max": 24.319
+   },
+   "renderMs": {
+    "mean": 0.576,
+    "p95": 1.048,
+    "p99": 1.719,
+    "max": 3.457
+   },
+   "allocsPerFrame": {
+    "mean": 27,
+    "p95": 40
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.85
+   }
+  },
+  {
+   "scenario": "drag-with-taps",
+   "why": "drag while every 6th frame something else is tapped (particle + reaction storm)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.642,
+    "p95": 1.05,
+    "p99": 2.174,
+    "max": 22.126
+   },
+   "renderMs": {
+    "mean": 0.903,
+    "p95": 1.611,
+    "p99": 1.868,
+    "max": 3.23
+   },
+   "allocsPerFrame": {
+    "mean": 41,
+    "p95": 74
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 1.319
+   }
+  },
+  {
+   "scenario": "drag-scroll",
+   "why": "drag while the world scrolls under the finger (edge auto-scroll / camera every frame)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.568,
+    "p95": 0.612,
+    "p99": 1.949,
+    "max": 29.027
+   },
+   "renderMs": {
+    "mean": 0.9,
+    "p95": 1.248,
+    "p99": 2.289,
+    "max": 3.344
+   },
+   "allocsPerFrame": {
+    "mean": 69,
+    "p95": 103
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.629
+   }
+  },
+  {
+   "scenario": "tap-spam",
+   "why": "ten taps a second on whatever is in view (reactions, word cards, speech)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.277,
+    "p95": 0.418,
+    "p99": 0.586,
+    "max": 1.234
+   },
+   "renderMs": {
+    "mean": 0.785,
+    "p95": 1.272,
+    "p99": 1.938,
+    "max": 2.425
+   },
+   "allocsPerFrame": {
+    "mean": 46,
+    "p95": 76
+   },
+   "worstTheme": {
+    "theme": "zoo",
+    "p95": 0.439
+   }
+  },
+  {
+   "scenario": "swipe-nudge",
+   "why": "background swipes back and forth (the whole cast reacts)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.405,
+    "p95": 0.797,
+    "p99": 1.103,
+    "max": 1.69
+   },
+   "renderMs": {
+    "mean": 0.747,
+    "p95": 1.377,
+    "p99": 1.871,
+    "max": 5.343
+   },
+   "allocsPerFrame": {
+    "mean": 22,
+    "p95": 34
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 0.877
+   }
+  },
+  {
+   "scenario": "drop-chain",
+   "why": "drag each draggable onto its nearest partner and drop (snaps, stacks, celebrations)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.443,
+    "p95": 0.634,
+    "p99": 1.162,
+    "max": 30.648
+   },
+   "renderMs": {
+    "mean": 0.52,
+    "p95": 0.836,
+    "p99": 1.629,
+    "max": 2.231
+   },
+   "allocsPerFrame": {
+    "mean": 32,
+    "p95": 36
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.702
+   }
+  }
+ ]
+}

@@ -6,6 +6,7 @@ import { Ledger, SequentialIds } from '../src/domain/ledger.js';
 import { EventBus } from '../src/events.js';
 import { AbSummarizer } from '../src/services/ab-summarizer.js';
 import { LedgerMerger } from '../src/services/ledger-merger.js';
+import { LedgerChecker } from '../src/services/ledger-checker.js';
 import { renderOnChange } from '../src/app/container.js';
 import { MarkdownLedgerView } from '../src/views/markdown-view.js';
 import { ListView } from '../src/views/list-view.js';
@@ -19,7 +20,7 @@ function wire(store = new MemoryStore()) {
     'a.json': { label: 'before', rows: [{ key: 'low/drag', metrics: { dropped: 56 } }] },
     'b.json': { label: 'after', rows: [{ key: 'low/drag', metrics: { dropped: 25 } }] },
   });
-  const controller = new LedgerController({ store, artifacts, bench, summarizer: new AbSummarizer([{ name: 'dropped', unit: '%' }]), merger: new LedgerMerger(ids), ids, clock: new FixedClock(), events });
+  const controller = new LedgerController({ store, artifacts, bench, summarizer: new AbSummarizer([{ name: 'dropped', unit: '%' }]), merger: new LedgerMerger(ids), ids, learningIds: new SequentialIds('L-'), checker: new LedgerChecker(), clock: new FixedClock(), events });
   const output = new MemoryOutput();
   renderOnChange(events, new MarkdownLedgerView({ title: 'T' }), output);
   return { controller, events, store, artifacts, output };

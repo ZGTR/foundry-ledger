@@ -286,12 +286,30 @@
     "before": "loop-2 start (develop @ #791)",
     "after": "EXP-018 + EXP-019",
     "cells": [
-     "low/market: world open 8947.5→2301.1 ms, heap 72.27→68.68 MB, nodes 34398→8258",
-     "low/playground: world open 3418.4→1726.5 ms, heap 67.54→66.44 MB, nodes 14797→7189",
-     "low/market/idle: dropped 43.41→3.16 %",
-     "low/market/drag-slow: dropped 76.92→47.46 %, input p95 169.1→107.2 ms",
-     "low/playground/idle: dropped 26.32→14.55 %",
-     "low/playground/drag-slow: dropped 67.29→65.73 %, input p95 130.6→126.9 ms"
+     {
+      "key": "low/market",
+      "text": "world open 8947.5→2301.1 ms, heap 72.27→68.68 MB, nodes 34398→8258"
+     },
+     {
+      "key": "low/playground",
+      "text": "world open 3418.4→1726.5 ms, heap 67.54→66.44 MB, nodes 14797→7189"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 43.41→3.16 %"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 76.92→47.46 %, input p95 169.1→107.2 ms"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 26.32→14.55 %"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 67.29→65.73 %, input p95 130.6→126.9 ms"
+     }
     ]
    },
    "results": [
@@ -361,14 +379,38 @@
     "before": "l2a",
     "after": "l2c",
     "cells": [
-     "low/market: world open 2212.9→2162.5 ms",
-     "low/playground: world open 1493.7→1508.3 ms",
-     "low/market/idle: dropped 2.62→3.19 %, heap 69.31→69.22 MB, nodes 10955→10955",
-     "low/market/drag-slow: dropped 27.01→22.88 %, input p95 77.8→82.6 ms, heap 70.02→70.08 MB, nodes 12226→12275",
-     "low/market/drag-hold: dropped 5.3→2.86 %, input p95 55.3→53.1 ms, heap 70.13→70.07 MB, nodes 10968→10968",
-     "low/playground/idle: dropped 12.14→7.78 %, heap 67.14→67 MB, nodes 9848→9848",
-     "low/playground/drag-slow: dropped 54.66→39.25 %, input p95 100.9→100.6 ms, heap 67.77→67.68 MB, nodes 12320→11492",
-     "low/playground/drag-hold: dropped 19.82→27.85 %, input p95 67.3→82.9 ms, heap 67.94→67.79 MB, nodes 9868→9868"
+     {
+      "key": "low/market",
+      "text": "world open 2212.9→2162.5 ms"
+     },
+     {
+      "key": "low/playground",
+      "text": "world open 1493.7→1508.3 ms"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 2.62→3.19 %, heap 69.31→69.22 MB, nodes 10955→10955"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 27.01→22.88 %, input p95 77.8→82.6 ms, heap 70.02→70.08 MB, nodes 12226→12275"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 5.3→2.86 %, input p95 55.3→53.1 ms, heap 70.13→70.07 MB, nodes 10968→10968"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 12.14→7.78 %, heap 67.14→67 MB, nodes 9848→9848"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 54.66→39.25 %, input p95 100.9→100.6 ms, heap 67.77→67.68 MB, nodes 12320→11492"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 19.82→27.85 %, input p95 67.3→82.9 ms, heap 67.94→67.79 MB, nodes 9868→9868"
+     }
     ]
    },
    "results": [
@@ -445,14 +487,38 @@
     "before": "l2e",
     "after": "l2f",
     "cells": [
-     "low/playground: world open 1604.9→1558.1 ms",
-     "low/market: world open 2253.1→2251.2 ms",
-     "low/playground/idle: dropped 8.33→7.1 %, heap 66.9→66.88 MB, nodes 9848→9848",
-     "low/playground/drag-slow: dropped 52.68→58.61 %, input p95 106.2→123.4 ms, heap 67.61→67.47 MB, nodes 12243→12251",
-     "low/playground/drag-hold: dropped 20.57→27.42 %, input p95 61.2→69.9 ms, heap 67.71→67.69 MB, nodes 9867→9866",
-     "low/market/idle: dropped 0→0 %, heap 68.98→68.96 MB, nodes 10955→10955",
-     "low/market/drag-slow: dropped 31.51→24.46 %, input p95 89.8→76.2 ms, heap 69.69→69.66 MB, nodes 12269→12271",
-     "low/market/drag-hold: dropped 8.36→4.26 %, input p95 56.6→51.8 ms, heap 69.83→69.8 MB, nodes 10968→10968"
+     {
+      "key": "low/playground",
+      "text": "world open 1604.9→1558.1 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 2253.1→2251.2 ms"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 8.33→7.1 %, heap 66.9→66.88 MB, nodes 9848→9848"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 52.68→58.61 %, input p95 106.2→123.4 ms, heap 67.61→67.47 MB, nodes 12243→12251"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 20.57→27.42 %, input p95 61.2→69.9 ms, heap 67.71→67.69 MB, nodes 9867→9866"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 0→0 %, heap 68.98→68.96 MB, nodes 10955→10955"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 31.51→24.46 %, input p95 89.8→76.2 ms, heap 69.69→69.66 MB, nodes 12269→12271"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 8.36→4.26 %, input p95 56.6→51.8 ms, heap 69.83→69.8 MB, nodes 10968→10968"
+     }
     ]
    },
    "results": [
@@ -477,16 +543,46 @@
     "before": "l3s",
     "after": "l3a",
     "cells": [
-     "low/playground: world open 1208.3→1234 ms",
-     "low/market: world open 1754.4→1787.3 ms",
-     "low/playground/drag-slow: dropped 55.93→25.47 %, input p95 101.6→76.8 ms, heap 67.31→67.42 MB, nodes 12264→12242",
-     "low/playground/drag-hold: dropped 29.67→16.45 %, input p95 69.8→63.9 ms, heap 67.68→67.67 MB, nodes 9868→9868",
-     "low/playground/tap-spam: dropped 45→13.71 %, input p95 117.8→73.8 ms, heap 67.86→67.89 MB, nodes 9872→9896",
-     "low/playground/swipe-nudge: dropped 68.81→59.33 %, input p95 68.9→66.9 ms, heap 70.01→70.01 MB, nodes 17878→17857",
-     "low/market/drag-slow: dropped 13.32→16.31 %, input p95 67.9→69.4 ms, heap 69.53→69.55 MB, nodes 12259→12275",
-     "low/market/drag-hold: dropped 1.5→4.26 %, input p95 51→54 ms, heap 69.76→69.74 MB, nodes 10968→10968",
-     "low/market/tap-spam: dropped 24.1→13.82 %, input p95 75.3→75.2 ms, heap 66.08→65.99 MB, nodes 2789→2791",
-     "low/market/swipe-nudge: dropped 33.94→30.61 %, input p95 68.9→64.3 ms, heap 66.37→66.39 MB, nodes 3208→3208"
+     {
+      "key": "low/playground",
+      "text": "world open 1208.3→1234 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1754.4→1787.3 ms"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 55.93→25.47 %, input p95 101.6→76.8 ms, heap 67.31→67.42 MB, nodes 12264→12242"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 29.67→16.45 %, input p95 69.8→63.9 ms, heap 67.68→67.67 MB, nodes 9868→9868"
+     },
+     {
+      "key": "low/playground/tap-spam",
+      "text": "dropped 45→13.71 %, input p95 117.8→73.8 ms, heap 67.86→67.89 MB, nodes 9872→9896"
+     },
+     {
+      "key": "low/playground/swipe-nudge",
+      "text": "dropped 68.81→59.33 %, input p95 68.9→66.9 ms, heap 70.01→70.01 MB, nodes 17878→17857"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 13.32→16.31 %, input p95 67.9→69.4 ms, heap 69.53→69.55 MB, nodes 12259→12275"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 1.5→4.26 %, input p95 51→54 ms, heap 69.76→69.74 MB, nodes 10968→10968"
+     },
+     {
+      "key": "low/market/tap-spam",
+      "text": "dropped 24.1→13.82 %, input p95 75.3→75.2 ms, heap 66.08→65.99 MB, nodes 2789→2791"
+     },
+     {
+      "key": "low/market/swipe-nudge",
+      "text": "dropped 33.94→30.61 %, input p95 68.9→64.3 ms, heap 66.37→66.39 MB, nodes 3208→3208"
+     }
     ]
    },
    "results": [
@@ -511,12 +607,30 @@
     "before": "l3a",
     "after": "l3b",
     "cells": [
-     "low/playground: world open 1235.2→1264.6 ms",
-     "low/market: world open 1602→1674.9 ms",
-     "low/playground/swipe-nudge: dropped 53.48→49.18 %, input p95 64.3→57.4 ms, heap 67.19→67.06 MB, nodes 9852→8075",
-     "low/playground/drag-edge-scroll: dropped 28.17→24.14 %, input p95 79.3→66.8 ms, heap 67.64→67.53 MB, nodes 11420→9442",
-     "low/market/swipe-nudge: dropped 17.96→14.98 %, input p95 50.5→64.7 ms, heap 69.23→69.1 MB, nodes 10965→8702",
-     "low/market/drag-edge-scroll: dropped 19.63→15.11 %, input p95 51.9→70.3 ms, heap 69.88→69.69 MB, nodes 11631→9287"
+     {
+      "key": "low/playground",
+      "text": "world open 1235.2→1264.6 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1602→1674.9 ms"
+     },
+     {
+      "key": "low/playground/swipe-nudge",
+      "text": "dropped 53.48→49.18 %, input p95 64.3→57.4 ms, heap 67.19→67.06 MB, nodes 9852→8075"
+     },
+     {
+      "key": "low/playground/drag-edge-scroll",
+      "text": "dropped 28.17→24.14 %, input p95 79.3→66.8 ms, heap 67.64→67.53 MB, nodes 11420→9442"
+     },
+     {
+      "key": "low/market/swipe-nudge",
+      "text": "dropped 17.96→14.98 %, input p95 50.5→64.7 ms, heap 69.23→69.1 MB, nodes 10965→8702"
+     },
+     {
+      "key": "low/market/drag-edge-scroll",
+      "text": "dropped 19.63→15.11 %, input p95 51.9→70.3 ms, heap 69.88→69.69 MB, nodes 11631→9287"
+     }
     ]
    },
    "results": [
@@ -541,30 +655,102 @@
     "before": "before-2",
     "after": "after-2",
     "cells": [
-     "low/playground: world open 1364.6→1338.1 ms",
-     "low/market: world open 1256.9→1442.6 ms",
-     "mid/playground: world open 725.2→677.5 ms",
-     "mid/market: world open 748.5→661.5 ms",
-     "low/playground/drag-slow: dropped 35.4→32.88 %, input p95 95.4→97.7 ms, heap 34.25→34.15 MB, nodes 10169→10161",
-     "low/playground/drag-hold: dropped 24.74→18.47 %, input p95 81.4→68.3 ms, heap 34.55→34.36 MB, nodes 8091→8083",
-     "low/playground/drag-fast: dropped 53.24→19.89 %, input p95 100.7→67.5 ms, heap 34.59→34.62 MB, nodes 8075→8077",
-     "low/playground/swipe-nudge: dropped 81→75.52 %, input p95 82.2→72.2 ms, heap 34.63→34.59 MB, nodes 8079→8076",
-     "low/playground/tap-spam: dropped 35.42→23.08 %, input p95 117.4→102.4 ms, heap 34.71→34.68 MB, nodes 8090→8087",
-     "low/market/drag-slow: dropped 22.67→22.45 %, input p95 76→78.4 ms, heap 34.9→34.87 MB, nodes 9958→8728",
-     "low/market/drag-hold: dropped 10.48→8.89 %, input p95 61.9→58.1 ms, heap 35.09→35.11 MB, nodes 7564→7564",
-     "low/market/drag-fast: dropped 13.39→9.49 %, input p95 57.4→60.8 ms, heap 35.26→35.16 MB, nodes 7575→7571",
-     "low/market/swipe-nudge: dropped 36.48→36.36 %, input p95 57.1→72.6 ms, heap 35.19→35.15 MB, nodes 7560→7562",
-     "low/market/tap-spam: dropped 24.22→23.93 %, input p95 112.7→97.6 ms, heap 33.01→32.99 MB, nodes 2782→2797",
-     "mid/playground/drag-slow: dropped 3.41→5.04 %, input p95 55.3→59.6 ms, heap 33.91→34.17 MB, nodes 10372→10384",
-     "mid/playground/drag-hold: dropped 1.67→2.1 %, input p95 53.1→53.1 ms, heap 34.13→34.33 MB, nodes 8546→8528",
-     "mid/playground/drag-fast: dropped 2.75→3.17 %, input p95 52.4→53.2 ms, heap 34.22→34.49 MB, nodes 8534→8520",
-     "mid/playground/swipe-nudge: dropped 28.83→34.08 %, input p95 58.6→47 ms, heap 34.19→34.59 MB, nodes 8513→8512",
-     "mid/playground/tap-spam: dropped 1.43→0.9 %, input p95 58.1→51.7 ms, heap 34.28→34.63 MB, nodes 8539→8540",
-     "mid/market/drag-slow: dropped 3.39→1.1 %, input p95 56.1→54.1 ms, heap 34.74→34.77 MB, nodes 8826→8834",
-     "mid/market/drag-hold: dropped 0.33→0.17 %, input p95 50.5→50.2 ms, heap 34.99→35.02 MB, nodes 7829→7825",
-     "mid/market/drag-fast: dropped 0.85→0.14 %, input p95 50.9→49.9 ms, heap 35.01→35.04 MB, nodes 7819→7819",
-     "mid/market/swipe-nudge: dropped 19.57→3.27 %, input p95 47.5→48.6 ms, heap 35.03→35.04 MB, nodes 7838→7828",
-     "mid/market/tap-spam: dropped 4.2→1.49 %, input p95 64.3→63.8 ms, heap 33.03→33.05 MB, nodes 2783→2783"
+     {
+      "key": "low/playground",
+      "text": "world open 1364.6→1338.1 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1256.9→1442.6 ms"
+     },
+     {
+      "key": "mid/playground",
+      "text": "world open 725.2→677.5 ms"
+     },
+     {
+      "key": "mid/market",
+      "text": "world open 748.5→661.5 ms"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 35.4→32.88 %, input p95 95.4→97.7 ms, heap 34.25→34.15 MB, nodes 10169→10161"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 24.74→18.47 %, input p95 81.4→68.3 ms, heap 34.55→34.36 MB, nodes 8091→8083"
+     },
+     {
+      "key": "low/playground/drag-fast",
+      "text": "dropped 53.24→19.89 %, input p95 100.7→67.5 ms, heap 34.59→34.62 MB, nodes 8075→8077"
+     },
+     {
+      "key": "low/playground/swipe-nudge",
+      "text": "dropped 81→75.52 %, input p95 82.2→72.2 ms, heap 34.63→34.59 MB, nodes 8079→8076"
+     },
+     {
+      "key": "low/playground/tap-spam",
+      "text": "dropped 35.42→23.08 %, input p95 117.4→102.4 ms, heap 34.71→34.68 MB, nodes 8090→8087"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 22.67→22.45 %, input p95 76→78.4 ms, heap 34.9→34.87 MB, nodes 9958→8728"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 10.48→8.89 %, input p95 61.9→58.1 ms, heap 35.09→35.11 MB, nodes 7564→7564"
+     },
+     {
+      "key": "low/market/drag-fast",
+      "text": "dropped 13.39→9.49 %, input p95 57.4→60.8 ms, heap 35.26→35.16 MB, nodes 7575→7571"
+     },
+     {
+      "key": "low/market/swipe-nudge",
+      "text": "dropped 36.48→36.36 %, input p95 57.1→72.6 ms, heap 35.19→35.15 MB, nodes 7560→7562"
+     },
+     {
+      "key": "low/market/tap-spam",
+      "text": "dropped 24.22→23.93 %, input p95 112.7→97.6 ms, heap 33.01→32.99 MB, nodes 2782→2797"
+     },
+     {
+      "key": "mid/playground/drag-slow",
+      "text": "dropped 3.41→5.04 %, input p95 55.3→59.6 ms, heap 33.91→34.17 MB, nodes 10372→10384"
+     },
+     {
+      "key": "mid/playground/drag-hold",
+      "text": "dropped 1.67→2.1 %, input p95 53.1→53.1 ms, heap 34.13→34.33 MB, nodes 8546→8528"
+     },
+     {
+      "key": "mid/playground/drag-fast",
+      "text": "dropped 2.75→3.17 %, input p95 52.4→53.2 ms, heap 34.22→34.49 MB, nodes 8534→8520"
+     },
+     {
+      "key": "mid/playground/swipe-nudge",
+      "text": "dropped 28.83→34.08 %, input p95 58.6→47 ms, heap 34.19→34.59 MB, nodes 8513→8512"
+     },
+     {
+      "key": "mid/playground/tap-spam",
+      "text": "dropped 1.43→0.9 %, input p95 58.1→51.7 ms, heap 34.28→34.63 MB, nodes 8539→8540"
+     },
+     {
+      "key": "mid/market/drag-slow",
+      "text": "dropped 3.39→1.1 %, input p95 56.1→54.1 ms, heap 34.74→34.77 MB, nodes 8826→8834"
+     },
+     {
+      "key": "mid/market/drag-hold",
+      "text": "dropped 0.33→0.17 %, input p95 50.5→50.2 ms, heap 34.99→35.02 MB, nodes 7829→7825"
+     },
+     {
+      "key": "mid/market/drag-fast",
+      "text": "dropped 0.85→0.14 %, input p95 50.9→49.9 ms, heap 35.01→35.04 MB, nodes 7819→7819"
+     },
+     {
+      "key": "mid/market/swipe-nudge",
+      "text": "dropped 19.57→3.27 %, input p95 47.5→48.6 ms, heap 35.03→35.04 MB, nodes 7838→7828"
+     },
+     {
+      "key": "mid/market/tap-spam",
+      "text": "dropped 4.2→1.49 %, input p95 64.3→63.8 ms, heap 33.03→33.05 MB, nodes 2783→2783"
+     }
     ]
    },
    "results": [
@@ -591,34 +777,118 @@
     "before": "before-2",
     "after": "after-2",
     "cells": [
-     "low/playground: world open 1343.3→1217.5 ms",
-     "low/market: world open 1444.4→1261.8 ms",
-     "mid/playground: world open 698.1→691.6 ms",
-     "mid/market: world open 638.3→691.3 ms",
-     "low/playground/idle: dropped 15.29→10.73 %, heap 33.63→33.74 MB, nodes 8064→8064",
-     "low/playground/drag-slow: dropped 43.26→23.64 %, input p95 92.3→79.9 ms, heap 34.16→34.21 MB, nodes 10158→10159",
-     "low/playground/drag-hold: dropped 20.65→11.23 %, input p95 63.5→61.6 ms, heap 34.45→34.46 MB, nodes 8084→8084",
-     "low/playground/drag-fast: dropped 23.33→16.61 %, input p95 64.1→66.6 ms, heap 34.61→34.61 MB, nodes 8082→8085",
-     "low/playground/swipe-nudge: dropped 81.07→37.38 %, input p95 82.8→63.3 ms, heap 34.65→34.64 MB, nodes 8078→8067",
-     "low/playground/tap-spam: dropped 35.71→24.46 %, input p95 109.5→91.9 ms, heap 34.75→34.8 MB, nodes 8087→8097",
-     "low/market/idle: dropped 0→0 %, heap 34.27→34.27 MB, nodes 7551→7551",
-     "low/market/drag-slow: dropped 28.39→14.73 %, input p95 70.3→69.4 ms, heap 34.92→34.96 MB, nodes 8708→9909",
-     "low/market/drag-hold: dropped 16.87→2.52 %, input p95 56.3→52.3 ms, heap 35.17→35.19 MB, nodes 7564→7573",
-     "low/market/drag-fast: dropped 19.74→8.57 %, input p95 54→54.3 ms, heap 35.21→35.2 MB, nodes 7563→7563",
-     "low/market/swipe-nudge: dropped 41.94→19.88 %, input p95 58.3→54 ms, heap 35.21→35.23 MB, nodes 7558→7574",
-     "low/market/tap-spam: dropped 23.1→23.01 %, input p95 89.4→77.7 ms, heap 33.06→33.06 MB, nodes 2789→2799",
-     "mid/playground/idle: dropped 0→0 %, heap 33.55→33.51 MB, nodes 8508→8508",
-     "mid/playground/drag-slow: dropped 6.23→2.88 %, input p95 61.7→55.7 ms, heap 34.12→34.2 MB, nodes 10366→10451",
-     "mid/playground/drag-hold: dropped 0.52→0.69 %, input p95 50.6→50 ms, heap 34.36→34.36 MB, nodes 8528→8528",
-     "mid/playground/drag-fast: dropped 0.56→0.42 %, input p95 50.8→50 ms, heap 34.54→34.56 MB, nodes 8520→8520",
-     "mid/playground/swipe-nudge: dropped 30.91→22.89 %, input p95 45.9→47.5 ms, heap 34.6→34.65 MB, nodes 8519→8512",
-     "mid/playground/tap-spam: dropped 0→0.61 %, input p95 49.5→50.2 ms, heap 34.72→34.8 MB, nodes 8540→8531",
-     "mid/market/idle: dropped 0→0 %, heap 34.24→34.11 MB, nodes 7807→7807",
-     "mid/market/drag-slow: dropped 1.38→2.06 %, input p95 52.6→51.6 ms, heap 34.82→34.75 MB, nodes 8840→9934",
-     "mid/market/drag-hold: dropped 0.25→0.08 %, input p95 50.3→50 ms, heap 35.06→35.08 MB, nodes 7829→7820",
-     "mid/market/drag-fast: dropped 0.14→0 %, input p95 50→50 ms, heap 35.08→35.1 MB, nodes 7827→7819",
-     "mid/market/swipe-nudge: dropped 3.83→4.26 %, input p95 59.2→44.2 ms, heap 35.11→35.03 MB, nodes 7816→7814",
-     "mid/market/tap-spam: dropped 0.89→1.2 %, input p95 60.8→70.8 ms, heap 33.13→33.09 MB, nodes 2783→2783"
+     {
+      "key": "low/playground",
+      "text": "world open 1343.3→1217.5 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1444.4→1261.8 ms"
+     },
+     {
+      "key": "mid/playground",
+      "text": "world open 698.1→691.6 ms"
+     },
+     {
+      "key": "mid/market",
+      "text": "world open 638.3→691.3 ms"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 15.29→10.73 %, heap 33.63→33.74 MB, nodes 8064→8064"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 43.26→23.64 %, input p95 92.3→79.9 ms, heap 34.16→34.21 MB, nodes 10158→10159"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 20.65→11.23 %, input p95 63.5→61.6 ms, heap 34.45→34.46 MB, nodes 8084→8084"
+     },
+     {
+      "key": "low/playground/drag-fast",
+      "text": "dropped 23.33→16.61 %, input p95 64.1→66.6 ms, heap 34.61→34.61 MB, nodes 8082→8085"
+     },
+     {
+      "key": "low/playground/swipe-nudge",
+      "text": "dropped 81.07→37.38 %, input p95 82.8→63.3 ms, heap 34.65→34.64 MB, nodes 8078→8067"
+     },
+     {
+      "key": "low/playground/tap-spam",
+      "text": "dropped 35.71→24.46 %, input p95 109.5→91.9 ms, heap 34.75→34.8 MB, nodes 8087→8097"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 0→0 %, heap 34.27→34.27 MB, nodes 7551→7551"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 28.39→14.73 %, input p95 70.3→69.4 ms, heap 34.92→34.96 MB, nodes 8708→9909"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 16.87→2.52 %, input p95 56.3→52.3 ms, heap 35.17→35.19 MB, nodes 7564→7573"
+     },
+     {
+      "key": "low/market/drag-fast",
+      "text": "dropped 19.74→8.57 %, input p95 54→54.3 ms, heap 35.21→35.2 MB, nodes 7563→7563"
+     },
+     {
+      "key": "low/market/swipe-nudge",
+      "text": "dropped 41.94→19.88 %, input p95 58.3→54 ms, heap 35.21→35.23 MB, nodes 7558→7574"
+     },
+     {
+      "key": "low/market/tap-spam",
+      "text": "dropped 23.1→23.01 %, input p95 89.4→77.7 ms, heap 33.06→33.06 MB, nodes 2789→2799"
+     },
+     {
+      "key": "mid/playground/idle",
+      "text": "dropped 0→0 %, heap 33.55→33.51 MB, nodes 8508→8508"
+     },
+     {
+      "key": "mid/playground/drag-slow",
+      "text": "dropped 6.23→2.88 %, input p95 61.7→55.7 ms, heap 34.12→34.2 MB, nodes 10366→10451"
+     },
+     {
+      "key": "mid/playground/drag-hold",
+      "text": "dropped 0.52→0.69 %, input p95 50.6→50 ms, heap 34.36→34.36 MB, nodes 8528→8528"
+     },
+     {
+      "key": "mid/playground/drag-fast",
+      "text": "dropped 0.56→0.42 %, input p95 50.8→50 ms, heap 34.54→34.56 MB, nodes 8520→8520"
+     },
+     {
+      "key": "mid/playground/swipe-nudge",
+      "text": "dropped 30.91→22.89 %, input p95 45.9→47.5 ms, heap 34.6→34.65 MB, nodes 8519→8512"
+     },
+     {
+      "key": "mid/playground/tap-spam",
+      "text": "dropped 0→0.61 %, input p95 49.5→50.2 ms, heap 34.72→34.8 MB, nodes 8540→8531"
+     },
+     {
+      "key": "mid/market/idle",
+      "text": "dropped 0→0 %, heap 34.24→34.11 MB, nodes 7807→7807"
+     },
+     {
+      "key": "mid/market/drag-slow",
+      "text": "dropped 1.38→2.06 %, input p95 52.6→51.6 ms, heap 34.82→34.75 MB, nodes 8840→9934"
+     },
+     {
+      "key": "mid/market/drag-hold",
+      "text": "dropped 0.25→0.08 %, input p95 50.3→50 ms, heap 35.06→35.08 MB, nodes 7829→7820"
+     },
+     {
+      "key": "mid/market/drag-fast",
+      "text": "dropped 0.14→0 %, input p95 50→50 ms, heap 35.08→35.1 MB, nodes 7827→7819"
+     },
+     {
+      "key": "mid/market/swipe-nudge",
+      "text": "dropped 3.83→4.26 %, input p95 59.2→44.2 ms, heap 35.11→35.03 MB, nodes 7816→7814"
+     },
+     {
+      "key": "mid/market/tap-spam",
+      "text": "dropped 0.89→1.2 %, input p95 60.8→70.8 ms, heap 33.13→33.09 MB, nodes 2783→2783"
+     }
     ]
    },
    "results": [
@@ -658,34 +928,118 @@
     "before": "before-2",
     "after": "after-2",
     "cells": [
-     "low/playground: world open 1369.2→1357.9 ms",
-     "low/market: world open 1326.7→1330.2 ms",
-     "mid/playground: world open 718.6→696.8 ms",
-     "mid/market: world open 649→629.3 ms",
-     "low/playground/idle: dropped 5.38→16.07 %, heap 33.65→33.66 MB, nodes 8064→8065",
-     "low/playground/drag-slow: dropped 33.63→38.06 %, input p95 81.8→100.1 ms, heap 34.18→34.2 MB, nodes 10217→10164",
-     "low/playground/drag-hold: dropped 17.14→12.33 %, input p95 63.8→69 ms, heap 34.39→34.48 MB, nodes 8084→8085",
-     "low/playground/drag-fast: dropped 20.7→13.95 %, input p95 64→68 ms, heap 34.64→34.59 MB, nodes 8077→8078",
-     "low/playground/swipe-nudge: dropped 49.68→27.76 %, input p95 65.7→56.8 ms, heap 34.76→34.68 MB, nodes 8068→8076",
-     "low/playground/tap-spam: dropped 35.69→17.42 %, input p95 104.2→70.5 ms, heap 34.88→34.8 MB, nodes 8087→8088",
-     "low/market/idle: dropped 0→0 %, heap 34.28→34.35 MB, nodes 7551→7552",
-     "low/market/drag-slow: dropped 20.49→11.15 %, input p95 69.6→70.7 ms, heap 34.93→34.97 MB, nodes 9909→9910",
-     "low/market/drag-hold: dropped 6.72→1.63 %, input p95 54.3→50.7 ms, heap 35.16→35.22 MB, nodes 7564→7565",
-     "low/market/drag-fast: dropped 15.9→2.91 %, input p95 60.5→51.9 ms, heap 35.2→35.27 MB, nodes 7563→7576",
-     "low/market/swipe-nudge: dropped 28.75→16.82 %, input p95 51.8→46.4 ms, heap 35.23→35.29 MB, nodes 7559→7570",
-     "low/market/tap-spam: dropped 32.82→18.24 %, input p95 108.6→72.6 ms, heap 33.05→33.08 MB, nodes 2782→2783",
-     "mid/playground/idle: dropped 0→0.51 %, heap 33.51→33.61 MB, nodes 8508→8509",
-     "mid/playground/drag-slow: dropped 9.41→4.69 %, input p95 64.6→58.6 ms, heap 34.33→34.25 MB, nodes 9871→10374",
-     "mid/playground/drag-hold: dropped 2.87→1.03 %, input p95 53.3→50.5 ms, heap 34.5→34.42 MB, nodes 8542→8529",
-     "mid/playground/drag-fast: dropped 3.46→2.01 %, input p95 51.3→53.9 ms, heap 34.54→34.49 MB, nodes 8538→8521",
-     "mid/playground/swipe-nudge: dropped 23.74→20.72 %, input p95 50.3→50.7 ms, heap 34.62→34.55 MB, nodes 8508→8513",
-     "mid/playground/tap-spam: dropped 2.93→1.8 %, input p95 58.2→57.8 ms, heap 34.72→34.77 MB, nodes 8547→8547",
-     "mid/market/idle: dropped 0→0 %, heap 34.15→34.16 MB, nodes 7807→7808",
-     "mid/market/drag-slow: dropped 1.66→0.96 %, input p95 50.9→50.5 ms, heap 34.84→34.84 MB, nodes 8831→9935",
-     "mid/market/drag-hold: dropped 0.17→0.08 %, input p95 50→49.9 ms, heap 35.08→35.11 MB, nodes 7820→7821",
-     "mid/market/drag-fast: dropped 0.71→0 %, input p95 50.2→50 ms, heap 35.25→35.09 MB, nodes 7843→7818",
-     "mid/market/swipe-nudge: dropped 6.85→5.62 %, input p95 47.8→44.7 ms, heap 35.19→35.11 MB, nodes 7815→7827",
-     "mid/market/tap-spam: dropped 2.69→1.8 %, input p95 67.3→62.5 ms, heap 33.11→33.13 MB, nodes 2783→2784"
+     {
+      "key": "low/playground",
+      "text": "world open 1369.2→1357.9 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1326.7→1330.2 ms"
+     },
+     {
+      "key": "mid/playground",
+      "text": "world open 718.6→696.8 ms"
+     },
+     {
+      "key": "mid/market",
+      "text": "world open 649→629.3 ms"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 5.38→16.07 %, heap 33.65→33.66 MB, nodes 8064→8065"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 33.63→38.06 %, input p95 81.8→100.1 ms, heap 34.18→34.2 MB, nodes 10217→10164"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 17.14→12.33 %, input p95 63.8→69 ms, heap 34.39→34.48 MB, nodes 8084→8085"
+     },
+     {
+      "key": "low/playground/drag-fast",
+      "text": "dropped 20.7→13.95 %, input p95 64→68 ms, heap 34.64→34.59 MB, nodes 8077→8078"
+     },
+     {
+      "key": "low/playground/swipe-nudge",
+      "text": "dropped 49.68→27.76 %, input p95 65.7→56.8 ms, heap 34.76→34.68 MB, nodes 8068→8076"
+     },
+     {
+      "key": "low/playground/tap-spam",
+      "text": "dropped 35.69→17.42 %, input p95 104.2→70.5 ms, heap 34.88→34.8 MB, nodes 8087→8088"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 0→0 %, heap 34.28→34.35 MB, nodes 7551→7552"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 20.49→11.15 %, input p95 69.6→70.7 ms, heap 34.93→34.97 MB, nodes 9909→9910"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 6.72→1.63 %, input p95 54.3→50.7 ms, heap 35.16→35.22 MB, nodes 7564→7565"
+     },
+     {
+      "key": "low/market/drag-fast",
+      "text": "dropped 15.9→2.91 %, input p95 60.5→51.9 ms, heap 35.2→35.27 MB, nodes 7563→7576"
+     },
+     {
+      "key": "low/market/swipe-nudge",
+      "text": "dropped 28.75→16.82 %, input p95 51.8→46.4 ms, heap 35.23→35.29 MB, nodes 7559→7570"
+     },
+     {
+      "key": "low/market/tap-spam",
+      "text": "dropped 32.82→18.24 %, input p95 108.6→72.6 ms, heap 33.05→33.08 MB, nodes 2782→2783"
+     },
+     {
+      "key": "mid/playground/idle",
+      "text": "dropped 0→0.51 %, heap 33.51→33.61 MB, nodes 8508→8509"
+     },
+     {
+      "key": "mid/playground/drag-slow",
+      "text": "dropped 9.41→4.69 %, input p95 64.6→58.6 ms, heap 34.33→34.25 MB, nodes 9871→10374"
+     },
+     {
+      "key": "mid/playground/drag-hold",
+      "text": "dropped 2.87→1.03 %, input p95 53.3→50.5 ms, heap 34.5→34.42 MB, nodes 8542→8529"
+     },
+     {
+      "key": "mid/playground/drag-fast",
+      "text": "dropped 3.46→2.01 %, input p95 51.3→53.9 ms, heap 34.54→34.49 MB, nodes 8538→8521"
+     },
+     {
+      "key": "mid/playground/swipe-nudge",
+      "text": "dropped 23.74→20.72 %, input p95 50.3→50.7 ms, heap 34.62→34.55 MB, nodes 8508→8513"
+     },
+     {
+      "key": "mid/playground/tap-spam",
+      "text": "dropped 2.93→1.8 %, input p95 58.2→57.8 ms, heap 34.72→34.77 MB, nodes 8547→8547"
+     },
+     {
+      "key": "mid/market/idle",
+      "text": "dropped 0→0 %, heap 34.15→34.16 MB, nodes 7807→7808"
+     },
+     {
+      "key": "mid/market/drag-slow",
+      "text": "dropped 1.66→0.96 %, input p95 50.9→50.5 ms, heap 34.84→34.84 MB, nodes 8831→9935"
+     },
+     {
+      "key": "mid/market/drag-hold",
+      "text": "dropped 0.17→0.08 %, input p95 50→49.9 ms, heap 35.08→35.11 MB, nodes 7820→7821"
+     },
+     {
+      "key": "mid/market/drag-fast",
+      "text": "dropped 0.71→0 %, input p95 50.2→50 ms, heap 35.25→35.09 MB, nodes 7843→7818"
+     },
+     {
+      "key": "mid/market/swipe-nudge",
+      "text": "dropped 6.85→5.62 %, input p95 47.8→44.7 ms, heap 35.19→35.11 MB, nodes 7815→7827"
+     },
+     {
+      "key": "mid/market/tap-spam",
+      "text": "dropped 2.69→1.8 %, input p95 67.3→62.5 ms, heap 33.11→33.13 MB, nodes 2783→2784"
+     }
     ]
    },
    "results": [
@@ -713,38 +1067,134 @@
     "before": "before-dist",
     "after": "after-dist",
     "cells": [
-     "low/playground: world open 1789.4→1010.1 ms",
-     "low/market: world open 1526.4→1072.5 ms",
-     "low/zoo: world open 1184.7→904.8 ms",
-     "low/farm: world open 1475.6→1055.7 ms",
-     "low/veh-roads: world open 1844.1→1276.2 ms",
-     "low/veh-airport: world open 1922.6→1156.2 ms",
-     "low/veh-harbour: world open 1017.4→785.3 ms",
-     "low/haul-site: world open 1789.6→1270.1 ms",
-     "mid/playground: world open 876.2→553.1 ms",
-     "mid/market: world open 896.5→563.2 ms",
-     "mid/zoo: world open 650.4→402.1 ms",
-     "mid/farm: world open 811.6→550 ms",
-     "mid/veh-roads: world open 1083.1→722 ms",
-     "mid/veh-airport: world open 1027.9→642.6 ms",
-     "mid/veh-harbour: world open 540.3→420 ms",
-     "mid/haul-site: world open 914.4→861.5 ms",
-     "low/playground/idle: dropped 19.14→10.17 %, heap 33.63→34.05 MB, nodes 8064→9502",
-     "low/market/idle: dropped 0.51→0 %, heap 34.32→34.71 MB, nodes 7551→9902",
-     "low/zoo/idle: dropped 7.1→4.28 %, heap 33.34→33.79 MB, nodes 6989→7693",
-     "low/farm/idle: dropped 0→2.09 %, heap 33.6→34.18 MB, nodes 8308→9284",
-     "low/veh-roads/idle: dropped 3.17→2.08 %, heap 35.36→35.84 MB, nodes 10594→12588",
-     "low/veh-airport/idle: dropped 0→1.55 %, heap 34.66→35.27 MB, nodes 9704→11210",
-     "low/veh-harbour/idle: dropped 11.43→4.81 %, heap 32.71→33.33 MB, nodes 6071→6650",
-     "low/haul-site/idle: dropped 2.09→2.08 %, heap 34.96→35.3 MB, nodes 8721→11641",
-     "mid/playground/idle: dropped 1.55→0 %, heap 33.52→33.97 MB, nodes 8508→9841",
-     "mid/market/idle: dropped 0.51→0 %, heap 34.15→34.56 MB, nodes 7807→9941",
-     "mid/zoo/idle: dropped 0→0.52 %, heap 33.37→33.74 MB, nodes 7294→7963",
-     "mid/farm/idle: dropped 0→0 %, heap 33.62→34 MB, nodes 8623→9506",
-     "mid/veh-roads/idle: dropped 0→0 %, heap 35.31→35.8 MB, nodes 11248→13358",
-     "mid/veh-airport/idle: dropped 0→0 %, heap 34.59→34.93 MB, nodes 10465→11877",
-     "mid/veh-harbour/idle: dropped 0→0.52 %, heap 32.7→33.31 MB, nodes 6260→6786",
-     "mid/haul-site/idle: dropped 0→0 %, heap 34.84→35.21 MB, nodes 9060→11770"
+     {
+      "key": "low/playground",
+      "text": "world open 1789.4→1010.1 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1526.4→1072.5 ms"
+     },
+     {
+      "key": "low/zoo",
+      "text": "world open 1184.7→904.8 ms"
+     },
+     {
+      "key": "low/farm",
+      "text": "world open 1475.6→1055.7 ms"
+     },
+     {
+      "key": "low/veh-roads",
+      "text": "world open 1844.1→1276.2 ms"
+     },
+     {
+      "key": "low/veh-airport",
+      "text": "world open 1922.6→1156.2 ms"
+     },
+     {
+      "key": "low/veh-harbour",
+      "text": "world open 1017.4→785.3 ms"
+     },
+     {
+      "key": "low/haul-site",
+      "text": "world open 1789.6→1270.1 ms"
+     },
+     {
+      "key": "mid/playground",
+      "text": "world open 876.2→553.1 ms"
+     },
+     {
+      "key": "mid/market",
+      "text": "world open 896.5→563.2 ms"
+     },
+     {
+      "key": "mid/zoo",
+      "text": "world open 650.4→402.1 ms"
+     },
+     {
+      "key": "mid/farm",
+      "text": "world open 811.6→550 ms"
+     },
+     {
+      "key": "mid/veh-roads",
+      "text": "world open 1083.1→722 ms"
+     },
+     {
+      "key": "mid/veh-airport",
+      "text": "world open 1027.9→642.6 ms"
+     },
+     {
+      "key": "mid/veh-harbour",
+      "text": "world open 540.3→420 ms"
+     },
+     {
+      "key": "mid/haul-site",
+      "text": "world open 914.4→861.5 ms"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 19.14→10.17 %, heap 33.63→34.05 MB, nodes 8064→9502"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 0.51→0 %, heap 34.32→34.71 MB, nodes 7551→9902"
+     },
+     {
+      "key": "low/zoo/idle",
+      "text": "dropped 7.1→4.28 %, heap 33.34→33.79 MB, nodes 6989→7693"
+     },
+     {
+      "key": "low/farm/idle",
+      "text": "dropped 0→2.09 %, heap 33.6→34.18 MB, nodes 8308→9284"
+     },
+     {
+      "key": "low/veh-roads/idle",
+      "text": "dropped 3.17→2.08 %, heap 35.36→35.84 MB, nodes 10594→12588"
+     },
+     {
+      "key": "low/veh-airport/idle",
+      "text": "dropped 0→1.55 %, heap 34.66→35.27 MB, nodes 9704→11210"
+     },
+     {
+      "key": "low/veh-harbour/idle",
+      "text": "dropped 11.43→4.81 %, heap 32.71→33.33 MB, nodes 6071→6650"
+     },
+     {
+      "key": "low/haul-site/idle",
+      "text": "dropped 2.09→2.08 %, heap 34.96→35.3 MB, nodes 8721→11641"
+     },
+     {
+      "key": "mid/playground/idle",
+      "text": "dropped 1.55→0 %, heap 33.52→33.97 MB, nodes 8508→9841"
+     },
+     {
+      "key": "mid/market/idle",
+      "text": "dropped 0.51→0 %, heap 34.15→34.56 MB, nodes 7807→9941"
+     },
+     {
+      "key": "mid/zoo/idle",
+      "text": "dropped 0→0.52 %, heap 33.37→33.74 MB, nodes 7294→7963"
+     },
+     {
+      "key": "mid/farm/idle",
+      "text": "dropped 0→0 %, heap 33.62→34 MB, nodes 8623→9506"
+     },
+     {
+      "key": "mid/veh-roads/idle",
+      "text": "dropped 0→0 %, heap 35.31→35.8 MB, nodes 11248→13358"
+     },
+     {
+      "key": "mid/veh-airport/idle",
+      "text": "dropped 0→0 %, heap 34.59→34.93 MB, nodes 10465→11877"
+     },
+     {
+      "key": "mid/veh-harbour/idle",
+      "text": "dropped 0→0.52 %, heap 32.7→33.31 MB, nodes 6260→6786"
+     },
+     {
+      "key": "mid/haul-site/idle",
+      "text": "dropped 0→0 %, heap 34.84→35.21 MB, nodes 9060→11770"
+     }
     ]
    },
    "results": [
@@ -769,34 +1219,118 @@
     "before": "svg-2",
     "after": "canvas-2",
     "cells": [
-     "low/playground: world open 1212.2→1265.2 ms",
-     "low/market: world open 1345.4→1196.1 ms",
-     "mid/playground: world open 683.4→668.6 ms",
-     "mid/market: world open 624.7→624.5 ms",
-     "low/playground/idle: dropped 72.13→7.78 %, heap 33.77→33.78 MB, nodes 8086→7380",
-     "low/playground/drag-slow: dropped 95.55→61.76 %, input p95 343.2→258.7 ms, heap 34.23→34.71 MB, nodes 9470→8797",
-     "low/playground/drag-hold: dropped 99.87→19.82 %, input p95 211.7→67.5 ms, heap 34.33→34.78 MB, nodes 8084→7396",
-     "low/playground/drag-fast: dropped 97.54→37.62 %, input p95 256.9→100.5 ms, heap 34.75→34.9 MB, nodes 8070→7393",
-     "low/playground/swipe-nudge: dropped 93.22→85.89 %, input p95 329.1→199.3 ms, heap 34.8→34.98 MB, nodes 8089→7393",
-     "low/playground/tap-spam: dropped 100→31.8 %, input p95 255.2→195.8 ms, heap 34.84→35.08 MB, nodes 8090→7401",
-     "low/market/idle: dropped 20.81→1.11 %, heap 34.32→34.45 MB, nodes 7552→6855",
-     "low/market/drag-slow: dropped 90.87→51.36 %, input p95 248.3→174.1 ms, heap 34.91→35.47 MB, nodes 8663→7970",
-     "low/market/drag-hold: dropped 78.08→14.04 %, input p95 106.9→66.6 ms, heap 35.23→35.42 MB, nodes 7565→6868",
-     "low/market/drag-fast: dropped 94.63→18.2 %, input p95 148→77.4 ms, heap 35.26→35.62 MB, nodes 7559→6868",
-     "low/market/swipe-nudge: dropped 89.39→83.9 %, input p95 158.9→194.1 ms, heap 35.45→35.57 MB, nodes 7577→6868",
-     "low/market/tap-spam: dropped 98.15→74.65 %, input p95 258.8→171.9 ms, heap 33.07→33.64 MB, nodes 2792→2570",
-     "mid/playground/idle: dropped 97.56→17.33 %, heap 33.63→33.71 MB, nodes 8509→7821",
-     "mid/playground/drag-slow: dropped 96.01→48.94 %, input p95 364.5→289 ms, heap 34.08→34.75 MB, nodes 9833→9110",
-     "mid/playground/drag-hold: dropped 99.87→30.43 %, input p95 234.2→87.3 ms, heap 34.23→34.87 MB, nodes 8528→7837",
-     "mid/playground/drag-fast: dropped 98.14→27.12 %, input p95 309.6→95.7 ms, heap 34.52→34.73 MB, nodes 8539→7834",
-     "mid/playground/swipe-nudge: dropped 90.98→82.07 %, input p95 261.3→178.7 ms, heap 34.76→34.84 MB, nodes 8540→7834",
-     "mid/playground/tap-spam: dropped 100→18.18 %, input p95 344.4→210.6 ms, heap 34.78→35.1 MB, nodes 8548→7842",
-     "mid/market/idle: dropped 74.12→2.23 %, heap 34.15→34.32 MB, nodes 7808→7110",
-     "mid/market/drag-slow: dropped 98.57→41.68 %, input p95 267.9→198 ms, heap 34.76→34.95 MB, nodes 8766→8076",
-     "mid/market/drag-hold: dropped 97.11→11.71 %, input p95 147.2→64.2 ms, heap 35.09→35.24 MB, nodes 7820→7123",
-     "mid/market/drag-fast: dropped 99.59→17.09 %, input p95 153.9→74 ms, heap 35.03→35.46 MB, nodes 7827→7123",
-     "mid/market/swipe-nudge: dropped 89.39→80.5 %, input p95 216.1→187.6 ms, heap 35.12→35.38 MB, nodes 7842→7123",
-     "mid/market/tap-spam: dropped 98.69→73.66 %, input p95 240.5→205.2 ms, heap 33.14→33.71 MB, nodes 2796→2570"
+     {
+      "key": "low/playground",
+      "text": "world open 1212.2→1265.2 ms"
+     },
+     {
+      "key": "low/market",
+      "text": "world open 1345.4→1196.1 ms"
+     },
+     {
+      "key": "mid/playground",
+      "text": "world open 683.4→668.6 ms"
+     },
+     {
+      "key": "mid/market",
+      "text": "world open 624.7→624.5 ms"
+     },
+     {
+      "key": "low/playground/idle",
+      "text": "dropped 72.13→7.78 %, heap 33.77→33.78 MB, nodes 8086→7380"
+     },
+     {
+      "key": "low/playground/drag-slow",
+      "text": "dropped 95.55→61.76 %, input p95 343.2→258.7 ms, heap 34.23→34.71 MB, nodes 9470→8797"
+     },
+     {
+      "key": "low/playground/drag-hold",
+      "text": "dropped 99.87→19.82 %, input p95 211.7→67.5 ms, heap 34.33→34.78 MB, nodes 8084→7396"
+     },
+     {
+      "key": "low/playground/drag-fast",
+      "text": "dropped 97.54→37.62 %, input p95 256.9→100.5 ms, heap 34.75→34.9 MB, nodes 8070→7393"
+     },
+     {
+      "key": "low/playground/swipe-nudge",
+      "text": "dropped 93.22→85.89 %, input p95 329.1→199.3 ms, heap 34.8→34.98 MB, nodes 8089→7393"
+     },
+     {
+      "key": "low/playground/tap-spam",
+      "text": "dropped 100→31.8 %, input p95 255.2→195.8 ms, heap 34.84→35.08 MB, nodes 8090→7401"
+     },
+     {
+      "key": "low/market/idle",
+      "text": "dropped 20.81→1.11 %, heap 34.32→34.45 MB, nodes 7552→6855"
+     },
+     {
+      "key": "low/market/drag-slow",
+      "text": "dropped 90.87→51.36 %, input p95 248.3→174.1 ms, heap 34.91→35.47 MB, nodes 8663→7970"
+     },
+     {
+      "key": "low/market/drag-hold",
+      "text": "dropped 78.08→14.04 %, input p95 106.9→66.6 ms, heap 35.23→35.42 MB, nodes 7565→6868"
+     },
+     {
+      "key": "low/market/drag-fast",
+      "text": "dropped 94.63→18.2 %, input p95 148→77.4 ms, heap 35.26→35.62 MB, nodes 7559→6868"
+     },
+     {
+      "key": "low/market/swipe-nudge",
+      "text": "dropped 89.39→83.9 %, input p95 158.9→194.1 ms, heap 35.45→35.57 MB, nodes 7577→6868"
+     },
+     {
+      "key": "low/market/tap-spam",
+      "text": "dropped 98.15→74.65 %, input p95 258.8→171.9 ms, heap 33.07→33.64 MB, nodes 2792→2570"
+     },
+     {
+      "key": "mid/playground/idle",
+      "text": "dropped 97.56→17.33 %, heap 33.63→33.71 MB, nodes 8509→7821"
+     },
+     {
+      "key": "mid/playground/drag-slow",
+      "text": "dropped 96.01→48.94 %, input p95 364.5→289 ms, heap 34.08→34.75 MB, nodes 9833→9110"
+     },
+     {
+      "key": "mid/playground/drag-hold",
+      "text": "dropped 99.87→30.43 %, input p95 234.2→87.3 ms, heap 34.23→34.87 MB, nodes 8528→7837"
+     },
+     {
+      "key": "mid/playground/drag-fast",
+      "text": "dropped 98.14→27.12 %, input p95 309.6→95.7 ms, heap 34.52→34.73 MB, nodes 8539→7834"
+     },
+     {
+      "key": "mid/playground/swipe-nudge",
+      "text": "dropped 90.98→82.07 %, input p95 261.3→178.7 ms, heap 34.76→34.84 MB, nodes 8540→7834"
+     },
+     {
+      "key": "mid/playground/tap-spam",
+      "text": "dropped 100→18.18 %, input p95 344.4→210.6 ms, heap 34.78→35.1 MB, nodes 8548→7842"
+     },
+     {
+      "key": "mid/market/idle",
+      "text": "dropped 74.12→2.23 %, heap 34.15→34.32 MB, nodes 7808→7110"
+     },
+     {
+      "key": "mid/market/drag-slow",
+      "text": "dropped 98.57→41.68 %, input p95 267.9→198 ms, heap 34.76→34.95 MB, nodes 8766→8076"
+     },
+     {
+      "key": "mid/market/drag-hold",
+      "text": "dropped 97.11→11.71 %, input p95 147.2→64.2 ms, heap 35.09→35.24 MB, nodes 7820→7123"
+     },
+     {
+      "key": "mid/market/drag-fast",
+      "text": "dropped 99.59→17.09 %, input p95 153.9→74 ms, heap 35.03→35.46 MB, nodes 7827→7123"
+     },
+     {
+      "key": "mid/market/swipe-nudge",
+      "text": "dropped 89.39→80.5 %, input p95 216.1→187.6 ms, heap 35.12→35.38 MB, nodes 7842→7123"
+     },
+     {
+      "key": "mid/market/tap-spam",
+      "text": "dropped 98.69→73.66 %, input p95 240.5→205.2 ms, heap 33.14→33.71 MB, nodes 2796→2570"
+     }
     ]
    },
    "results": [
@@ -807,6 +1341,227 @@
     "experiments/results/EXP-035/gpu-svg-run1.json",
     "experiments/results/EXP-035/hit-parity.txt",
     "experiments/results/EXP-035/traces-software-compositing.txt"
+   ]
+  },
+  {
+   "id": "EXP-036",
+   "date": "2026-11-07",
+   "title": "Rig: riders carried by their host's bones (cost measured, no action)",
+   "area": "engine+native",
+   "hypothesis": "The rig pass (every rider's world transform composed from its host's bone each frame, plus Skia's per-rider SVD decompose) could cost real frame time once every carrier in a world is loaded and driven.",
+   "method": "perf-rig.ts (new): every carrier loaded (2 riders each where possible), carriers driven by pointer for 600 frames while the others are tapped; per frame: engine tick, the rig pass alone (Rig.apply wrapped), Skia draw; same world unloaded as baseline; 15 worlds (vehicle, haul, construction, farm, harbor).",
+   "before": "unloaded worlds: frame p95 0.8-2.6 ms",
+   "after": "loaded worlds: rig pass p95 0.017-0.135 ms per frame; frame p95 0.8-3.1 ms; loaded vs unloaded within run-to-run noise",
+   "decision": "no action (measured: not a cost)",
+   "evidence": "results/EXP-036/rig-*.json (perf-rig output). The only frame drops in the run were door frames, unrelated to the rig: see EXP-037. Not verified on a device: CanvasKit on a 4-vCPU VM.",
+   "commit": "ZGTR/foundry-mobileapps@84eaebd0",
+   "pr": "#767",
+   "results": [
+    "experiments/results/EXP-036/rig-before-rule-index.json"
+   ]
+  },
+  {
+   "id": "EXP-037",
+   "date": "2026-11-07",
+   "title": "Engine: interaction-rule lookup indexed by actor selector (door frame 218 ms → 11 ms)",
+   "area": "engine",
+   "hypothesis": "A 50-324 ms tick spike when a door opens (in loaded and unloaded worlds alike) is not the rig: the scene load asks ruleFor for every pair of the new cast (hasSnapKit), and ruleFor scanned all ~4 400 interaction rules per new pair.",
+   "method": "perf-rig worst-frame report (spike at the door frame f75-f96 in both arms); in-process CPU profile of the door frame (ruleFor ~210 ms of a 218 ms tick); fix: rules indexed by actor selector (blueprint id or #tag), merged in original order, built once; ruleIndex.test compares against the first-match scan over 9k+ pairs and keeps rule order (red when the merge order is reversed); perf-engine over all 561 worlds after.",
+   "before": "door frame (veh-railway) tick 218 ms; worst frame over 15 worlds 324 ms (haul-farm)",
+   "after": "door frame 11 ms (16.7 ms with the profiler attached); worst frame over 15 worlds 39 ms; all 561 worlds: mean tick 73 µs, worst p95 0.69 ms, worst load 17 ms",
+   "decision": "kept",
+   "evidence": "ruleIndex.test.ts (red with reversed merge order); results: rig before/after, engine over 561 worlds. Absolute numbers from a 4-vCPU VM; compare within the run.",
+   "commit": "ZGTR/foundry-mobileapps@84eaebd0",
+   "pr": "#767",
+   "results": [
+    "experiments/results/EXP-037/rig-before-rule-index.json",
+    "experiments/results/EXP-037/rig-after-rule-index.json",
+    "experiments/results/EXP-037/engine-561-worlds-after.json"
+   ]
+  },
+  {
+   "id": "EXP-038",
+   "date": "2026-11-08",
+   "title": "Door: the scene load and the new scene's first draw on separate frames",
+   "area": "native+engine",
+   "hypothesis": "After EXP-037 the door frame still paid the scene load (tick 5-9 ms) AND the new scene's first draw (4-9 ms) together; under a fully closed iris nothing of the scene is visible, and the ~45 frames a door waits and its iris closes are idle.",
+   "method": "perf-rig door frames (f75-f97) on 5 worlds, develop vs change, each run twice in one session; under a closed iris only the iris disc is drawn; the next environment's shape paths are built during the wait in ≤1 ms slices (StageController.upcomingBlueprints); lazy backdrop chunks also pre-record the unseen chunks nearest the view in ≤0.5 ms a frame; skia-parity over 7 worlds x 6 camera positions; doorWarmup.test red with either part removed.",
+   "before": "door frame 9-17 ms (load and first draw in one frame)",
+   "after": "load frame 4.4-8 ms with ~0.03 ms draw; first draw on the next frame 5.7-10.7 ms: worst single door frame about a third lower",
+   "decision": "kept",
+   "evidence": "skia-parity: 0 differing channels (42 camera positions); doorWarmup.test.ts. Develop had independently landed lazy chunk recording (EXP-021), so the gain is the iris skip + path warm-up + look-ahead only.",
+   "commit": "ZGTR/foundry-mobileapps@7f4f2c8a",
+   "pr": "#811"
+  },
+  {
+   "id": "EXP-039",
+   "date": "2026-11-08",
+   "title": "Web: will-change on the static layers or the cast to cut compositor commit (rejected)",
+   "area": "web",
+   "hypothesis": "after EXP-035 the canvas path pays a compositor commit each frame; promoting the static underlay or the cast to their own layers with will-change should let the compositor reuse them and cut commit",
+   "method": "web-trace interleaved x2 on the low-end playground drag, svg vs canvas, will-change:transform on the underlay svg (static) or the moving-layer root (cast)",
+   "before": "commit 2 376 / 2 010 ms (two runs)",
+   "after": "static layers: 2 409 / 2 414 ms; cast: 2 189 / 2 320 ms",
+   "decision": "rejected (commit moved within noise or rose; same lesson as EXP-010)",
+   "evidence": "traces in the session; within run-to-run spread, no change kept. EXP-010 had already rejected will-change on the backdrop: this retry was avoidable by reading the ledger first",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "commit (static)",
+     "before": 2376,
+     "after": 2409,
+     "unit": "ms"
+    },
+    {
+     "name": "commit (cast)",
+     "before": 2010,
+     "after": 2189,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-040",
+   "date": "2026-11-08",
+   "title": "Web: particles updated at half rate on slow frames (rejected)",
+   "area": "web",
+   "hypothesis": "particle simulation and drawing are a visible share of the swipe frame; at adaptive quality 2+ halving their update rate should cut commit",
+   "method": "web-trace swipe on the low-end playground, before/after interleaved x2",
+   "before": "swipe commit 845 / 804 ms",
+   "after": "swipe commit 811 / 728 ms",
+   "decision": "rejected (the gain was within noise and the particles visibly stuttered)",
+   "evidence": "traces in the session; under 10 % and inside run-to-run spread, with visible stutter in the recording; EXP-028 (1 device px canvas) stays the particle policy",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "swipe commit",
+     "before": 845,
+     "after": 811,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-041",
+   "date": "2026-11-08",
+   "title": "Web: attribute-write census of a swipe and a drag (measurement)",
+   "area": "web",
+   "hypothesis": "the svg path's main-thread time after EXP-033 is the attributes written per frame, not the paint; counting writes by name says which ones",
+   "method": "setAttribute wrapped with a counter by attribute name and a self-time timer, one low-end swipe and one drag",
+   "before": "unknown split of rAF time",
+   "after": "swipe: transform 7 444 writes, data-sx / data-sy 1 775 each, x 1 394, data-x 1 355; setAttribute self time 683 ms (swipe) / 834 ms (drag)",
+   "decision": "measured: attribute writes are the cost; led to EXP-032 and EXP-035",
+   "evidence": "counter output in the session. Composing the matrix (EXP-032) did not cut the count enough; moving the cast off the DOM (EXP-035) removed the writes",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "setAttribute swipe",
+     "before": 683,
+     "after": 683,
+     "unit": "ms"
+    },
+    {
+     "name": "setAttribute drag",
+     "before": 834,
+     "after": 834,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-042",
+   "date": "2026-11-08",
+   "title": "Web canvas: own transform stack, no hidden svg writes, calm-frame stride",
+   "area": "web",
+   "hypothesis": "the first canvas build still paid for svg bookkeeping it no longer showed (hidden attribute writes) and for ctx.save/restore per part",
+   "method": "canvas-mode profile on the low-end playground drag; the adapter keeps its own transform stack (setTransform) instead of ctx.save; svg attribute writes skipped while the canvas renders; idle frames drawn on the quality stride; canvas-parity on frozen frames",
+   "before": "ctx.save 376 ms self; canvas drag rAF 4 052 / 4 196 ms",
+   "after": "canvas drag rAF 3 769 / 3 690 ms; parity unchanged",
+   "decision": "kept",
+   "evidence": "profiles in the session; canvas-parity <= 0.6 % px; part of the EXP-035 renderer as merged",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "canvas drag rAF",
+     "before": 4052,
+     "after": 3769,
+     "unit": "ms"
+    },
+    {
+     "name": "ctx.save self",
+     "before": 376,
+     "after": 0,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-043",
+   "date": "2026-11-08",
+   "title": "Method: measure the GPU path with --gpu (SwiftShader) as well as software compositing",
+   "area": "method",
+   "hypothesis": "the VM has no GPU, so Chromium composites in software and the canvas copies each frame on the main thread; that cost does not exist on a phone, so the software path alone misjudges the canvas",
+   "method": "web-bench and web-trace with --gpu (GPU raster and compositing on SwiftShader) beside the default software path, interleaved",
+   "before": "canvas idle commit 749 ms (software compositing)",
+   "after": "canvas idle commit 247 ms (--gpu)",
+   "decision": "kept (both paths reported for any renderer change)",
+   "evidence": "results/EXP-035/gpu-*.json; SwiftShader shares the CPU, so the magnitude is indicative only, not a phone number",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "canvas idle commit",
+     "before": 749,
+     "after": 247,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-044",
+   "date": "2026-11-08",
+   "title": "Web: renderer 'auto' probe rejects software GL (failIfMajorPerformanceCaveat accepted SwiftShader)",
+   "area": "web",
+   "hypothesis": "auto must pick svg where the browser composites in software; failIfMajorPerformanceCaveat should refuse a context there",
+   "method": "probe run on the VM with and without --gpu; read the WebGL UNMASKED_RENDERER string",
+   "before": "probe said GPU on SwiftShader (the caveat flag did not refuse it): auto would pick canvas on software GL",
+   "after": "renderer string matched against software rasterisers (SwiftShader, llvmpipe, Software): auto picks svg there, canvas on a hardware GPU",
+   "decision": "kept (correctness of the auto policy)",
+   "evidence": "probe unit tests in the app; e2e under both renderers",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "software-GL hosts picking canvas",
+     "before": 1,
+     "after": 0
+    }
+   ]
+  },
+  {
+   "id": "EXP-045",
+   "date": "2026-11-08",
+   "title": "Web canvas placement: device-pixel snap, getScreenCTM mapping, frozen-frame parity",
+   "area": "web",
+   "hypothesis": "canvas drawing must land on the same pixels as the svg it replaces",
+   "method": "canvas-parity.mjs on frozen frames at DPR 1 and 2; device-pixel snap tried; screen mapping taken from the browser's getScreenCTM instead of recomputed",
+   "before": "0.67 % of pixels differed; a 1 CSS px offset at some view sizes",
+   "after": "snap: 0.64 % (neutral, dropped); getScreenCTM removed the offset; same-frame parity <= 0.6 % of pixels > 24/255 (edge anti-aliasing)",
+   "decision": "kept (correctness; the snap was neutral and is not kept)",
+   "evidence": "results/EXP-035/canvas-parity.json, hit-parity.txt",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "pixels differing",
+     "before": 0.67,
+     "after": 0.6,
+     "unit": "%"
+    }
    ]
   }
  ],
@@ -844,6 +1599,434 @@
     "experiments/results/EXP-026/after-web-low.json"
    ],
    "pr": "#803"
+  }
+ ],
+ "learnings": [
+  {
+   "id": "L-001",
+   "date": "2026-11-09",
+   "title": "Measure first, then change one thing",
+   "lesson": "Every kept change started from a trace or a bench row that named the cost; guesses (the rig, nightfall, will-change) were measured and dropped.",
+   "area": "method",
+   "experiments": [
+    "EXP-022",
+    "EXP-036",
+    "EXP-041"
+   ]
+  },
+  {
+   "id": "L-002",
+   "date": "2026-11-09",
+   "title": "One machine, one session, interleaved, more than once",
+   "lesson": "The same build moved ~30 % between runs on the shared VM. Only before/after/before/after in one session, reported as a median, held up; re-measure after a rebase.",
+   "area": "method",
+   "experiments": [
+    "EXP-034",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-003",
+   "date": "2026-11-09",
+   "title": "A committed baseline from another machine is a ratchet, not a verdict",
+   "lesson": "The node rail's absolute gate failed for develop and the change alike; only the same-run comparison judged the change.",
+   "area": "method",
+   "experiments": [
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-004",
+   "date": "2026-11-09",
+   "title": "Report dropped frames and input p95, never a mean",
+   "lesson": "Means hid the frames a child feels. The bench reports dropped % and input-latency p95 per device, world and scenario.",
+   "area": "method",
+   "experiments": [
+    "EXP-006",
+    "EXP-013",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-005",
+   "date": "2026-11-09",
+   "title": "Name the frame, not the average",
+   "lesson": "p95 hid every door: 1-3 ms frames at p95 while one door frame cost 50-324 ms. A worst-frame list (frame, tick, draw) found it.",
+   "area": "method",
+   "experiments": [
+    "EXP-037",
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-006",
+   "date": "2026-11-09",
+   "title": "Profile with the tool that sees the code",
+   "lesson": "An inspector session blamed a whole loop on post; node --cpu-prof saw it. Transpiled one-line modules hide line ticks: read the inclusive tree.",
+   "area": "method",
+   "experiments": [
+    "EXP-034",
+    "EXP-037"
+   ]
+  },
+  {
+   "id": "L-007",
+   "date": "2026-11-09",
+   "title": "Trace forced style with stacks, then bisect with CSS",
+   "lesson": "The zone arrows' keyframe animation forced style every frame; the trace's stack named it and toggling the CSS confirmed it before any code change.",
+   "area": "method",
+   "experiments": [
+    "EXP-031"
+   ]
+  },
+  {
+   "id": "L-008",
+   "date": "2026-11-09",
+   "title": "Prototype in the page with --eval before building",
+   "lesson": "A one-line override evaluated in the bench page priced the underlay idea before it was built properly.",
+   "area": "method",
+   "experiments": [
+    "EXP-033"
+   ]
+  },
+  {
+   "id": "L-009",
+   "date": "2026-11-09",
+   "title": "Micro-benchmarks suggest; the frame decides",
+   "lesson": "Composing part transforms into one matrix was faster in isolation and changed nothing in the frame.",
+   "area": "method",
+   "experiments": [
+    "EXP-032"
+   ]
+  },
+  {
+   "id": "L-010",
+   "date": "2026-11-09",
+   "title": "Suspect the harness first",
+   "lesson": "Two apparent regressions were the rig: a test suite running beside the bench, and a capture of an element that no longer held the pixels.",
+   "area": "method",
+   "experiments": [
+    "EXP-031",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-011",
+   "date": "2026-11-09",
+   "title": "Separate the environment from the product",
+   "lesson": "The VM composites in software; the canvas's main-thread copy does not exist on a phone GPU. Measure both paths (--gpu) and say which one a number is.",
+   "area": "method",
+   "experiments": [
+    "EXP-030",
+    "EXP-035",
+    "EXP-043"
+   ]
+  },
+  {
+   "id": "L-012",
+   "date": "2026-11-09",
+   "title": "Platform probes can lie",
+   "lesson": "failIfMajorPerformanceCaveat accepted SwiftShader; only the renderer string told software GL apart. Test a probe on the hosts it must refuse.",
+   "area": "method",
+   "experiments": [
+    "EXP-044"
+   ]
+  },
+  {
+   "id": "L-013",
+   "date": "2026-11-09",
+   "title": "Record failed measurements so they are not retried every frame",
+   "lesson": "A tap pad whose measurement failed was measured again every frame; caching the failure removed the repeat.",
+   "area": "method",
+   "experiments": [
+    "EXP-018"
+   ]
+  },
+  {
+   "id": "L-014",
+   "date": "2026-11-09",
+   "title": "A guard test must be red on the old code",
+   "lesson": "Every regression test was run against the reverted fix first; one that passes both ways guards nothing.",
+   "area": "proof",
+   "experiments": [
+    "EXP-001",
+    "EXP-037",
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-015",
+   "date": "2026-11-09",
+   "title": "A speed-up is kept only with an identity check that could have failed",
+   "lesson": "World open was fingerprinted over 561 worlds at two sizes (1 122 scenes) against the base: 0 differences, before and after the merge.",
+   "area": "proof",
+   "experiments": [
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-016",
+   "date": "2026-11-09",
+   "title": "Parity checks with threshold zero, and a same-build control",
+   "lesson": "Pixel parity on frozen frames, with two captures of one build as the control for noise (8-34 px); hide what is meant to move.",
+   "area": "proof",
+   "experiments": [
+    "EXP-008",
+    "EXP-009",
+    "EXP-016",
+    "EXP-033",
+    "EXP-035",
+    "EXP-045"
+   ]
+  },
+  {
+   "id": "L-017",
+   "date": "2026-11-09",
+   "title": "Make sure the check can see the thing",
+   "lesson": "A blank capture matched perfectly in both builds. Check a capture has content (its standard deviation) before trusting a zero diff.",
+   "area": "proof",
+   "experiments": [
+    "EXP-033",
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-018",
+   "date": "2026-11-09",
+   "title": "Frozen-frame parity across renderers",
+   "lesson": "The canvas renderer was accepted on frozen frames diffed against svg (<= 0.6 % px, edge AA) and on hit parity (actor >= 99.95 %).",
+   "area": "proof",
+   "experiments": [
+    "EXP-035",
+    "EXP-045"
+   ]
+  },
+  {
+   "id": "L-019",
+   "date": "2026-11-09",
+   "title": "Replay loops must reset per-iteration state",
+   "lesson": "A hit-test replay leaked one part's transform into the next until each iteration reset it; the parity run caught it.",
+   "area": "proof",
+   "experiments": [
+    "EXP-035",
+    "EXP-042"
+   ]
+  },
+  {
+   "id": "L-020",
+   "date": "2026-11-09",
+   "title": "Per-frame values do not belong in React state",
+   "lesson": "The native stage re-rendered React every frame for a picture that only Skia needed; moving it out of state cut the drag cost.",
+   "area": "react",
+   "experiments": [
+    "EXP-001"
+   ]
+  },
+  {
+   "id": "L-021",
+   "date": "2026-11-09",
+   "title": "Read layout once before writing",
+   "lesson": "Interleaved reads and writes forced a sync layout per object; batching all reads before writes removed it.",
+   "area": "web",
+   "experiments": [
+    "EXP-004",
+    "EXP-018"
+   ]
+  },
+  {
+   "id": "L-022",
+   "date": "2026-11-09",
+   "title": "Coalesce input once per frame",
+   "lesson": "Gaze and hover picking ran per pointer event; once per frame is all the screen can show.",
+   "area": "engine",
+   "experiments": [
+    "EXP-003"
+   ]
+  },
+  {
+   "id": "L-023",
+   "date": "2026-11-09",
+   "title": "Cull the drawing, keep the contract",
+   "lesson": "Hide off-screen bodies but keep roots and tap pads, so hit tests, tests and state still see every object.",
+   "area": "web",
+   "experiments": [
+    "EXP-005",
+    "EXP-011",
+    "EXP-012",
+    "EXP-027"
+   ]
+  },
+  {
+   "id": "L-024",
+   "date": "2026-11-09",
+   "title": "Stride idle animation by measured quality",
+   "lesson": "An adaptive governor slows idle redraw only when frames are measured slow, never on a device guess.",
+   "area": "engine",
+   "experiments": [
+    "EXP-006",
+    "EXP-013",
+    "EXP-028"
+   ]
+  },
+  {
+   "id": "L-025",
+   "date": "2026-11-09",
+   "title": "Separate what is static from what moves",
+   "lesson": "One paint layer per lifetime: tiles and an underlay for scenery, the cast on its own; will-change alone did not composite here.",
+   "area": "web",
+   "experiments": [
+    "EXP-010",
+    "EXP-016",
+    "EXP-019",
+    "EXP-029",
+    "EXP-033",
+    "EXP-039"
+   ]
+  },
+  {
+   "id": "L-026",
+   "date": "2026-11-09",
+   "title": "Remove work, do not just hide it",
+   "lesson": "Hidden scenery vectors still cost style and layout; removing them once their tile covered them did not.",
+   "area": "web",
+   "experiments": [
+    "EXP-019",
+    "EXP-029"
+   ]
+  },
+  {
+   "id": "L-027",
+   "date": "2026-11-09",
+   "title": "Do not simulate the unseen, but keep moving things moving",
+   "lesson": "Far objects at rest sleep and far swipes skip, but anything already in motion finishes, so nothing freezes when it comes back into view.",
+   "area": "engine",
+   "experiments": [
+    "EXP-024",
+    "EXP-026"
+   ]
+  },
+  {
+   "id": "L-028",
+   "date": "2026-11-09",
+   "title": "Look for work done twice",
+   "lesson": "World open built the backdrop twice (load and fit), and the second build threw away tiles mid-raster.",
+   "area": "engine",
+   "experiments": [
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-029",
+   "date": "2026-11-09",
+   "title": "Per-object facts are computed once per object",
+   "lesson": "Shape boxes, pivots and a linear scan over ~4 400 interaction rules were recomputed per load or pair; a WeakMap and an ordered index fixed both.",
+   "area": "engine",
+   "experiments": [
+    "EXP-015",
+    "EXP-034",
+    "EXP-037"
+   ]
+  },
+  {
+   "id": "L-030",
+   "date": "2026-11-09",
+   "title": "Spread one-off work over frames nobody is watching",
+   "lesson": "A closed door iris hides the scene, so the next world is built in <= 1 ms slices behind it and first drawn on a later frame.",
+   "area": "engine",
+   "experiments": [
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-031",
+   "date": "2026-11-09",
+   "title": "Measure memory after GC, and dispose what native holds",
+   "lesson": "Heap after a forced GC over a reload loop found no leak; native pictures and chunks are disposed explicitly.",
+   "area": "memory",
+   "experiments": [
+    "EXP-020",
+    "EXP-025"
+   ]
+  },
+  {
+   "id": "L-032",
+   "date": "2026-11-09",
+   "title": "Count attribute writes before choosing a fix",
+   "lesson": "The census named transform and data-* writes as the svg path's cost, which pointed to moving the cast off the DOM.",
+   "area": "web",
+   "experiments": [
+    "EXP-041",
+    "EXP-032",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-033",
+   "date": "2026-11-09",
+   "title": "Reuse a renderer through an adapter and injection",
+   "lesson": "The native Skia renderer draws the web canvas through a 2D-canvas adapter, so one drawing path serves both platforms.",
+   "area": "web",
+   "experiments": [
+    "EXP-035",
+    "EXP-042"
+   ]
+  },
+  {
+   "id": "L-034",
+   "date": "2026-11-09",
+   "title": "Ship a hardware-dependent win as a measured policy",
+   "lesson": "Canvas wins with a GPU and loses under software compositing, so renderer 'auto' picks per host, with svg as the fallback.",
+   "area": "web",
+   "experiments": [
+    "EXP-035",
+    "EXP-044"
+   ]
+  },
+  {
+   "id": "L-035",
+   "date": "2026-11-09",
+   "title": "Keep the web's z-order semantics when sharing a renderer",
+   "lesson": "Native draws a part that precedes its parent nested (ostrich tuft over head); the web canvas keeps DOM order. Native parity is open.",
+   "area": "web",
+   "experiments": [
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-036",
+   "date": "2026-11-09",
+   "title": "Record rejections and read the ledger first",
+   "lesson": "will-change was tried again after EXP-010 had rejected it; the ledger already held the answer.",
+   "area": "process",
+   "experiments": [
+    "EXP-010",
+    "EXP-039",
+    "EXP-040"
+   ]
+  },
+  {
+   "id": "L-037",
+   "date": "2026-11-09",
+   "title": "Parallel branches converge: merge ledgers and re-measure",
+   "lesson": "Two branches each wrote an EXP-034; develop landed fixes already in flight. Merge ledgers with renumbering and claim only the gain over the new base.",
+   "area": "process",
+   "experiments": [
+    "EXP-015",
+    "EXP-021",
+    "EXP-034",
+    "EXP-035",
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-038",
+   "date": "2026-11-09",
+   "title": "Separate flakes from failures by rerunning alone; a stale node_modules looks like a bug",
+   "lesson": "Suites that failed once under 4 workers passed 3/3 alone; seven failures were one missing package fixed by npm ci.",
+   "area": "process",
+   "experiments": [
+    "EXP-034"
+   ]
   }
  ]
 }

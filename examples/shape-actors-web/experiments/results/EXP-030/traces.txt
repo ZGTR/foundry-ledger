@@ -1,0 +1,12 @@
+drag market before:  8968 ms RunTask  2703 ms FireAnimationFrame  1939 ms Commit  932 ms Paint 
+drag market after:  8963 ms RunTask  2715 ms FireAnimationFrame  1877 ms Commit  934 ms Paint 
+drag market before:  9286 ms RunTask  2531 ms FireAnimationFrame  2412 ms Commit  859 ms Paint 
+drag market after:  8322 ms RunTask  2539 ms FireAnimationFrame  1786 ms Commit  800 ms Paint 
+drag playground before:  10075 ms RunTask  3223 ms FireAnimationFrame  1912 ms Paint  1302 ms Commit 
+drag playground after:  10045 ms RunTask  3286 ms FireAnimationFrame  1918 ms Paint  1335 ms Commit 
+drag playground before:  10468 ms RunTask  3341 ms FireAnimationFrame  1992 ms Paint  1363 ms Commit 
+drag playground after:  10077 ms RunTask  3149 ms FireAnimationFrame  1930 ms Paint  1399 ms Commit 
+swipe playground before:  7865 ms RunTask  2258 ms FireAnimationFrame  1295 ms Paint  940 ms Commit 
+swipe playground after:  7540 ms RunTask  2187 ms FireAnimationFrame  1211 ms Paint  905 ms Commit 
+swipe playground before:  7700 ms RunTask  2145 ms FireAnimationFrame  1302 ms Paint  918 ms Commit 
+swipe playground after:  7789 ms RunTask  2279 ms FireAnimationFrame  1337 ms Paint  839 ms Commit 

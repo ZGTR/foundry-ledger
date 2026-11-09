@@ -1,0 +1,56 @@
+[
+ {
+  "theme": "playground",
+  "frac": 0,
+  "pxDifferPct": 0.2,
+  "pxOver24Pct": 0.103
+ },
+ {
+  "theme": "playground",
+  "frac": 0.4,
+  "pxDifferPct": 0.33,
+  "pxOver24Pct": 0.068
+ },
+ {
+  "theme": "playground",
+  "frac": 0.8,
+  "pxDifferPct": 0.14,
+  "pxOver24Pct": 0.009
+ },
+ {
+  "theme": "market",
+  "frac": 0,
+  "pxDifferPct": 0.15,
+  "pxOver24Pct": 0.071
+ },
+ {
+  "theme": "market",
+  "frac": 0.4,
+  "pxDifferPct": 0.72,
+  "pxOver24Pct": 0.187
+ },
+ {
+  "theme": "market",
+  "frac": 0.8,
+  "pxDifferPct": 0.25,
+  "pxOver24Pct": 0.011
+ },
+ {
+  "theme": "zoo",
+  "frac": 0,
+  "pxDifferPct": 1.43,
+  "pxOver24Pct": 0.589
+ },
+ {
+  "theme": "zoo",
+  "frac": 0.4,
+  "pxDifferPct": 1.22,
+  "pxOver24Pct": 0.411
+ },
+ {
+  "theme": "zoo",
+  "frac": 0.8,
+  "pxDifferPct": 1.82,
+  "pxOver24Pct": 0.606
+ }
+]

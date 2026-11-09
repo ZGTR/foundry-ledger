@@ -1,4 +1,4 @@
-import type { Experiment } from '../domain/experiment.js';
+import { trendOf, type Experiment } from '../domain/experiment.js';
 import type { Ledger } from '../domain/ledger.js';
 
 /** A view: the ledger in, text out. Views never load, save or decide anything. */
@@ -29,6 +29,10 @@ export class MarkdownLedgerView implements LedgerView {
       `# ${o.title ?? 'Performance experiment ledger'}`, '',
       `_Generated from \`${o.source ?? 'ledger.json'}\` by foundry-performance-ledger. Do not edit by hand._`, '',
       ...(o.intro ? [o.intro, ''] : []),
+      ...(ledger.learnings.length
+        ? ['## Learnings', '', 'What the experiments below taught, each with the experiments it came from.', '',
+          ...ledger.learnings.flatMap((l) => [`- **${l.id} · ${l.title}** ${l.lesson} _(${l.experiments.join(', ')})_`]), '', '## Experiments', '']
+        : []),
       '| id | date | area | experiment | before | after | decision | evidence |',
       '|---|---|---|---|---|---|---|---|',
       ...ledger.experiments.map((e) =>
@@ -48,6 +52,7 @@ export class MarkdownLedgerView implements LedgerView {
       `- **Area:** ${e.area}`, `- **Hypothesis:** ${e.hypothesis}`, `- **Method:** ${e.method}`,
       `- **Before:** ${e.before}`, `- **After:** ${e.after}`, `- **Decision:** ${decision(e)}`, `- **Evidence:** ${e.evidence}`,
       ...(e.commit ? [`- **Commit:** ${e.commit}`] : []),
+      ...(e.metrics?.length ? [`- **Metrics:** ${e.metrics.map((m) => `${m.name} ${m.before} → ${m.after}${m.unit ? ` ${m.unit}` : ''} (${trendOf(m)})`).join('; ')}`] : []),
       ...(e.results?.length ? [`- **Raw results (checked in):** ${e.results.map((r) => `\`${r}\``).join(', ')}`] : []),
       ...(e.ab ? [`- **A/B (${e.ab.before} → ${e.ab.after}):**`, ...e.ab.cells.map((c) => `  - ${c.key ? `${c.key}: ` : ''}${c.text}`)] : []),
       '',

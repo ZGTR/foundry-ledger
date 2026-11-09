@@ -1,0 +1,95 @@
+{
+ "kind": "node",
+ "machine": "linux-x64 node v22.23.4",
+ "viewport": [
+  390,
+  760
+ ],
+ "themes": [
+  "market",
+  "playground",
+  "zoo"
+ ],
+ "rows": [
+  {
+   "scenario": "idle",
+   "why": "no input: breathing, ambience, life (the floor every other case adds to)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.092,
+    "p95": 0.159,
+    "p99": 0.414,
+    "max": 4.418
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.201
+   }
+  },
+  {
+   "scenario": "drag-slow",
+   "why": "a careful child: 2 px per frame, hover and spotlight on the whole time",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.246,
+    "p95": 0.413,
+    "p99": 1.963,
+    "max": 3.371
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.566
+   }
+  },
+  {
+   "scenario": "drag-hold",
+   "why": "grab and hold nearly still for 6 s (spotlight + beckon pulses, finger jitter)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.168,
+    "p95": 0.279,
+    "p99": 1.045,
+    "max": 2.338
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.317
+   }
+  },
+  {
+   "scenario": "tap-spam",
+   "why": "ten taps a second on whatever is in view (reactions, word cards, speech)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.079,
+    "p95": 0.199,
+    "p99": 0.419,
+    "max": 2.256
+   },
+   "worstTheme": {
+    "theme": "market",
+    "p95": 0.297
+   }
+  },
+  {
+   "scenario": "swipe-nudge",
+   "why": "background swipes back and forth (the whole cast reacts)",
+   "themes": 3,
+   "engineMs": {
+    "mean": 0.239,
+    "p95": 0.558,
+    "p99": 0.979,
+    "max": 4.488
+   },
+   "worstTheme": {
+    "theme": "playground",
+    "p95": 0.603
+   }
+  }
+ ],
+ "startup": {
+  "kitMs": 257.4,
+  "loadMs": 7.2,
+  "samples": 15
+ }
+}

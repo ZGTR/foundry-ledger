@@ -21,7 +21,8 @@ branch's ids and renumbers the incoming one, moving exactly its result files.
 
 It was extracted from the performance work on a web + native 2D stage for a children's learning
 app, where it held 35 experiments over three days; that ledger ships as the
-[example](examples/shape-actors-web/LEDGER.md).
+[example](examples/shape-actors-web/LEDGER.md), now with the suite that measured it, the raw
+results, before/after recordings and [what it taught](examples/shape-actors-web/LEARNINGS.md).
 
 ## Install
 
@@ -46,10 +47,39 @@ npx foundry-performance-ledger record \
   --decision kept --evidence "stage-parity.mjs; stageUnderlay test" --pr "#842" \
   --ab bench/before.json,bench/after.json   # summarised into the entry; raw files kept
 
+# headline numbers, machine-readable (repeatable): name:before:after[:unit[:higher]]
+npx foundry-performance-ledger record --title "..." --decision rejected --metric "commit:1.94:1.88:s" ...
+
+# what the experiments taught, citing them
+npx foundry-performance-ledger learn --title "Micro-benchmarks suggest; the frame decides" \
+  --lesson "A 45 % win in isolation did not move the real frame." --from EXP-032
+
+npx foundry-performance-ledger check     # complete entries, valid citations, LEDGER.md up to date (exit 1)
+npx foundry-performance-ledger list --learnings
 npx foundry-performance-ledger list --verdict rejected  # what did we already rule out?
 npx foundry-performance-ledger list --grep canvas
 npx foundry-performance-ledger show EXP-012
 npx foundry-performance-ledger render                   # regenerate LEDGER.md
+```
+
+### Learnings
+
+Experiments are evidence; **learnings** are the conclusions. Each learning is one rule ("compare
+builds within one run"), why it holds, and the experiments it came from. The Markdown ledger
+lists them first, so a reader gets the lessons before the 40 rows of evidence. A learning cannot
+cite an experiment the ledger does not hold.
+
+### Agents and CI: every experiment, every time
+
+Set `completeFrom` in the config to the first experiment recorded under the rule. From that id
+on, `check` fails unless an entry has a hypothesis, a method, before and after, evidence, and
+its numbers as `--metric`s or an `--ab` comparison; and it fails if `LEDGER.md` was not
+re-rendered. Run `check` in CI (or your pre-push gate) and tell agents, in your agent
+instructions, to record every performance experiment they run, kept or rejected:
+
+```text
+Before: read LEDGER.md (has this been tried?). After any measured change, kept or not:
+foundry-performance-ledger record ... --metric ... (or --ab before.json,after.json); then check.
 ```
 
 ### Merging branches

@@ -1,0 +1,8 @@
+web-trace drag playground 6 --stacks, interleaved (unminified builds; before = HEAD~1, after = this change)
+before: 334 ms / 403x forced UpdateLayoutTree @ render (getBoundingClientRect at frame start)
+after:   10 ms /  12x
+before: 333 ms / 433x
+after:   15 ms /  14x
+CSS ablation on the before build, forced recalc: as-is 294 ms; *{animation:none} 2 ms; [data-zone-arrow]{animation:none} 17 ms;
+[data-zone-arrow]{will-change:transform} 276 ms; [data-zone-arrow][disabled]{animation:none} 276 ms.
+Total UpdateLayoutTree (before build): 1 105 ms as-is vs 536 ms with the arrow animation off.

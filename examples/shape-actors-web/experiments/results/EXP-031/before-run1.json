@@ -1,0 +1,685 @@
+{
+ "kind": "web",
+ "label": "before-1",
+ "reps": 1,
+ "rows": [
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "idle",
+   "actors": 92,
+   "seconds": 3.97,
+   "frames": 173,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.4,
+    "max": 50
+   },
+   "droppedPct": 12.72,
+   "longFrames": 1,
+   "longFrameMs": 108.6,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   },
+   "memory": {
+    "jsHeapMB": 33.58,
+    "domNodes": 8064,
+    "layoutObjects": 5774,
+    "listeners": 651
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-slow",
+   "actors": 92,
+   "seconds": 15.98,
+   "frames": 545,
+   "frameMs": {
+    "p50": 16.8,
+    "p95": 49.9,
+    "p99": 66.7,
+    "max": 166.7
+   },
+   "droppedPct": 48.99,
+   "longFrames": 9,
+   "longFrameMs": 794.1,
+   "inputLatencyMs": {
+    "p50": 55.6,
+    "p95": 99.4
+   },
+   "memory": {
+    "jsHeapMB": 34.19,
+    "domNodes": 10217,
+    "layoutObjects": 7516,
+    "listeners": 657
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-hold",
+   "actors": 92,
+   "seconds": 20.75,
+   "frames": 944,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.5,
+    "max": 166.7
+   },
+   "droppedPct": 19.17,
+   "longFrames": 4,
+   "longFrameMs": 485.8,
+   "inputLatencyMs": {
+    "p50": 43.9,
+    "p95": 68.6
+   },
+   "memory": {
+    "jsHeapMB": 34.35,
+    "domNodes": 8084,
+    "layoutObjects": 5793,
+    "listeners": 651
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-fast",
+   "actors": 92,
+   "seconds": 13.03,
+   "frames": 607,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.4,
+    "max": 66.7
+   },
+   "droppedPct": 15.82,
+   "longFrames": 1,
+   "longFrameMs": 114.6,
+   "inputLatencyMs": {
+    "p50": 45.6,
+    "p95": 75.7
+   },
+   "memory": {
+    "jsHeapMB": 34.64,
+    "domNodes": 8076,
+    "layoutObjects": 5785,
+    "listeners": 651
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "swipe-nudge",
+   "actors": 92,
+   "seconds": 9.67,
+   "frames": 286,
+   "frameMs": {
+    "p50": 33.3,
+    "p95": 49.9,
+    "p99": 50,
+    "max": 50.1
+   },
+   "droppedPct": 76.22,
+   "longFrames": 2,
+   "longFrameMs": 236.3,
+   "inputLatencyMs": {
+    "p50": 49.6,
+    "p95": 82.9
+   },
+   "memory": {
+    "jsHeapMB": 34.74,
+    "domNodes": 8076,
+    "layoutObjects": 5782,
+    "listeners": 651
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "tap-spam",
+   "actors": 92,
+   "seconds": 7.98,
+   "frames": 323,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 50,
+    "max": 100
+   },
+   "droppedPct": 25.08,
+   "longFrames": 3,
+   "longFrameMs": 225.6,
+   "inputLatencyMs": {
+    "p50": 50.9,
+    "p95": 122.7
+   },
+   "memory": {
+    "jsHeapMB": 34.77,
+    "domNodes": 8089,
+    "layoutObjects": 5796,
+    "listeners": 651
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "idle",
+   "actors": 95,
+   "seconds": 3.92,
+   "frames": 196,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 16.8,
+    "max": 16.8
+   },
+   "droppedPct": 0,
+   "longFrames": 3,
+   "longFrameMs": 441.5,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   },
+   "memory": {
+    "jsHeapMB": 34.29,
+    "domNodes": 7551,
+    "layoutObjects": 4849,
+    "listeners": 654
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-slow",
+   "actors": 95,
+   "seconds": 13.1,
+   "frames": 556,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 66.6,
+    "max": 116.7
+   },
+   "droppedPct": 26.08,
+   "longFrames": 8,
+   "longFrameMs": 701.7,
+   "inputLatencyMs": {
+    "p50": 44.5,
+    "p95": 79.2
+   },
+   "memory": {
+    "jsHeapMB": 34.92,
+    "domNodes": 8702,
+    "layoutObjects": 5988,
+    "listeners": 658
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-hold",
+   "actors": 95,
+   "seconds": 19.15,
+   "frames": 991,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.3,
+    "p99": 49.9,
+    "max": 83.3
+   },
+   "droppedPct": 8.38,
+   "longFrames": 3,
+   "longFrameMs": 331.4,
+   "inputLatencyMs": {
+    "p50": 41.8,
+    "p95": 60.5
+   },
+   "memory": {
+    "jsHeapMB": 35.16,
+    "domNodes": 7564,
+    "layoutObjects": 4861,
+    "listeners": 654
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-fast",
+   "actors": 95,
+   "seconds": 11.36,
+   "frames": 544,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.4,
+    "max": 66.6
+   },
+   "droppedPct": 12.87,
+   "longFrames": 2,
+   "longFrameMs": 260.3,
+   "inputLatencyMs": {
+    "p50": 34.9,
+    "p95": 60
+   },
+   "memory": {
+    "jsHeapMB": 35.24,
+    "domNodes": 7577,
+    "layoutObjects": 4870,
+    "listeners": 654
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "swipe-nudge",
+   "actors": 95,
+   "seconds": 8.21,
+   "frames": 312,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 50,
+    "max": 50
+   },
+   "droppedPct": 39.74,
+   "longFrames": 2,
+   "longFrameMs": 176,
+   "inputLatencyMs": {
+    "p50": 40.3,
+    "p95": 77.9
+   },
+   "memory": {
+    "jsHeapMB": 35.22,
+    "domNodes": 7558,
+    "layoutObjects": 4855,
+    "listeners": 654
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "tap-spam",
+   "actors": 95,
+   "seconds": 8.33,
+   "frames": 330,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 50,
+    "max": 333.3
+   },
+   "droppedPct": 26.06,
+   "longFrames": 5,
+   "longFrameMs": 742.7,
+   "inputLatencyMs": {
+    "p50": 52,
+    "p95": 122.6
+   },
+   "memory": {
+    "jsHeapMB": 33.06,
+    "domNodes": 2806,
+    "layoutObjects": 894,
+    "listeners": 646
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "scenario": "idle",
+   "actors": 92,
+   "seconds": 3.71,
+   "frames": 197,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.7,
+    "p99": 16.8,
+    "max": 16.8
+   },
+   "droppedPct": 0,
+   "longFrames": 1,
+   "longFrameMs": 50.6,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   },
+   "memory": {
+    "jsHeapMB": 33.58,
+    "domNodes": 8508,
+    "layoutObjects": 6216,
+    "listeners": 653
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "scenario": "drag-slow",
+   "actors": 92,
+   "seconds": 12.64,
+   "frames": 683,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.3,
+    "p99": 50,
+    "max": 116.6
+   },
+   "droppedPct": 5.27,
+   "longFrames": 3,
+   "longFrameMs": 252.8,
+   "inputLatencyMs": {
+    "p50": 48.3,
+    "p95": 60.2
+   },
+   "memory": {
+    "jsHeapMB": 34.09,
+    "domNodes": 10367,
+    "layoutObjects": 7670,
+    "listeners": 659
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "scenario": "drag-hold",
+   "actors": 92,
+   "seconds": 19.69,
+   "frames": 1144,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 16.8,
+    "max": 66.7
+   },
+   "droppedPct": 0.7,
+   "longFrames": 2,
+   "longFrameMs": 126.3,
+   "inputLatencyMs": {
+    "p50": 49,
+    "p95": 50.5
+   },
+   "memory": {
+    "jsHeapMB": 34.32,
+    "domNodes": 8537,
+    "layoutObjects": 6242,
+    "listeners": 653
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "scenario": "drag-fast",
+   "actors": 92,
+   "seconds": 12.75,
+   "frames": 706,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 33.2,
+    "max": 50
+   },
+   "droppedPct": 1.13,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 48.7,
+    "p95": 50.5
+   },
+   "memory": {
+    "jsHeapMB": 34.51,
+    "domNodes": 8538,
+    "layoutObjects": 6241,
+    "listeners": 653
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "scenario": "swipe-nudge",
+   "actors": 92,
+   "seconds": 7.51,
+   "frames": 327,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.4,
+    "max": 33.4
+   },
+   "droppedPct": 26.3,
+   "longFrames": 1,
+   "longFrameMs": 78.6,
+   "inputLatencyMs": {
+    "p50": 40.6,
+    "p95": 48
+   },
+   "memory": {
+    "jsHeapMB": 34.55,
+    "domNodes": 8518,
+    "layoutObjects": 6223,
+    "listeners": 653
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "scenario": "tap-spam",
+   "actors": 92,
+   "seconds": 6.28,
+   "frames": 339,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 16.8,
+    "max": 33.3
+   },
+   "droppedPct": 0.59,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 41.2,
+    "p95": 56.1
+   },
+   "memory": {
+    "jsHeapMB": 34.65,
+    "domNodes": 8544,
+    "layoutObjects": 6247,
+    "listeners": 653
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "idle",
+   "actors": 95,
+   "seconds": 3.7,
+   "frames": 195,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.7,
+    "p99": 16.8,
+    "max": 16.8
+   },
+   "droppedPct": 0,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   },
+   "memory": {
+    "jsHeapMB": 34.14,
+    "domNodes": 7807,
+    "layoutObjects": 5105,
+    "listeners": 656
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "drag-slow",
+   "actors": 95,
+   "seconds": 12.96,
+   "frames": 722,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 16.8,
+    "max": 66.7
+   },
+   "droppedPct": 0.97,
+   "longFrames": 1,
+   "longFrameMs": 73.2,
+   "inputLatencyMs": {
+    "p50": 49.2,
+    "p95": 51.1
+   },
+   "memory": {
+    "jsHeapMB": 34.79,
+    "domNodes": 9934,
+    "layoutObjects": 7221,
+    "listeners": 662
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "drag-hold",
+   "actors": 95,
+   "seconds": 20.53,
+   "frames": 1190,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.7,
+    "p99": 16.8,
+    "max": 33.4
+   },
+   "droppedPct": 0.08,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 49.2,
+    "p95": 50.1
+   },
+   "memory": {
+    "jsHeapMB": 35.06,
+    "domNodes": 7820,
+    "layoutObjects": 5117,
+    "listeners": 656
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "drag-fast",
+   "actors": 95,
+   "seconds": 12.95,
+   "frames": 736,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.7,
+    "p99": 16.8,
+    "max": 33.4
+   },
+   "droppedPct": 0.27,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 49.3,
+    "p95": 50.1
+   },
+   "memory": {
+    "jsHeapMB": 35.1,
+    "domNodes": 7837,
+    "layoutObjects": 5130,
+    "listeners": 656
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "swipe-nudge",
+   "actors": 95,
+   "seconds": 6.4,
+   "frames": 339,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 33.4,
+    "max": 33.4
+   },
+   "droppedPct": 3.54,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 41.2,
+    "p95": 46.6
+   },
+   "memory": {
+    "jsHeapMB": 35.09,
+    "domNodes": 7816,
+    "layoutObjects": 5112,
+    "listeners": 656
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "tap-spam",
+   "actors": 95,
+   "seconds": 6.32,
+   "frames": 337,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.7,
+    "p99": 33.3,
+    "max": 133.4
+   },
+   "droppedPct": 1.19,
+   "longFrames": 1,
+   "longFrameMs": 151.3,
+   "inputLatencyMs": {
+    "p50": 42.3,
+    "p95": 55.6
+   },
+   "memory": {
+    "jsHeapMB": 33.04,
+    "domNodes": 2783,
+    "layoutObjects": 877,
+    "listeners": 646
+   }
+  }
+ ],
+ "opens": [
+  {
+   "device": "low",
+   "theme": "playground",
+   "openMs": 1288.1,
+   "jsHeapMB": 33.04,
+   "domNodes": 6409
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "openMs": 1351.8,
+   "jsHeapMB": 33.75,
+   "domNodes": 5828
+  },
+  {
+   "device": "mid",
+   "theme": "playground",
+   "openMs": 650.8,
+   "jsHeapMB": 33.17,
+   "domNodes": 6992
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "openMs": 642.2,
+   "jsHeapMB": 33.86,
+   "domNodes": 6285
+  }
+ ]
+}

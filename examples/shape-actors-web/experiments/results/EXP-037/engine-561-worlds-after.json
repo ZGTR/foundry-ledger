@@ -1,0 +1,4490 @@
+[
+ {
+  "theme": "rich-grocery",
+  "actors": 139,
+  "loadMs": 4.9,
+  "tickUs": 382,
+  "plansUs": 75,
+  "p95Us": 500
+ },
+ {
+  "theme": "abc-garden",
+  "actors": 22,
+  "loadMs": 17.4,
+  "tickUs": 282,
+  "plansUs": 86,
+  "p95Us": 685
+ },
+ {
+  "theme": "inside-circus",
+  "actors": 24,
+  "loadMs": 3.3,
+  "tickUs": 172,
+  "plansUs": 52,
+  "p95Us": 279
+ },
+ {
+  "theme": "kuwait-towers",
+  "actors": 22,
+  "loadMs": 6.3,
+  "tickUs": 171,
+  "plansUs": 35,
+  "p95Us": 389
+ },
+ {
+  "theme": "oman-nizwa",
+  "actors": 23,
+  "loadMs": 6.1,
+  "tickUs": 171,
+  "plansUs": 33,
+  "p95Us": 219
+ },
+ {
+  "theme": "job-artist",
+  "actors": 22,
+  "loadMs": 5.9,
+  "tickUs": 163,
+  "plansUs": 45,
+  "p95Us": 208
+ },
+ {
+  "theme": "inside-church",
+  "actors": 67,
+  "loadMs": 4.3,
+  "tickUs": 149,
+  "plansUs": 26,
+  "p95Us": 356
+ },
+ {
+  "theme": "algeria-timgad",
+  "actors": 23,
+  "loadMs": 9.2,
+  "tickUs": 148,
+  "plansUs": 35,
+  "p95Us": 251
+ },
+ {
+  "theme": "dino-valley",
+  "actors": 22,
+  "loadMs": 8.3,
+  "tickUs": 148,
+  "plansUs": 56,
+  "p95Us": 221
+ },
+ {
+  "theme": "arctic",
+  "actors": 25,
+  "loadMs": 5.5,
+  "tickUs": 146,
+  "plansUs": 36,
+  "p95Us": 347
+ },
+ {
+  "theme": "inside-fire-station",
+  "actors": 22,
+  "loadMs": 5.5,
+  "tickUs": 146,
+  "plansUs": 30,
+  "p95Us": 196
+ },
+ {
+  "theme": "qatar-inland-sea",
+  "actors": 22,
+  "loadMs": 6.3,
+  "tickUs": 146,
+  "plansUs": 34,
+  "p95Us": 182
+ },
+ {
+  "theme": "airport",
+  "actors": 23,
+  "loadMs": 8.4,
+  "tickUs": 145,
+  "plansUs": 28,
+  "p95Us": 423
+ },
+ {
+  "theme": "islam-journey",
+  "actors": 64,
+  "loadMs": 4.9,
+  "tickUs": 144,
+  "plansUs": 50,
+  "p95Us": 215
+ },
+ {
+  "theme": "old-city",
+  "actors": 23,
+  "loadMs": 6,
+  "tickUs": 141,
+  "plansUs": 38,
+  "p95Us": 262
+ },
+ {
+  "theme": "job-electrician",
+  "actors": 23,
+  "loadMs": 3.1,
+  "tickUs": 140,
+  "plansUs": 38,
+  "p95Us": 147
+ },
+ {
+  "theme": "music-box",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 139,
+  "plansUs": 17,
+  "p95Us": 302
+ },
+ {
+  "theme": "islam-mina",
+  "actors": 68,
+  "loadMs": 4.7,
+  "tickUs": 137,
+  "plansUs": 32,
+  "p95Us": 204
+ },
+ {
+  "theme": "job-farmer",
+  "actors": 85,
+  "loadMs": 6.4,
+  "tickUs": 134,
+  "plansUs": 20,
+  "p95Us": 173
+ },
+ {
+  "theme": "inside-bus",
+  "actors": 22,
+  "loadMs": 5.6,
+  "tickUs": 132,
+  "plansUs": 21,
+  "p95Us": 200
+ },
+ {
+  "theme": "jungle",
+  "actors": 96,
+  "loadMs": 6.5,
+  "tickUs": 132,
+  "plansUs": 27,
+  "p95Us": 177
+ },
+ {
+  "theme": "about-me",
+  "actors": 22,
+  "loadMs": 8.5,
+  "tickUs": 131,
+  "plansUs": 44,
+  "p95Us": 267
+ },
+ {
+  "theme": "islam-kaaba",
+  "actors": 60,
+  "loadMs": 5,
+  "tickUs": 129,
+  "plansUs": 22,
+  "p95Us": 168
+ },
+ {
+  "theme": "barn",
+  "actors": 22,
+  "loadMs": 6.8,
+  "tickUs": 128,
+  "plansUs": 33,
+  "p95Us": 204
+ },
+ {
+  "theme": "oman-wadi-shab",
+  "actors": 23,
+  "loadMs": 4.9,
+  "tickUs": 127,
+  "plansUs": 34,
+  "p95Us": 165
+ },
+ {
+  "theme": "castle",
+  "actors": 23,
+  "loadMs": 3.9,
+  "tickUs": 125,
+  "plansUs": 28,
+  "p95Us": 187
+ },
+ {
+  "theme": "fun-park",
+  "actors": 92,
+  "loadMs": 5,
+  "tickUs": 125,
+  "plansUs": 34,
+  "p95Us": 174
+ },
+ {
+  "theme": "algeria-ghardaia",
+  "actors": 85,
+  "loadMs": 6.4,
+  "tickUs": 124,
+  "plansUs": 44,
+  "p95Us": 179
+ },
+ {
+  "theme": "mosque",
+  "actors": 61,
+  "loadMs": 2.9,
+  "tickUs": 121,
+  "plansUs": 28,
+  "p95Us": 163
+ },
+ {
+  "theme": "snow",
+  "actors": 94,
+  "loadMs": 4.1,
+  "tickUs": 121,
+  "plansUs": 30,
+  "p95Us": 177
+ },
+ {
+  "theme": "farm",
+  "actors": 22,
+  "loadMs": 4.5,
+  "tickUs": 120,
+  "plansUs": 20,
+  "p95Us": 165
+ },
+ {
+  "theme": "garden",
+  "actors": 91,
+  "loadMs": 4.8,
+  "tickUs": 120,
+  "plansUs": 20,
+  "p95Us": 152
+ },
+ {
+  "theme": "superhero-city",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 120,
+  "plansUs": 17,
+  "p95Us": 178
+ },
+ {
+  "theme": "bedroom",
+  "actors": 23,
+  "loadMs": 6.3,
+  "tickUs": 119,
+  "plansUs": 16,
+  "p95Us": 196
+ },
+ {
+  "theme": "lebanon-beirut",
+  "actors": 23,
+  "loadMs": 5.5,
+  "tickUs": 119,
+  "plansUs": 17,
+  "p95Us": 189
+ },
+ {
+  "theme": "rich-jungle",
+  "actors": 22,
+  "loadMs": 4,
+  "tickUs": 119,
+  "plansUs": 21,
+  "p95Us": 145
+ },
+ {
+  "theme": "bathroom",
+  "actors": 22,
+  "loadMs": 6.5,
+  "tickUs": 118,
+  "plansUs": 37,
+  "p95Us": 176
+ },
+ {
+  "theme": "bird-flight",
+  "actors": 22,
+  "loadMs": 6.5,
+  "tickUs": 118,
+  "plansUs": 25,
+  "p95Us": 201
+ },
+ {
+  "theme": "instruments",
+  "actors": 25,
+  "loadMs": 5.7,
+  "tickUs": 118,
+  "plansUs": 26,
+  "p95Us": 186
+ },
+ {
+  "theme": "islam-muzdalifah",
+  "actors": 63,
+  "loadMs": 2.8,
+  "tickUs": 118,
+  "plansUs": 30,
+  "p95Us": 219
+ },
+ {
+  "theme": "savannah",
+  "actors": 90,
+  "loadMs": 4.9,
+  "tickUs": 118,
+  "plansUs": 27,
+  "p95Us": 162
+ },
+ {
+  "theme": "aquarium",
+  "actors": 22,
+  "loadMs": 9.9,
+  "tickUs": 117,
+  "plansUs": 34,
+  "p95Us": 175
+ },
+ {
+  "theme": "sudan-dinder",
+  "actors": 24,
+  "loadMs": 6,
+  "tickUs": 117,
+  "plansUs": 42,
+  "p95Us": 182
+ },
+ {
+  "theme": "job-scientist",
+  "actors": 90,
+  "loadMs": 4.9,
+  "tickUs": 116,
+  "plansUs": 34,
+  "p95Us": 150
+ },
+ {
+  "theme": "islam-mosque-hall",
+  "actors": 59,
+  "loadMs": 4,
+  "tickUs": 115,
+  "plansUs": 29,
+  "p95Us": 146
+ },
+ {
+  "theme": "mountains",
+  "actors": 85,
+  "loadMs": 6.4,
+  "tickUs": 115,
+  "plansUs": 27,
+  "p95Us": 136
+ },
+ {
+  "theme": "rocket-garage",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 115,
+  "plansUs": 22,
+  "p95Us": 139
+ },
+ {
+  "theme": "somalia-mogadishu",
+  "actors": 71,
+  "loadMs": 4,
+  "tickUs": 115,
+  "plansUs": 29,
+  "p95Us": 191
+ },
+ {
+  "theme": "inside-rocket",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 114,
+  "plansUs": 29,
+  "p95Us": 131
+ },
+ {
+  "theme": "islam-mosque-taraweeh",
+  "actors": 52,
+  "loadMs": 4.3,
+  "tickUs": 114,
+  "plansUs": 28,
+  "p95Us": 143
+ },
+ {
+  "theme": "lebanon-baalbek",
+  "actors": 22,
+  "loadMs": 6.1,
+  "tickUs": 114,
+  "plansUs": 23,
+  "p95Us": 225
+ },
+ {
+  "theme": "morocco-chefchaouen",
+  "actors": 85,
+  "loadMs": 5.1,
+  "tickUs": 114,
+  "plansUs": 28,
+  "p95Us": 144
+ },
+ {
+  "theme": "djibouti-day-forest",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 113,
+  "plansUs": 20,
+  "p95Us": 173
+ },
+ {
+  "theme": "comoros-galawa-beach",
+  "actors": 21,
+  "loadMs": 3.6,
+  "tickUs": 111,
+  "plansUs": 18,
+  "p95Us": 223
+ },
+ {
+  "theme": "lebanon-byblos",
+  "actors": 23,
+  "loadMs": 3.8,
+  "tickUs": 111,
+  "plansUs": 25,
+  "p95Us": 113
+ },
+ {
+  "theme": "space-explorer",
+  "actors": 24,
+  "loadMs": 4.6,
+  "tickUs": 111,
+  "plansUs": 25,
+  "p95Us": 181
+ },
+ {
+  "theme": "amazon",
+  "actors": 25,
+  "loadMs": 5.7,
+  "tickUs": 110,
+  "plansUs": 25,
+  "p95Us": 159
+ },
+ {
+  "theme": "big-trucks",
+  "actors": 22,
+  "loadMs": 9.2,
+  "tickUs": 110,
+  "plansUs": 28,
+  "p95Us": 259
+ },
+ {
+  "theme": "morocco-atlas",
+  "actors": 85,
+  "loadMs": 4,
+  "tickUs": 110,
+  "plansUs": 28,
+  "p95Us": 127
+ },
+ {
+  "theme": "saudi-riyadh",
+  "actors": 22,
+  "loadMs": 5.1,
+  "tickUs": 110,
+  "plansUs": 25,
+  "p95Us": 175
+ },
+ {
+  "theme": "dog-park",
+  "actors": 23,
+  "loadMs": 4.5,
+  "tickUs": 109,
+  "plansUs": 27,
+  "p95Us": 165
+ },
+ {
+  "theme": "job-astronaut",
+  "actors": 22,
+  "loadMs": 4.1,
+  "tickUs": 109,
+  "plansUs": 34,
+  "p95Us": 206
+ },
+ {
+  "theme": "zoo",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 109,
+  "plansUs": 20,
+  "p95Us": 151
+ },
+ {
+  "theme": "algeria-algiers",
+  "actors": 23,
+  "loadMs": 6.5,
+  "tickUs": 108,
+  "plansUs": 24,
+  "p95Us": 333
+ },
+ {
+  "theme": "oman-wahiba",
+  "actors": 24,
+  "loadMs": 3.7,
+  "tickUs": 108,
+  "plansUs": 21,
+  "p95Us": 127
+ },
+ {
+  "theme": "syria-damascus",
+  "actors": 82,
+  "loadMs": 3.8,
+  "tickUs": 108,
+  "plansUs": 22,
+  "p95Us": 124
+ },
+ {
+  "theme": "bikes",
+  "actors": 22,
+  "loadMs": 6.3,
+  "tickUs": 107,
+  "plansUs": 29,
+  "p95Us": 215
+ },
+ {
+  "theme": "egg-in-moon",
+  "actors": 22,
+  "loadMs": 4.3,
+  "tickUs": 107,
+  "plansUs": 17,
+  "p95Us": 128
+ },
+ {
+  "theme": "islam-quba",
+  "actors": 67,
+  "loadMs": 3.6,
+  "tickUs": 107,
+  "plansUs": 18,
+  "p95Us": 159
+ },
+ {
+  "theme": "kuwait-aquarium",
+  "actors": 22,
+  "loadMs": 4.9,
+  "tickUs": 107,
+  "plansUs": 23,
+  "p95Us": 174
+ },
+ {
+  "theme": "modern-city",
+  "actors": 22,
+  "loadMs": 9.1,
+  "tickUs": 107,
+  "plansUs": 23,
+  "p95Us": 186
+ },
+ {
+  "theme": "plant-garden",
+  "actors": 91,
+  "loadMs": 4.1,
+  "tickUs": 107,
+  "plansUs": 28,
+  "p95Us": 125
+ },
+ {
+  "theme": "islam-zamzam",
+  "actors": 64,
+  "loadMs": 2.7,
+  "tickUs": 106,
+  "plansUs": 17,
+  "p95Us": 139
+ },
+ {
+  "theme": "job-mechanic",
+  "actors": 22,
+  "loadMs": 4.8,
+  "tickUs": 106,
+  "plansUs": 15,
+  "p95Us": 152
+ },
+ {
+  "theme": "lebanon-cedars",
+  "actors": 23,
+  "loadMs": 5.7,
+  "tickUs": 106,
+  "plansUs": 19,
+  "p95Us": 194
+ },
+ {
+  "theme": "sky",
+  "actors": 23,
+  "loadMs": 6.7,
+  "tickUs": 106,
+  "plansUs": 19,
+  "p95Us": 139
+ },
+ {
+  "theme": "playground",
+  "actors": 23,
+  "loadMs": 4.1,
+  "tickUs": 105,
+  "plansUs": 28,
+  "p95Us": 141
+ },
+ {
+  "theme": "tunisia-djerba",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 104,
+  "plansUs": 25,
+  "p95Us": 165
+ },
+ {
+  "theme": "job-gardener",
+  "actors": 86,
+  "loadMs": 7.2,
+  "tickUs": 103,
+  "plansUs": 28,
+  "p95Us": 132
+ },
+ {
+  "theme": "libya-ghadames",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 103,
+  "plansUs": 23,
+  "p95Us": 178
+ },
+ {
+  "theme": "pet-cafe",
+  "actors": 22,
+  "loadMs": 6.8,
+  "tickUs": 103,
+  "plansUs": 23,
+  "p95Us": 185
+ },
+ {
+  "theme": "close-job-farmer",
+  "actors": 28,
+  "loadMs": 5.2,
+  "tickUs": 102,
+  "plansUs": 24,
+  "p95Us": 137
+ },
+ {
+  "theme": "job-bus-driver",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 102,
+  "plansUs": 10,
+  "p95Us": 79
+ },
+ {
+  "theme": "job-plumber",
+  "actors": 22,
+  "loadMs": 5.3,
+  "tickUs": 101,
+  "plansUs": 20,
+  "p95Us": 146
+ },
+ {
+  "theme": "palestine-gaza",
+  "actors": 73,
+  "loadMs": 3,
+  "tickUs": 101,
+  "plansUs": 16,
+  "p95Us": 124
+ },
+ {
+  "theme": "tunisia-sidi-bou-said",
+  "actors": 23,
+  "loadMs": 10.9,
+  "tickUs": 101,
+  "plansUs": 17,
+  "p95Us": 130
+ },
+ {
+  "theme": "job-baker",
+  "actors": 21,
+  "loadMs": 5,
+  "tickUs": 100,
+  "plansUs": 40,
+  "p95Us": 160
+ },
+ {
+  "theme": "palestine-jerusalem",
+  "actors": 23,
+  "loadMs": 4.4,
+  "tickUs": 100,
+  "plansUs": 28,
+  "p95Us": 159
+ },
+ {
+  "theme": "inside-gym",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 99,
+  "plansUs": 16,
+  "p95Us": 124
+ },
+ {
+  "theme": "market",
+  "actors": 23,
+  "loadMs": 3.8,
+  "tickUs": 99,
+  "plansUs": 34,
+  "p95Us": 145
+ },
+ {
+  "theme": "playdate",
+  "actors": 23,
+  "loadMs": 5.5,
+  "tickUs": 99,
+  "plansUs": 14,
+  "p95Us": 163
+ },
+ {
+  "theme": "swamp",
+  "actors": 85,
+  "loadMs": 3.5,
+  "tickUs": 99,
+  "plansUs": 21,
+  "p95Us": 126
+ },
+ {
+  "theme": "kuwait-failaka",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 98,
+  "plansUs": 22,
+  "p95Us": 125
+ },
+ {
+  "theme": "syria-latakia",
+  "actors": 75,
+  "loadMs": 3.5,
+  "tickUs": 98,
+  "plansUs": 25,
+  "p95Us": 144
+ },
+ {
+  "theme": "toy-room",
+  "actors": 24,
+  "loadMs": 4.1,
+  "tickUs": 98,
+  "plansUs": 26,
+  "p95Us": 153
+ },
+ {
+  "theme": "f1-pitstop",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 97,
+  "plansUs": 25,
+  "p95Us": 125
+ },
+ {
+  "theme": "morocco-fes",
+  "actors": 22,
+  "loadMs": 5.9,
+  "tickUs": 97,
+  "plansUs": 35,
+  "p95Us": 156
+ },
+ {
+  "theme": "oman-salalah",
+  "actors": 71,
+  "loadMs": 3.6,
+  "tickUs": 97,
+  "plansUs": 36,
+  "p95Us": 153
+ },
+ {
+  "theme": "animal-sounds",
+  "actors": 23,
+  "loadMs": 5.3,
+  "tickUs": 96,
+  "plansUs": 21,
+  "p95Us": 326
+ },
+ {
+  "theme": "egg-tree-house",
+  "actors": 22,
+  "loadMs": 4.6,
+  "tickUs": 96,
+  "plansUs": 8,
+  "p95Us": 69
+ },
+ {
+  "theme": "job-postman",
+  "actors": 23,
+  "loadMs": 9.5,
+  "tickUs": 96,
+  "plansUs": 21,
+  "p95Us": 141
+ },
+ {
+  "theme": "morocco-merzouga",
+  "actors": 24,
+  "loadMs": 6.4,
+  "tickUs": 96,
+  "plansUs": 19,
+  "p95Us": 133
+ },
+ {
+  "theme": "saudi-empty-quarter",
+  "actors": 24,
+  "loadMs": 3.8,
+  "tickUs": 95,
+  "plansUs": 19,
+  "p95Us": 111
+ },
+ {
+  "theme": "yemen-shibam",
+  "actors": 22,
+  "loadMs": 4,
+  "tickUs": 95,
+  "plansUs": 23,
+  "p95Us": 137
+ },
+ {
+  "theme": "in-lost-box",
+  "actors": 26,
+  "loadMs": 2.2,
+  "tickUs": 94,
+  "plansUs": 20,
+  "p95Us": 122
+ },
+ {
+  "theme": "job-taxi",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 94,
+  "plansUs": 13,
+  "p95Us": 125
+ },
+ {
+  "theme": "veh-roads",
+  "actors": 22,
+  "loadMs": 7.8,
+  "tickUs": 94,
+  "plansUs": 20,
+  "p95Us": 152
+ },
+ {
+  "theme": "yemen-sanaa",
+  "actors": 22,
+  "loadMs": 4,
+  "tickUs": 94,
+  "plansUs": 18,
+  "p95Us": 147
+ },
+ {
+  "theme": "qatar-doha-corniche",
+  "actors": 23,
+  "loadMs": 6,
+  "tickUs": 93,
+  "plansUs": 27,
+  "p95Us": 111
+ },
+ {
+  "theme": "f1-garage",
+  "actors": 23,
+  "loadMs": 3,
+  "tickUs": 92,
+  "plansUs": 17,
+  "p95Us": 110
+ },
+ {
+  "theme": "iraq-marshes",
+  "actors": 22,
+  "loadMs": 4.6,
+  "tickUs": 92,
+  "plansUs": 33,
+  "p95Us": 134
+ },
+ {
+  "theme": "job-fisher",
+  "actors": 23,
+  "loadMs": 9.4,
+  "tickUs": 92,
+  "plansUs": 26,
+  "p95Us": 116
+ },
+ {
+  "theme": "jordan-wadi-rum",
+  "actors": 22,
+  "loadMs": 7.3,
+  "tickUs": 92,
+  "plansUs": 25,
+  "p95Us": 151
+ },
+ {
+  "theme": "qatar-museum-park",
+  "actors": 23,
+  "loadMs": 4,
+  "tickUs": 92,
+  "plansUs": 24,
+  "p95Us": 113
+ },
+ {
+  "theme": "space-blocks",
+  "actors": 23,
+  "loadMs": 4,
+  "tickUs": 92,
+  "plansUs": 18,
+  "p95Us": 108
+ },
+ {
+  "theme": "sudan-nubian-village",
+  "actors": 23,
+  "loadMs": 3.2,
+  "tickUs": 92,
+  "plansUs": 18,
+  "p95Us": 113
+ },
+ {
+  "theme": "swimming-pool",
+  "actors": 23,
+  "loadMs": 8.1,
+  "tickUs": 92,
+  "plansUs": 16,
+  "p95Us": 139
+ },
+ {
+  "theme": "car-garage",
+  "actors": 22,
+  "loadMs": 4.1,
+  "tickUs": 91,
+  "plansUs": 19,
+  "p95Us": 123
+ },
+ {
+  "theme": "donut-shop",
+  "actors": 23,
+  "loadMs": 5.8,
+  "tickUs": 90,
+  "plansUs": 23,
+  "p95Us": 166
+ },
+ {
+  "theme": "islam-safa-marwa",
+  "actors": 66,
+  "loadMs": 3.3,
+  "tickUs": 90,
+  "plansUs": 21,
+  "p95Us": 118
+ },
+ {
+  "theme": "job-firefighter",
+  "actors": 22,
+  "loadMs": 4.8,
+  "tickUs": 90,
+  "plansUs": 13,
+  "p95Us": 115
+ },
+ {
+  "theme": "job-vet",
+  "actors": 23,
+  "loadMs": 5.5,
+  "tickUs": 90,
+  "plansUs": 27,
+  "p95Us": 166
+ },
+ {
+  "theme": "palestine-jericho",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 90,
+  "plansUs": 14,
+  "p95Us": 120
+ },
+ {
+  "theme": "shore-beach",
+  "actors": 22,
+  "loadMs": 8.9,
+  "tickUs": 90,
+  "plansUs": 14,
+  "p95Us": 165
+ },
+ {
+  "theme": "spooky-house",
+  "actors": 22,
+  "loadMs": 4.7,
+  "tickUs": 90,
+  "plansUs": 18,
+  "p95Us": 172
+ },
+ {
+  "theme": "uae-abu-dhabi",
+  "actors": 23,
+  "loadMs": 4.6,
+  "tickUs": 90,
+  "plansUs": 20,
+  "p95Us": 132
+ },
+ {
+  "theme": "islam-medina",
+  "actors": 72,
+  "loadMs": 3.4,
+  "tickUs": 89,
+  "plansUs": 33,
+  "p95Us": 134
+ },
+ {
+  "theme": "qatar-al-zubarah",
+  "actors": 25,
+  "loadMs": 4.4,
+  "tickUs": 89,
+  "plansUs": 14,
+  "p95Us": 122
+ },
+ {
+  "theme": "street",
+  "actors": 22,
+  "loadMs": 14.3,
+  "tickUs": 89,
+  "plansUs": 39,
+  "p95Us": 137
+ },
+ {
+  "theme": "close-job-vet",
+  "actors": 23,
+  "loadMs": 4.1,
+  "tickUs": 88,
+  "plansUs": 15,
+  "p95Us": 111
+ },
+ {
+  "theme": "djibouti-moucha",
+  "actors": 23,
+  "loadMs": 4.1,
+  "tickUs": 88,
+  "plansUs": 25,
+  "p95Us": 128
+ },
+ {
+  "theme": "palestine-nablus",
+  "actors": 23,
+  "loadMs": 3.3,
+  "tickUs": 88,
+  "plansUs": 18,
+  "p95Us": 118
+ },
+ {
+  "theme": "rich-forest",
+  "actors": 21,
+  "loadMs": 3.7,
+  "tickUs": 88,
+  "plansUs": 20,
+  "p95Us": 174
+ },
+ {
+  "theme": "iraq-erbil",
+  "actors": 23,
+  "loadMs": 5.3,
+  "tickUs": 87,
+  "plansUs": 13,
+  "p95Us": 105
+ },
+ {
+  "theme": "job-factory",
+  "actors": 23,
+  "loadMs": 6.7,
+  "tickUs": 87,
+  "plansUs": 19,
+  "p95Us": 118
+ },
+ {
+  "theme": "job-hairdresser",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 87,
+  "plansUs": 26,
+  "p95Us": 119
+ },
+ {
+  "theme": "treasure-hunt",
+  "actors": 25,
+  "loadMs": 3.3,
+  "tickUs": 87,
+  "plansUs": 13,
+  "p95Us": 130
+ },
+ {
+  "theme": "uae-jumeirah-beach",
+  "actors": 23,
+  "loadMs": 3.4,
+  "tickUs": 87,
+  "plansUs": 18,
+  "p95Us": 111
+ },
+ {
+  "theme": "iraq-babylon",
+  "actors": 23,
+  "loadMs": 4.1,
+  "tickUs": 86,
+  "plansUs": 19,
+  "p95Us": 109
+ },
+ {
+  "theme": "island-town",
+  "actors": 21,
+  "loadMs": 3.7,
+  "tickUs": 86,
+  "plansUs": 13,
+  "p95Us": 110
+ },
+ {
+  "theme": "art-studio",
+  "actors": 22,
+  "loadMs": 4.4,
+  "tickUs": 85,
+  "plansUs": 19,
+  "p95Us": 139
+ },
+ {
+  "theme": "construction",
+  "actors": 22,
+  "loadMs": 4.3,
+  "tickUs": 85,
+  "plansUs": 24,
+  "p95Us": 123
+ },
+ {
+  "theme": "in-garden-shed",
+  "actors": 27,
+  "loadMs": 3.5,
+  "tickUs": 85,
+  "plansUs": 20,
+  "p95Us": 104
+ },
+ {
+  "theme": "inside-barn",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 85,
+  "plansUs": 24,
+  "p95Us": 119
+ },
+ {
+  "theme": "inside-truck",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 85,
+  "plansUs": 13,
+  "p95Us": 99
+ },
+ {
+  "theme": "job-security-guard",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 85,
+  "plansUs": 17,
+  "p95Us": 104
+ },
+ {
+  "theme": "kuwait-desert",
+  "actors": 24,
+  "loadMs": 4.1,
+  "tickUs": 85,
+  "plansUs": 12,
+  "p95Us": 148
+ },
+ {
+  "theme": "ocean",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 85,
+  "plansUs": 18,
+  "p95Us": 124
+ },
+ {
+  "theme": "uae-liwa-desert",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 85,
+  "plansUs": 18,
+  "p95Us": 115
+ },
+ {
+  "theme": "bahrain-fort",
+  "actors": 23,
+  "loadMs": 4.7,
+  "tickUs": 84,
+  "plansUs": 18,
+  "p95Us": 147
+ },
+ {
+  "theme": "bahrain-skyline",
+  "actors": 22,
+  "loadMs": 4,
+  "tickUs": 84,
+  "plansUs": 21,
+  "p95Us": 114
+ },
+ {
+  "theme": "close-art-desk",
+  "actors": 23,
+  "loadMs": 5.4,
+  "tickUs": 84,
+  "plansUs": 46,
+  "p95Us": 136
+ },
+ {
+  "theme": "islam-arafat",
+  "actors": 69,
+  "loadMs": 3.2,
+  "tickUs": 84,
+  "plansUs": 28,
+  "p95Us": 118
+ },
+ {
+  "theme": "islam-mosque-eid",
+  "actors": 58,
+  "loadMs": 8.7,
+  "tickUs": 84,
+  "plansUs": 23,
+  "p95Us": 138
+ },
+ {
+  "theme": "libya-ubari-lakes",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 84,
+  "plansUs": 19,
+  "p95Us": 110
+ },
+ {
+  "theme": "music",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 84,
+  "plansUs": 23,
+  "p95Us": 117
+ },
+ {
+  "theme": "uae-dubai-creek",
+  "actors": 23,
+  "loadMs": 3,
+  "tickUs": 84,
+  "plansUs": 27,
+  "p95Us": 95
+ },
+ {
+  "theme": "vehicle-show",
+  "actors": 22,
+  "loadMs": 3.1,
+  "tickUs": 84,
+  "plansUs": 11,
+  "p95Us": 111
+ },
+ {
+  "theme": "baseball",
+  "actors": 23,
+  "loadMs": 6.3,
+  "tickUs": 83,
+  "plansUs": 20,
+  "p95Us": 140
+ },
+ {
+  "theme": "car-factory",
+  "actors": 23,
+  "loadMs": 4.4,
+  "tickUs": 83,
+  "plansUs": 18,
+  "p95Us": 142
+ },
+ {
+  "theme": "fairy-forest",
+  "actors": 23,
+  "loadMs": 6.5,
+  "tickUs": 83,
+  "plansUs": 24,
+  "p95Us": 116
+ },
+ {
+  "theme": "islam-aqsa",
+  "actors": 74,
+  "loadMs": 3.4,
+  "tickUs": 83,
+  "plansUs": 28,
+  "p95Us": 110
+ },
+ {
+  "theme": "job-librarian",
+  "actors": 25,
+  "loadMs": 4.2,
+  "tickUs": 83,
+  "plansUs": 19,
+  "p95Us": 128
+ },
+ {
+  "theme": "jordan-petra",
+  "actors": 22,
+  "loadMs": 4.6,
+  "tickUs": 83,
+  "plansUs": 10,
+  "p95Us": 150
+ },
+ {
+  "theme": "plane-hangar",
+  "actors": 23,
+  "loadMs": 3.8,
+  "tickUs": 83,
+  "plansUs": 10,
+  "p95Us": 101
+ },
+ {
+  "theme": "comoros-moroni",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 82,
+  "plansUs": 30,
+  "p95Us": 107
+ },
+ {
+  "theme": "garbage-city",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 82,
+  "plansUs": 18,
+  "p95Us": 119
+ },
+ {
+  "theme": "jordan-amman",
+  "actors": 23,
+  "loadMs": 5.7,
+  "tickUs": 82,
+  "plansUs": 18,
+  "p95Us": 172
+ },
+ {
+  "theme": "morocco-marrakech",
+  "actors": 21,
+  "loadMs": 6,
+  "tickUs": 82,
+  "plansUs": 11,
+  "p95Us": 139
+ },
+ {
+  "theme": "saudi-jeddah",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 82,
+  "plansUs": 18,
+  "p95Us": 124
+ },
+ {
+  "theme": "sudan-khartoum",
+  "actors": 23,
+  "loadMs": 6.3,
+  "tickUs": 82,
+  "plansUs": 21,
+  "p95Us": 116
+ },
+ {
+  "theme": "tunisia-douz",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 82,
+  "plansUs": 12,
+  "p95Us": 96
+ },
+ {
+  "theme": "winter-city",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 82,
+  "plansUs": 23,
+  "p95Us": 128
+ },
+ {
+  "theme": "games-coins",
+  "actors": 30,
+  "loadMs": 3.7,
+  "tickUs": 81,
+  "plansUs": 14,
+  "p95Us": 115
+ },
+ {
+  "theme": "holiday-trucks",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 81,
+  "plansUs": 21,
+  "p95Us": 109
+ },
+ {
+  "theme": "snow-trucks",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 81,
+  "plansUs": 21,
+  "p95Us": 111
+ },
+ {
+  "theme": "close-job-police",
+  "actors": 20,
+  "loadMs": 5.6,
+  "tickUs": 80,
+  "plansUs": 14,
+  "p95Us": 104
+ },
+ {
+  "theme": "egg-pirate-cove",
+  "actors": 26,
+  "loadMs": 5.8,
+  "tickUs": 80,
+  "plansUs": 11,
+  "p95Us": 94
+ },
+ {
+  "theme": "inside-f1",
+  "actors": 23,
+  "loadMs": 6.8,
+  "tickUs": 80,
+  "plansUs": 24,
+  "p95Us": 108
+ },
+ {
+  "theme": "inside-ship",
+  "actors": 23,
+  "loadMs": 3.2,
+  "tickUs": 80,
+  "plansUs": 25,
+  "p95Us": 100
+ },
+ {
+  "theme": "job-builder",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 80,
+  "plansUs": 32,
+  "p95Us": 113
+ },
+ {
+  "theme": "job-chef",
+  "actors": 24,
+  "loadMs": 3.7,
+  "tickUs": 80,
+  "plansUs": 16,
+  "p95Us": 104
+ },
+ {
+  "theme": "job-market-seller",
+  "actors": 21,
+  "loadMs": 5,
+  "tickUs": 80,
+  "plansUs": 17,
+  "p95Us": 118
+ },
+ {
+  "theme": "job-nurse",
+  "actors": 25,
+  "loadMs": 4,
+  "tickUs": 80,
+  "plansUs": 22,
+  "p95Us": 110
+ },
+ {
+  "theme": "job-pilot",
+  "actors": 23,
+  "loadMs": 7.6,
+  "tickUs": 80,
+  "plansUs": 16,
+  "p95Us": 118
+ },
+ {
+  "theme": "museum",
+  "actors": 22,
+  "loadMs": 4,
+  "tickUs": 80,
+  "plansUs": 17,
+  "p95Us": 112
+ },
+ {
+  "theme": "road-trip",
+  "actors": 22,
+  "loadMs": 4.7,
+  "tickUs": 80,
+  "plansUs": 17,
+  "p95Us": 104
+ },
+ {
+  "theme": "wow-world",
+  "actors": 22,
+  "loadMs": 4.2,
+  "tickUs": 80,
+  "plansUs": 16,
+  "p95Us": 197
+ },
+ {
+  "theme": "bug-buddies",
+  "actors": 24,
+  "loadMs": 4.7,
+  "tickUs": 79,
+  "plansUs": 12,
+  "p95Us": 124
+ },
+ {
+  "theme": "dish-sink",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 79,
+  "plansUs": 10,
+  "p95Us": 93
+ },
+ {
+  "theme": "in-treasure",
+  "actors": 25,
+  "loadMs": 2.8,
+  "tickUs": 79,
+  "plansUs": 14,
+  "p95Us": 92
+ },
+ {
+  "theme": "islam-mosque-iftar",
+  "actors": 56,
+  "loadMs": 2.7,
+  "tickUs": 79,
+  "plansUs": 13,
+  "p95Us": 95
+ },
+ {
+  "theme": "jordan-aqaba",
+  "actors": 25,
+  "loadMs": 5.8,
+  "tickUs": 79,
+  "plansUs": 18,
+  "p95Us": 119
+ },
+ {
+  "theme": "robot-party",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 79,
+  "plansUs": 17,
+  "p95Us": 117
+ },
+ {
+  "theme": "tennis",
+  "actors": 23,
+  "loadMs": 3.1,
+  "tickUs": 79,
+  "plansUs": 17,
+  "p95Us": 111
+ },
+ {
+  "theme": "aviary",
+  "actors": 22,
+  "loadMs": 4.7,
+  "tickUs": 78,
+  "plansUs": 21,
+  "p95Us": 130
+ },
+ {
+  "theme": "djibouti-lake-abbe",
+  "actors": 23,
+  "loadMs": 4.4,
+  "tickUs": 78,
+  "plansUs": 21,
+  "p95Us": 135
+ },
+ {
+  "theme": "fire-station",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 78,
+  "plansUs": 21,
+  "p95Us": 113
+ },
+ {
+  "theme": "in-basket",
+  "actors": 23,
+  "loadMs": 2.8,
+  "tickUs": 78,
+  "plansUs": 17,
+  "p95Us": 94
+ },
+ {
+  "theme": "islam-mosque-halaqa",
+  "actors": 60,
+  "loadMs": 2.7,
+  "tickUs": 78,
+  "plansUs": 14,
+  "p95Us": 94
+ },
+ {
+  "theme": "numbers-world",
+  "actors": 24,
+  "loadMs": 4.5,
+  "tickUs": 78,
+  "plansUs": 10,
+  "p95Us": 128
+ },
+ {
+  "theme": "resort",
+  "actors": 22,
+  "loadMs": 5.9,
+  "tickUs": 78,
+  "plansUs": 12,
+  "p95Us": 105
+ },
+ {
+  "theme": "robot-factory",
+  "actors": 23,
+  "loadMs": 3.3,
+  "tickUs": 78,
+  "plansUs": 21,
+  "p95Us": 122
+ },
+ {
+  "theme": "bahrain-manama-souq",
+  "actors": 22,
+  "loadMs": 4.1,
+  "tickUs": 77,
+  "plansUs": 22,
+  "p95Us": 107
+ },
+ {
+  "theme": "close-job-ice-cream-seller",
+  "actors": 25,
+  "loadMs": 2.8,
+  "tickUs": 77,
+  "plansUs": 21,
+  "p95Us": 108
+ },
+ {
+  "theme": "inside-pyramid",
+  "actors": 77,
+  "loadMs": 3.2,
+  "tickUs": 77,
+  "plansUs": 41,
+  "p95Us": 108
+ },
+ {
+  "theme": "inside-submarine",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 77,
+  "plansUs": 13,
+  "p95Us": 99
+ },
+ {
+  "theme": "libya-tripoli",
+  "actors": 23,
+  "loadMs": 5.1,
+  "tickUs": 77,
+  "plansUs": 17,
+  "p95Us": 118
+ },
+ {
+  "theme": "mecca",
+  "actors": 68,
+  "loadMs": 2.9,
+  "tickUs": 77,
+  "plansUs": 17,
+  "p95Us": 91
+ },
+ {
+  "theme": "algeria-constantine",
+  "actors": 23,
+  "loadMs": 6.3,
+  "tickUs": 76,
+  "plansUs": 16,
+  "p95Us": 131
+ },
+ {
+  "theme": "algeria-tassili",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 76,
+  "plansUs": 11,
+  "p95Us": 142
+ },
+ {
+  "theme": "circus",
+  "actors": 22,
+  "loadMs": 7.2,
+  "tickUs": 76,
+  "plansUs": 11,
+  "p95Us": 121
+ },
+ {
+  "theme": "close-build-airplane",
+  "actors": 22,
+  "loadMs": 2.4,
+  "tickUs": 76,
+  "plansUs": 20,
+  "p95Us": 117
+ },
+ {
+  "theme": "close-vehroad-car-wash",
+  "actors": 22,
+  "loadMs": 7.4,
+  "tickUs": 76,
+  "plansUs": 16,
+  "p95Us": 105
+ },
+ {
+  "theme": "egypt-red-sea",
+  "actors": 25,
+  "loadMs": 3.3,
+  "tickUs": 76,
+  "plansUs": 12,
+  "p95Us": 96
+ },
+ {
+  "theme": "saudi-abha",
+  "actors": 23,
+  "loadMs": 6.5,
+  "tickUs": 76,
+  "plansUs": 23,
+  "p95Us": 115
+ },
+ {
+  "theme": "toolbox-workshop",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 76,
+  "plansUs": 16,
+  "p95Us": 109
+ },
+ {
+  "theme": "tunisia-tunis-medina",
+  "actors": 22,
+  "loadMs": 3.1,
+  "tickUs": 76,
+  "plansUs": 25,
+  "p95Us": 111
+ },
+ {
+  "theme": "comoros-karthala",
+  "actors": 22,
+  "loadMs": 4.4,
+  "tickUs": 75,
+  "plansUs": 21,
+  "p95Us": 112
+ },
+ {
+  "theme": "egypt-khan-el-khalili",
+  "actors": 22,
+  "loadMs": 3.5,
+  "tickUs": 75,
+  "plansUs": 22,
+  "p95Us": 114
+ },
+ {
+  "theme": "fruit-veg-garden",
+  "actors": 27,
+  "loadMs": 5,
+  "tickUs": 75,
+  "plansUs": 15,
+  "p95Us": 121
+ },
+ {
+  "theme": "job-office-worker",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 75,
+  "plansUs": 24,
+  "p95Us": 103
+ },
+ {
+  "theme": "job-teacher",
+  "actors": 22,
+  "loadMs": 6,
+  "tickUs": 75,
+  "plansUs": 11,
+  "p95Us": 177
+ },
+ {
+  "theme": "job-waiter",
+  "actors": 22,
+  "loadMs": 3.5,
+  "tickUs": 75,
+  "plansUs": 12,
+  "p95Us": 129
+ },
+ {
+  "theme": "somalia-cal-madow",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 75,
+  "plansUs": 15,
+  "p95Us": 101
+ },
+ {
+  "theme": "djibouti-lake-assal",
+  "actors": 23,
+  "loadMs": 4.3,
+  "tickUs": 74,
+  "plansUs": 17,
+  "p95Us": 119
+ },
+ {
+  "theme": "family-home",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 74,
+  "plansUs": 25,
+  "p95Us": 128
+ },
+ {
+  "theme": "inside-car",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 74,
+  "plansUs": 29,
+  "p95Us": 114
+ },
+ {
+  "theme": "inside-train",
+  "actors": 22,
+  "loadMs": 7.1,
+  "tickUs": 74,
+  "plansUs": 11,
+  "p95Us": 101
+ },
+ {
+  "theme": "libya-leptis-magna",
+  "actors": 23,
+  "loadMs": 4.2,
+  "tickUs": 74,
+  "plansUs": 11,
+  "p95Us": 110
+ },
+ {
+  "theme": "train-yard",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 74,
+  "plansUs": 17,
+  "p95Us": 98
+ },
+ {
+  "theme": "cake-prep",
+  "actors": 21,
+  "loadMs": 9.8,
+  "tickUs": 73,
+  "plansUs": 22,
+  "p95Us": 127
+ },
+ {
+  "theme": "close-job-tailor",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 73,
+  "plansUs": 22,
+  "p95Us": 96
+ },
+ {
+  "theme": "hat-maker",
+  "actors": 22,
+  "loadMs": 3,
+  "tickUs": 73,
+  "plansUs": 8,
+  "p95Us": 89
+ },
+ {
+  "theme": "job-pharmacist",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 73,
+  "plansUs": 15,
+  "p95Us": 115
+ },
+ {
+  "theme": "lebanon-jeita",
+  "actors": 23,
+  "loadMs": 6.5,
+  "tickUs": 73,
+  "plansUs": 27,
+  "p95Us": 162
+ },
+ {
+  "theme": "sky-islands",
+  "actors": 23,
+  "loadMs": 3.6,
+  "tickUs": 73,
+  "plansUs": 14,
+  "p95Us": 99
+ },
+ {
+  "theme": "stove",
+  "actors": 24,
+  "loadMs": 6.9,
+  "tickUs": 73,
+  "plansUs": 10,
+  "p95Us": 104
+ },
+ {
+  "theme": "babies",
+  "actors": 27,
+  "loadMs": 3.9,
+  "tickUs": 72,
+  "plansUs": 9,
+  "p95Us": 88
+ },
+ {
+  "theme": "city-shops",
+  "actors": 21,
+  "loadMs": 4.2,
+  "tickUs": 72,
+  "plansUs": 10,
+  "p95Us": 114
+ },
+ {
+  "theme": "egypt-luxor",
+  "actors": 23,
+  "loadMs": 6.3,
+  "tickUs": 72,
+  "plansUs": 11,
+  "p95Us": 105
+ },
+ {
+  "theme": "in-pantry",
+  "actors": 22,
+  "loadMs": 2.6,
+  "tickUs": 72,
+  "plansUs": 19,
+  "p95Us": 90
+ },
+ {
+  "theme": "seven-wonders",
+  "actors": 23,
+  "loadMs": 5,
+  "tickUs": 72,
+  "plansUs": 16,
+  "p95Us": 116
+ },
+ {
+  "theme": "veh-railway",
+  "actors": 22,
+  "loadMs": 3.6,
+  "tickUs": 72,
+  "plansUs": 10,
+  "p95Us": 110
+ },
+ {
+  "theme": "church",
+  "actors": 63,
+  "loadMs": 3.3,
+  "tickUs": 71,
+  "plansUs": 23,
+  "p95Us": 109
+ },
+ {
+  "theme": "close-bath-time",
+  "actors": 21,
+  "loadMs": 2.5,
+  "tickUs": 71,
+  "plansUs": 16,
+  "p95Us": 110
+ },
+ {
+  "theme": "close-job-postman",
+  "actors": 20,
+  "loadMs": 3,
+  "tickUs": 71,
+  "plansUs": 16,
+  "p95Us": 103
+ },
+ {
+  "theme": "ice-cream-parlour",
+  "actors": 25,
+  "loadMs": 7.3,
+  "tickUs": 71,
+  "plansUs": 10,
+  "p95Us": 110
+ },
+ {
+  "theme": "inside-airplane",
+  "actors": 23,
+  "loadMs": 7.6,
+  "tickUs": 71,
+  "plansUs": 16,
+  "p95Us": 104
+ },
+ {
+  "theme": "job-bank-teller",
+  "actors": 23,
+  "loadMs": 3,
+  "tickUs": 71,
+  "plansUs": 16,
+  "p95Us": 91
+ },
+ {
+  "theme": "job-courier",
+  "actors": 22,
+  "loadMs": 3.5,
+  "tickUs": 71,
+  "plansUs": 17,
+  "p95Us": 106
+ },
+ {
+  "theme": "job-programmer",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 71,
+  "plansUs": 15,
+  "p95Us": 99
+ },
+ {
+  "theme": "sudan-suakin",
+  "actors": 23,
+  "loadMs": 4.6,
+  "tickUs": 71,
+  "plansUs": 10,
+  "p95Us": 111
+ },
+ {
+  "theme": "yemen-aden",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 71,
+  "plansUs": 15,
+  "p95Us": 98
+ },
+ {
+  "theme": "close-vehair-cockpit",
+  "actors": 23,
+  "loadMs": 3.1,
+  "tickUs": 70,
+  "plansUs": 12,
+  "p95Us": 96
+ },
+ {
+  "theme": "colors-world",
+  "actors": 22,
+  "loadMs": 7.5,
+  "tickUs": 70,
+  "plansUs": 9,
+  "p95Us": 112
+ },
+ {
+  "theme": "in-cool-box",
+  "actors": 25,
+  "loadMs": 3,
+  "tickUs": 70,
+  "plansUs": 19,
+  "p95Us": 99
+ },
+ {
+  "theme": "job-carpenter",
+  "actors": 22,
+  "loadMs": 2.8,
+  "tickUs": 70,
+  "plansUs": 19,
+  "p95Us": 89
+ },
+ {
+  "theme": "djibouti-city",
+  "actors": 21,
+  "loadMs": 3.9,
+  "tickUs": 69,
+  "plansUs": 8,
+  "p95Us": 91
+ },
+ {
+  "theme": "in-fridge",
+  "actors": 27,
+  "loadMs": 2.9,
+  "tickUs": 69,
+  "plansUs": 18,
+  "p95Us": 104
+ },
+ {
+  "theme": "mauritania-chinguetti",
+  "actors": 25,
+  "loadMs": 3.7,
+  "tickUs": 69,
+  "plansUs": 9,
+  "p95Us": 99
+ },
+ {
+  "theme": "qatar-souq-waqif",
+  "actors": 23,
+  "loadMs": 3.9,
+  "tickUs": 69,
+  "plansUs": 9,
+  "p95Us": 97
+ },
+ {
+  "theme": "veh-airport",
+  "actors": 23,
+  "loadMs": 3.9,
+  "tickUs": 69,
+  "plansUs": 14,
+  "p95Us": 99
+ },
+ {
+  "theme": "camping",
+  "actors": 22,
+  "loadMs": 5,
+  "tickUs": 68,
+  "plansUs": 10,
+  "p95Us": 100
+ },
+ {
+  "theme": "in-dishwasher",
+  "actors": 22,
+  "loadMs": 2.4,
+  "tickUs": 68,
+  "plansUs": 11,
+  "p95Us": 86
+ },
+ {
+  "theme": "job-tailor",
+  "actors": 22,
+  "loadMs": 2.8,
+  "tickUs": 68,
+  "plansUs": 10,
+  "p95Us": 91
+ },
+ {
+  "theme": "puppy-school",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 68,
+  "plansUs": 13,
+  "p95Us": 119
+ },
+ {
+  "theme": "rainbows",
+  "actors": 24,
+  "loadMs": 4.3,
+  "tickUs": 68,
+  "plansUs": 16,
+  "p95Us": 121
+ },
+ {
+  "theme": "syria-aleppo",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 68,
+  "plansUs": 14,
+  "p95Us": 108
+ },
+ {
+  "theme": "apartment",
+  "actors": 21,
+  "loadMs": 5,
+  "tickUs": 67,
+  "plansUs": 9,
+  "p95Us": 101
+ },
+ {
+  "theme": "egypt-alexandria",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 67,
+  "plansUs": 25,
+  "p95Us": 101
+ },
+ {
+  "theme": "juice-bar",
+  "actors": 21,
+  "loadMs": 4.3,
+  "tickUs": 67,
+  "plansUs": 13,
+  "p95Us": 116
+ },
+ {
+  "theme": "pyramid",
+  "actors": 22,
+  "loadMs": 4.3,
+  "tickUs": 67,
+  "plansUs": 19,
+  "p95Us": 123
+ },
+ {
+  "theme": "cinema",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 66,
+  "plansUs": 26,
+  "p95Us": 126
+ },
+ {
+  "theme": "close-job-zookeeper",
+  "actors": 21,
+  "loadMs": 3,
+  "tickUs": 66,
+  "plansUs": 14,
+  "p95Us": 84
+ },
+ {
+  "theme": "close-vehrail-driver-cab",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 66,
+  "plansUs": 10,
+  "p95Us": 68
+ },
+ {
+  "theme": "iraq-baghdad",
+  "actors": 23,
+  "loadMs": 10.2,
+  "tickUs": 66,
+  "plansUs": 16,
+  "p95Us": 108
+ },
+ {
+  "theme": "islam-mosque-jumuah",
+  "actors": 53,
+  "loadMs": 2.6,
+  "tickUs": 66,
+  "plansUs": 24,
+  "p95Us": 86
+ },
+ {
+  "theme": "job-doctor",
+  "actors": 23,
+  "loadMs": 7.7,
+  "tickUs": 66,
+  "plansUs": 8,
+  "p95Us": 83
+ },
+ {
+  "theme": "monsters",
+  "actors": 24,
+  "loadMs": 3.7,
+  "tickUs": 66,
+  "plansUs": 17,
+  "p95Us": 104
+ },
+ {
+  "theme": "pet-shop",
+  "actors": 24,
+  "loadMs": 6.7,
+  "tickUs": 66,
+  "plansUs": 14,
+  "p95Us": 99
+ },
+ {
+  "theme": "saudi-alula",
+  "actors": 24,
+  "loadMs": 3.6,
+  "tickUs": 66,
+  "plansUs": 14,
+  "p95Us": 97
+ },
+ {
+  "theme": "shore-seaside",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 66,
+  "plansUs": 10,
+  "p95Us": 141
+ },
+ {
+  "theme": "sound-box",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 66,
+  "plansUs": 15,
+  "p95Us": 102
+ },
+ {
+  "theme": "yemen-haraz",
+  "actors": 23,
+  "loadMs": 6.7,
+  "tickUs": 66,
+  "plansUs": 20,
+  "p95Us": 108
+ },
+ {
+  "theme": "yemen-socotra",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 66,
+  "plansUs": 13,
+  "p95Us": 96
+ },
+ {
+  "theme": "baby-dress-up",
+  "actors": 22,
+  "loadMs": 5.4,
+  "tickUs": 65,
+  "plansUs": 14,
+  "p95Us": 102
+ },
+ {
+  "theme": "close-job-security-guard",
+  "actors": 22,
+  "loadMs": 2.9,
+  "tickUs": 65,
+  "plansUs": 28,
+  "p95Us": 91
+ },
+ {
+  "theme": "food-mixer",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 65,
+  "plansUs": 8,
+  "p95Us": 79
+ },
+ {
+  "theme": "haul-farm",
+  "actors": 21,
+  "loadMs": 3.5,
+  "tickUs": 65,
+  "plansUs": 8,
+  "p95Us": 82
+ },
+ {
+  "theme": "kuwait-mubarakiya",
+  "actors": 23,
+  "loadMs": 7.7,
+  "tickUs": 65,
+  "plansUs": 16,
+  "p95Us": 103
+ },
+ {
+  "theme": "mauritania-iron-train",
+  "actors": 23,
+  "loadMs": 3.4,
+  "tickUs": 65,
+  "plansUs": 14,
+  "p95Us": 97
+ },
+ {
+  "theme": "neighborhood",
+  "actors": 21,
+  "loadMs": 3.8,
+  "tickUs": 65,
+  "plansUs": 13,
+  "p95Us": 97
+ },
+ {
+  "theme": "bug-garden",
+  "actors": 27,
+  "loadMs": 4.2,
+  "tickUs": 64,
+  "plansUs": 14,
+  "p95Us": 86
+ },
+ {
+  "theme": "egg-fairy-garden",
+  "actors": 40,
+  "loadMs": 4.4,
+  "tickUs": 64,
+  "plansUs": 15,
+  "p95Us": 77
+ },
+ {
+  "theme": "fix-teacher-board",
+  "actors": 21,
+  "loadMs": 3.2,
+  "tickUs": 64,
+  "plansUs": 13,
+  "p95Us": 90
+ },
+ {
+  "theme": "flower-shop",
+  "actors": 23,
+  "loadMs": 7.3,
+  "tickUs": 64,
+  "plansUs": 23,
+  "p95Us": 99
+ },
+ {
+  "theme": "funny-faces",
+  "actors": 24,
+  "loadMs": 4.4,
+  "tickUs": 64,
+  "plansUs": 9,
+  "p95Us": 98
+ },
+ {
+  "theme": "in-bedside-drawer",
+  "actors": 24,
+  "loadMs": 2.2,
+  "tickUs": 64,
+  "plansUs": 16,
+  "p95Us": 87
+ },
+ {
+  "theme": "in-costume-trunk",
+  "actors": 22,
+  "loadMs": 2.1,
+  "tickUs": 64,
+  "plansUs": 10,
+  "p95Us": 80
+ },
+ {
+  "theme": "job-cleaner",
+  "actors": 22,
+  "loadMs": 4.8,
+  "tickUs": 64,
+  "plansUs": 24,
+  "p95Us": 125
+ },
+ {
+  "theme": "my-body",
+  "actors": 23,
+  "loadMs": 4.1,
+  "tickUs": 64,
+  "plansUs": 17,
+  "p95Us": 102
+ },
+ {
+  "theme": "oman-muscat",
+  "actors": 23,
+  "loadMs": 7.1,
+  "tickUs": 64,
+  "plansUs": 12,
+  "p95Us": 103
+ },
+ {
+  "theme": "open-net",
+  "actors": 21,
+  "loadMs": 1.9,
+  "tickUs": 64,
+  "plansUs": 11,
+  "p95Us": 83
+ },
+ {
+  "theme": "open-shopping-cart",
+  "actors": 23,
+  "loadMs": 3.6,
+  "tickUs": 64,
+  "plansUs": 12,
+  "p95Us": 86
+ },
+ {
+  "theme": "pond",
+  "actors": 23,
+  "loadMs": 3,
+  "tickUs": 64,
+  "plansUs": 10,
+  "p95Us": 96
+ },
+ {
+  "theme": "somalia-berbera",
+  "actors": 23,
+  "loadMs": 3.4,
+  "tickUs": 64,
+  "plansUs": 9,
+  "p95Us": 91
+ },
+ {
+  "theme": "classroom",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 63,
+  "plansUs": 29,
+  "p95Us": 100
+ },
+ {
+  "theme": "close-job-plumber",
+  "actors": 21,
+  "loadMs": 3.9,
+  "tickUs": 63,
+  "plansUs": 20,
+  "p95Us": 97
+ },
+ {
+  "theme": "daycare",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 63,
+  "plansUs": 8,
+  "p95Us": 92
+ },
+ {
+  "theme": "dishwasher",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 63,
+  "plansUs": 8,
+  "p95Us": 75
+ },
+ {
+  "theme": "football",
+  "actors": 22,
+  "loadMs": 5.1,
+  "tickUs": 63,
+  "plansUs": 12,
+  "p95Us": 112
+ },
+ {
+  "theme": "greetings",
+  "actors": 23,
+  "loadMs": 4.4,
+  "tickUs": 63,
+  "plansUs": 18,
+  "p95Us": 131
+ },
+ {
+  "theme": "haul-site",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 63,
+  "plansUs": 8,
+  "p95Us": 86
+ },
+ {
+  "theme": "islam-library",
+  "actors": 25,
+  "loadMs": 3,
+  "tickUs": 63,
+  "plansUs": 9,
+  "p95Us": 74
+ },
+ {
+  "theme": "job-cashier",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 63,
+  "plansUs": 16,
+  "p95Us": 94
+ },
+ {
+  "theme": "job-zookeeper",
+  "actors": 21,
+  "loadMs": 3.8,
+  "tickUs": 63,
+  "plansUs": 29,
+  "p95Us": 129
+ },
+ {
+  "theme": "jordan-dead-sea",
+  "actors": 23,
+  "loadMs": 5.8,
+  "tickUs": 63,
+  "plansUs": 9,
+  "p95Us": 86
+ },
+ {
+  "theme": "openb-in-under-bed",
+  "actors": 22,
+  "loadMs": 2.9,
+  "tickUs": 63,
+  "plansUs": 17,
+  "p95Us": 87
+ },
+ {
+  "theme": "picnic",
+  "actors": 23,
+  "loadMs": 4,
+  "tickUs": 63,
+  "plansUs": 9,
+  "p95Us": 91
+ },
+ {
+  "theme": "sports-day",
+  "actors": 25,
+  "loadMs": 4.6,
+  "tickUs": 63,
+  "plansUs": 14,
+  "p95Us": 105
+ },
+ {
+  "theme": "syria-hama",
+  "actors": 23,
+  "loadMs": 3.5,
+  "tickUs": 63,
+  "plansUs": 20,
+  "p95Us": 87
+ },
+ {
+  "theme": "inside-mosque",
+  "actors": 60,
+  "loadMs": 2.7,
+  "tickUs": 62,
+  "plansUs": 23,
+  "p95Us": 89
+ },
+ {
+  "theme": "job-nanny",
+  "actors": 25,
+  "loadMs": 3.4,
+  "tickUs": 62,
+  "plansUs": 28,
+  "p95Us": 93
+ },
+ {
+  "theme": "kitchen",
+  "actors": 24,
+  "loadMs": 3.8,
+  "tickUs": 62,
+  "plansUs": 9,
+  "p95Us": 88
+ },
+ {
+  "theme": "libya-akakus",
+  "actors": 22,
+  "loadMs": 4.1,
+  "tickUs": 62,
+  "plansUs": 9,
+  "p95Us": 87
+ },
+ {
+  "theme": "street-party",
+  "actors": 23,
+  "loadMs": 2.9,
+  "tickUs": 62,
+  "plansUs": 9,
+  "p95Us": 93
+ },
+ {
+  "theme": "syria-palmyra",
+  "actors": 22,
+  "loadMs": 5.9,
+  "tickUs": 62,
+  "plansUs": 21,
+  "p95Us": 125
+ },
+ {
+  "theme": "town-blocks",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 62,
+  "plansUs": 13,
+  "p95Us": 98
+ },
+ {
+  "theme": "close-chef-counter",
+  "actors": 20,
+  "loadMs": 3.1,
+  "tickUs": 61,
+  "plansUs": 9,
+  "p95Us": 81
+ },
+ {
+  "theme": "close-job-firefighter",
+  "actors": 27,
+  "loadMs": 3.1,
+  "tickUs": 61,
+  "plansUs": 15,
+  "p95Us": 85
+ },
+ {
+  "theme": "clothes-studio",
+  "actors": 25,
+  "loadMs": 3.6,
+  "tickUs": 61,
+  "plansUs": 18,
+  "p95Us": 81
+ },
+ {
+  "theme": "fix-fisher-sea",
+  "actors": 22,
+  "loadMs": 6.4,
+  "tickUs": 61,
+  "plansUs": 12,
+  "p95Us": 84
+ },
+ {
+  "theme": "home-tasks",
+  "actors": 23,
+  "loadMs": 4,
+  "tickUs": 61,
+  "plansUs": 12,
+  "p95Us": 90
+ },
+ {
+  "theme": "iraq-basra",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 61,
+  "plansUs": 14,
+  "p95Us": 82
+ },
+ {
+  "theme": "job-police",
+  "actors": 22,
+  "loadMs": 4.5,
+  "tickUs": 61,
+  "plansUs": 12,
+  "p95Us": 103
+ },
+ {
+  "theme": "close-dinner-table",
+  "actors": 21,
+  "loadMs": 2.6,
+  "tickUs": 60,
+  "plansUs": 20,
+  "p95Us": 97
+ },
+ {
+  "theme": "comoros-moheli",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 60,
+  "plansUs": 13,
+  "p95Us": 81
+ },
+ {
+  "theme": "egg-mouse-house",
+  "actors": 42,
+  "loadMs": 4.5,
+  "tickUs": 60,
+  "plansUs": 21,
+  "p95Us": 78
+ },
+ {
+  "theme": "egg-storybook",
+  "actors": 25,
+  "loadMs": 4.1,
+  "tickUs": 60,
+  "plansUs": 10,
+  "p95Us": 79
+ },
+ {
+  "theme": "fix-market-seller-stall",
+  "actors": 22,
+  "loadMs": 2,
+  "tickUs": 60,
+  "plansUs": 11,
+  "p95Us": 89
+ },
+ {
+  "theme": "icecream-garden",
+  "actors": 22,
+  "loadMs": 4.5,
+  "tickUs": 60,
+  "plansUs": 15,
+  "p95Us": 106
+ },
+ {
+  "theme": "in-bookshelf",
+  "actors": 25,
+  "loadMs": 2.3,
+  "tickUs": 60,
+  "plansUs": 9,
+  "p95Us": 72
+ },
+ {
+  "theme": "in-lunchbox",
+  "actors": 22,
+  "loadMs": 1.7,
+  "tickUs": 60,
+  "plansUs": 8,
+  "p95Us": 59
+ },
+ {
+  "theme": "islam-mosque-courtyard",
+  "actors": 57,
+  "loadMs": 2.9,
+  "tickUs": 60,
+  "plansUs": 18,
+  "p95Us": 86
+ },
+ {
+  "theme": "library",
+  "actors": 22,
+  "loadMs": 4.2,
+  "tickUs": 60,
+  "plansUs": 8,
+  "p95Us": 91
+ },
+ {
+  "theme": "mauritania-nouakchott",
+  "actors": 21,
+  "loadMs": 4.6,
+  "tickUs": 60,
+  "plansUs": 15,
+  "p95Us": 108
+ },
+ {
+  "theme": "nurse-room",
+  "actors": 23,
+  "loadMs": 3.6,
+  "tickUs": 60,
+  "plansUs": 8,
+  "p95Us": 76
+ },
+ {
+  "theme": "palestine-hebron",
+  "actors": 24,
+  "loadMs": 3.4,
+  "tickUs": 60,
+  "plansUs": 21,
+  "p95Us": 85
+ },
+ {
+  "theme": "somalia-hargeisa",
+  "actors": 22,
+  "loadMs": 3.6,
+  "tickUs": 60,
+  "plansUs": 20,
+  "p95Us": 106
+ },
+ {
+  "theme": "uae-downtown-dubai",
+  "actors": 22,
+  "loadMs": 3.3,
+  "tickUs": 60,
+  "plansUs": 9,
+  "p95Us": 93
+ },
+ {
+  "theme": "bahrain-pearling",
+  "actors": 25,
+  "loadMs": 4.4,
+  "tickUs": 59,
+  "plansUs": 19,
+  "p95Us": 93
+ },
+ {
+  "theme": "bahrain-tree-of-life",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 59,
+  "plansUs": 8,
+  "p95Us": 79
+ },
+ {
+  "theme": "close-build-car",
+  "actors": 22,
+  "loadMs": 2.2,
+  "tickUs": 59,
+  "plansUs": 10,
+  "p95Us": 82
+ },
+ {
+  "theme": "in-bin",
+  "actors": 24,
+  "loadMs": 2.4,
+  "tickUs": 59,
+  "plansUs": 10,
+  "p95Us": 76
+ },
+ {
+  "theme": "moto-shop",
+  "actors": 22,
+  "loadMs": 3,
+  "tickUs": 59,
+  "plansUs": 13,
+  "p95Us": 91
+ },
+ {
+  "theme": "somalia-laas-geel",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 59,
+  "plansUs": 12,
+  "p95Us": 93
+ },
+ {
+  "theme": "bakery",
+  "actors": 24,
+  "loadMs": 3.9,
+  "tickUs": 58,
+  "plansUs": 8,
+  "p95Us": 74
+ },
+ {
+  "theme": "close-breakfast",
+  "actors": 21,
+  "loadMs": 2.9,
+  "tickUs": 58,
+  "plansUs": 14,
+  "p95Us": 85
+ },
+ {
+  "theme": "close-job-baker",
+  "actors": 24,
+  "loadMs": 3.6,
+  "tickUs": 58,
+  "plansUs": 18,
+  "p95Us": 81
+ },
+ {
+  "theme": "close-kitchen-pan",
+  "actors": 22,
+  "loadMs": 2.7,
+  "tickUs": 58,
+  "plansUs": 14,
+  "p95Us": 79
+ },
+ {
+  "theme": "clothes-world",
+  "actors": 22,
+  "loadMs": 4.8,
+  "tickUs": 58,
+  "plansUs": 12,
+  "p95Us": 85
+ },
+ {
+  "theme": "egg-in-clock",
+  "actors": 22,
+  "loadMs": 4.3,
+  "tickUs": 58,
+  "plansUs": 9,
+  "p95Us": 66
+ },
+ {
+  "theme": "harbor",
+  "actors": 23,
+  "loadMs": 3.3,
+  "tickUs": 58,
+  "plansUs": 18,
+  "p95Us": 88
+ },
+ {
+  "theme": "in-crate",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 58,
+  "plansUs": 9,
+  "p95Us": 63
+ },
+ {
+  "theme": "in-oven",
+  "actors": 24,
+  "loadMs": 2,
+  "tickUs": 58,
+  "plansUs": 16,
+  "p95Us": 72
+ },
+ {
+  "theme": "in-toy-box",
+  "actors": 24,
+  "loadMs": 2.1,
+  "tickUs": 58,
+  "plansUs": 14,
+  "p95Us": 70
+ },
+ {
+  "theme": "islam-mosque-adhan",
+  "actors": 54,
+  "loadMs": 2.9,
+  "tickUs": 58,
+  "plansUs": 24,
+  "p95Us": 83
+ },
+ {
+  "theme": "luggage-security",
+  "actors": 23,
+  "loadMs": 3.9,
+  "tickUs": 58,
+  "plansUs": 23,
+  "p95Us": 101
+ },
+ {
+  "theme": "party",
+  "actors": 22,
+  "loadMs": 3.5,
+  "tickUs": 58,
+  "plansUs": 12,
+  "p95Us": 92
+ },
+ {
+  "theme": "sea",
+  "actors": 22,
+  "loadMs": 4,
+  "tickUs": 58,
+  "plansUs": 13,
+  "p95Us": 85
+ },
+ {
+  "theme": "sudan-meroe",
+  "actors": 22,
+  "loadMs": 3.6,
+  "tickUs": 58,
+  "plansUs": 8,
+  "p95Us": 87
+ },
+ {
+  "theme": "in-cutlery-drawer",
+  "actors": 23,
+  "loadMs": 1.9,
+  "tickUs": 57,
+  "plansUs": 9,
+  "p95Us": 60
+ },
+ {
+  "theme": "islam-wudu",
+  "actors": 22,
+  "loadMs": 3.7,
+  "tickUs": 57,
+  "plansUs": 14,
+  "p95Us": 72
+ },
+ {
+  "theme": "open-log",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 57,
+  "plansUs": 9,
+  "p95Us": 75
+ },
+ {
+  "theme": "restaurant",
+  "actors": 24,
+  "loadMs": 3.6,
+  "tickUs": 57,
+  "plansUs": 13,
+  "p95Us": 93
+ },
+ {
+  "theme": "tunisia-matmata",
+  "actors": 24,
+  "loadMs": 3.3,
+  "tickUs": 57,
+  "plansUs": 16,
+  "p95Us": 90
+ },
+ {
+  "theme": "close-doctor-tray",
+  "actors": 23,
+  "loadMs": 2.9,
+  "tickUs": 56,
+  "plansUs": 19,
+  "p95Us": 85
+ },
+ {
+  "theme": "close-job-artist",
+  "actors": 20,
+  "loadMs": 2.7,
+  "tickUs": 56,
+  "plansUs": 9,
+  "p95Us": 76
+ },
+ {
+  "theme": "close-job-cleaner",
+  "actors": 22,
+  "loadMs": 2.6,
+  "tickUs": 56,
+  "plansUs": 18,
+  "p95Us": 72
+ },
+ {
+  "theme": "close-job-gardener",
+  "actors": 26,
+  "loadMs": 2.8,
+  "tickUs": 56,
+  "plansUs": 20,
+  "p95Us": 78
+ },
+ {
+  "theme": "egg-bears-picnic",
+  "actors": 23,
+  "loadMs": 5.3,
+  "tickUs": 56,
+  "plansUs": 27,
+  "p95Us": 91
+ },
+ {
+  "theme": "fix-bus-stops",
+  "actors": 22,
+  "loadMs": 2,
+  "tickUs": 56,
+  "plansUs": 8,
+  "p95Us": 54
+ },
+ {
+  "theme": "hospital",
+  "actors": 22,
+  "loadMs": 3.4,
+  "tickUs": 56,
+  "plansUs": 12,
+  "p95Us": 84
+ },
+ {
+  "theme": "in-microwave",
+  "actors": 22,
+  "loadMs": 2.5,
+  "tickUs": 56,
+  "plansUs": 9,
+  "p95Us": 67
+ },
+ {
+  "theme": "mauritania-eye-of-sahara",
+  "actors": 22,
+  "loadMs": 3.6,
+  "tickUs": 56,
+  "plansUs": 13,
+  "p95Us": 82
+ },
+ {
+  "theme": "shop-salon",
+  "actors": 25,
+  "loadMs": 2.8,
+  "tickUs": 56,
+  "plansUs": 10,
+  "p95Us": 68
+ },
+ {
+  "theme": "washroom",
+  "actors": 22,
+  "loadMs": 3.2,
+  "tickUs": 56,
+  "plansUs": 10,
+  "p95Us": 73
+ },
+ {
+  "theme": "close-build-robot",
+  "actors": 23,
+  "loadMs": 2.2,
+  "tickUs": 55,
+  "plansUs": 13,
+  "p95Us": 67
+ },
+ {
+  "theme": "close-build-rocket",
+  "actors": 22,
+  "loadMs": 2.3,
+  "tickUs": 55,
+  "plansUs": 11,
+  "p95Us": 88
+ },
+ {
+  "theme": "close-build-truck",
+  "actors": 23,
+  "loadMs": 2.5,
+  "tickUs": 55,
+  "plansUs": 10,
+  "p95Us": 75
+ },
+ {
+  "theme": "close-job-pharmacist",
+  "actors": 22,
+  "loadMs": 2.6,
+  "tickUs": 55,
+  "plansUs": 22,
+  "p95Us": 79
+ },
+ {
+  "theme": "doctor-room",
+  "actors": 23,
+  "loadMs": 6.6,
+  "tickUs": 55,
+  "plansUs": 12,
+  "p95Us": 82
+ },
+ {
+  "theme": "egg-fish-tank",
+  "actors": 22,
+  "loadMs": 5.6,
+  "tickUs": 55,
+  "plansUs": 9,
+  "p95Us": 83
+ },
+ {
+  "theme": "in-backpack",
+  "actors": 22,
+  "loadMs": 2.3,
+  "tickUs": 55,
+  "plansUs": 14,
+  "p95Us": 70
+ },
+ {
+  "theme": "soccer",
+  "actors": 22,
+  "loadMs": 3.9,
+  "tickUs": 55,
+  "plansUs": 12,
+  "p95Us": 86
+ },
+ {
+  "theme": "veh-harbour",
+  "actors": 23,
+  "loadMs": 6.3,
+  "tickUs": 55,
+  "plansUs": 12,
+  "p95Us": 74
+ },
+ {
+  "theme": "basketball",
+  "actors": 22,
+  "loadMs": 4.6,
+  "tickUs": 54,
+  "plansUs": 18,
+  "p95Us": 85
+ },
+ {
+  "theme": "close-job-nanny",
+  "actors": 21,
+  "loadMs": 2.7,
+  "tickUs": 54,
+  "plansUs": 10,
+  "p95Us": 65
+ },
+ {
+  "theme": "close-tea-party",
+  "actors": 24,
+  "loadMs": 2.9,
+  "tickUs": 54,
+  "plansUs": 14,
+  "p95Us": 66
+ },
+ {
+  "theme": "comoros-anjouan",
+  "actors": 22,
+  "loadMs": 4.4,
+  "tickUs": 54,
+  "plansUs": 17,
+  "p95Us": 83
+ },
+ {
+  "theme": "egg-dreamland",
+  "actors": 43,
+  "loadMs": 4.6,
+  "tickUs": 54,
+  "plansUs": 9,
+  "p95Us": 66
+ },
+ {
+  "theme": "egypt-giza",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 54,
+  "plansUs": 17,
+  "p95Us": 85
+ },
+ {
+  "theme": "in-fire-locker",
+  "actors": 23,
+  "loadMs": 1.7,
+  "tickUs": 54,
+  "plansUs": 9,
+  "p95Us": 67
+ },
+ {
+  "theme": "in-handbag",
+  "actors": 23,
+  "loadMs": 1.9,
+  "tickUs": 54,
+  "plansUs": 9,
+  "p95Us": 58
+ },
+ {
+  "theme": "in-medicine-cabinet",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 54,
+  "plansUs": 8,
+  "p95Us": 75
+ },
+ {
+  "theme": "in-moving-box",
+  "actors": 22,
+  "loadMs": 2.2,
+  "tickUs": 54,
+  "plansUs": 14,
+  "p95Us": 82
+ },
+ {
+  "theme": "in-wardrobe",
+  "actors": 22,
+  "loadMs": 2.2,
+  "tickUs": 54,
+  "plansUs": 8,
+  "p95Us": 61
+ },
+ {
+  "theme": "mauritania-banc-arguin",
+  "actors": 22,
+  "loadMs": 6.2,
+  "tickUs": 54,
+  "plansUs": 12,
+  "p95Us": 81
+ },
+ {
+  "theme": "open-fruit-crate",
+  "actors": 21,
+  "loadMs": 1.8,
+  "tickUs": 54,
+  "plansUs": 9,
+  "p95Us": 68
+ },
+ {
+  "theme": "openb-in-deck-box",
+  "actors": 21,
+  "loadMs": 2.2,
+  "tickUs": 54,
+  "plansUs": 14,
+  "p95Us": 61
+ },
+ {
+  "theme": "openc-under-rug",
+  "actors": 22,
+  "loadMs": 2,
+  "tickUs": 54,
+  "plansUs": 8,
+  "p95Us": 61
+ },
+ {
+  "theme": "close-garden-potting",
+  "actors": 22,
+  "loadMs": 2.6,
+  "tickUs": 53,
+  "plansUs": 13,
+  "p95Us": 72
+ },
+ {
+  "theme": "close-haul-crane",
+  "actors": 23,
+  "loadMs": 3.2,
+  "tickUs": 53,
+  "plansUs": 11,
+  "p95Us": 72
+ },
+ {
+  "theme": "design-studio",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 53,
+  "plansUs": 16,
+  "p95Us": 82
+ },
+ {
+  "theme": "in-desk-drawer",
+  "actors": 22,
+  "loadMs": 1.7,
+  "tickUs": 53,
+  "plansUs": 9,
+  "p95Us": 62
+ },
+ {
+  "theme": "in-freezer",
+  "actors": 25,
+  "loadMs": 1.8,
+  "tickUs": 53,
+  "plansUs": 12,
+  "p95Us": 63
+ },
+ {
+  "theme": "in-prize-box",
+  "actors": 22,
+  "loadMs": 1.6,
+  "tickUs": 53,
+  "plansUs": 8,
+  "p95Us": 67
+ },
+ {
+  "theme": "in-sink-cupboard",
+  "actors": 22,
+  "loadMs": 2.3,
+  "tickUs": 53,
+  "plansUs": 20,
+  "p95Us": 75
+ },
+ {
+  "theme": "magic-show",
+  "actors": 22,
+  "loadMs": 3,
+  "tickUs": 53,
+  "plansUs": 17,
+  "p95Us": 78
+ },
+ {
+  "theme": "open-under-bed",
+  "actors": 23,
+  "loadMs": 2.2,
+  "tickUs": 53,
+  "plansUs": 8,
+  "p95Us": 59
+ },
+ {
+  "theme": "open-under-bench",
+  "actors": 23,
+  "loadMs": 2,
+  "tickUs": 53,
+  "plansUs": 9,
+  "p95Us": 56
+ },
+ {
+  "theme": "openc-under-rock",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 53,
+  "plansUs": 8,
+  "p95Us": 60
+ },
+ {
+  "theme": "supermarket",
+  "actors": 21,
+  "loadMs": 3.1,
+  "tickUs": 53,
+  "plansUs": 11,
+  "p95Us": 80
+ },
+ {
+  "theme": "close-pizza-making",
+  "actors": 24,
+  "loadMs": 2.5,
+  "tickUs": 52,
+  "plansUs": 19,
+  "p95Us": 64
+ },
+ {
+  "theme": "fix-astronaut-station",
+  "actors": 20,
+  "loadMs": 1.7,
+  "tickUs": 52,
+  "plansUs": 10,
+  "p95Us": 74
+ },
+ {
+  "theme": "fix-builder-wall",
+  "actors": 20,
+  "loadMs": 2.1,
+  "tickUs": 52,
+  "plansUs": 8,
+  "p95Us": 54
+ },
+ {
+  "theme": "in-first-aid",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 52,
+  "plansUs": 9,
+  "p95Us": 65
+ },
+ {
+  "theme": "in-nurse-cart",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 52,
+  "plansUs": 14,
+  "p95Us": 70
+ },
+ {
+  "theme": "open-under-table",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 52,
+  "plansUs": 14,
+  "p95Us": 61
+ },
+ {
+  "theme": "openc-barrel",
+  "actors": 23,
+  "loadMs": 2.2,
+  "tickUs": 52,
+  "plansUs": 13,
+  "p95Us": 67
+ },
+ {
+  "theme": "openc-instrument-case",
+  "actors": 22,
+  "loadMs": 1.7,
+  "tickUs": 52,
+  "plansUs": 9,
+  "p95Us": 61
+ },
+ {
+  "theme": "close-vehsea-deck",
+  "actors": 23,
+  "loadMs": 3.4,
+  "tickUs": 51,
+  "plansUs": 13,
+  "p95Us": 65
+ },
+ {
+  "theme": "in-bathroom-cabinet",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 51,
+  "plansUs": 9,
+  "p95Us": 59
+ },
+ {
+  "theme": "in-dresser",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 51,
+  "plansUs": 9,
+  "p95Us": 65
+ },
+ {
+  "theme": "in-laundry-basket",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 51,
+  "plansUs": 9,
+  "p95Us": 59
+ },
+ {
+  "theme": "in-salon-trolley",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 51,
+  "plansUs": 8,
+  "p95Us": 64
+ },
+ {
+  "theme": "in-tent",
+  "actors": 24,
+  "loadMs": 2,
+  "tickUs": 51,
+  "plansUs": 14,
+  "p95Us": 67
+ },
+ {
+  "theme": "job-dentist",
+  "actors": 23,
+  "loadMs": 3.7,
+  "tickUs": 51,
+  "plansUs": 28,
+  "p95Us": 91
+ },
+ {
+  "theme": "open-blanket-fort",
+  "actors": 25,
+  "loadMs": 1.9,
+  "tickUs": 51,
+  "plansUs": 13,
+  "p95Us": 62
+ },
+ {
+  "theme": "open-under-rock",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 51,
+  "plansUs": 8,
+  "p95Us": 63
+ },
+ {
+  "theme": "open-under-sofa",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 51,
+  "plansUs": 8,
+  "p95Us": 58
+ },
+ {
+  "theme": "shop-florist",
+  "actors": 23,
+  "loadMs": 2,
+  "tickUs": 51,
+  "plansUs": 12,
+  "p95Us": 69
+ },
+ {
+  "theme": "close-car-repair",
+  "actors": 21,
+  "loadMs": 2.6,
+  "tickUs": 50,
+  "plansUs": 9,
+  "p95Us": 65
+ },
+ {
+  "theme": "in-car-boot",
+  "actors": 25,
+  "loadMs": 1.9,
+  "tickUs": 50,
+  "plansUs": 13,
+  "p95Us": 60
+ },
+ {
+  "theme": "in-cookie-jar",
+  "actors": 22,
+  "loadMs": 2.5,
+  "tickUs": 50,
+  "plansUs": 14,
+  "p95Us": 76
+ },
+ {
+  "theme": "in-doctor-bag",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 50,
+  "plansUs": 23,
+  "p95Us": 73
+ },
+ {
+  "theme": "in-toolbox",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 50,
+  "plansUs": 14,
+  "p95Us": 68
+ },
+ {
+  "theme": "open-ambulance",
+  "actors": 22,
+  "loadMs": 1.7,
+  "tickUs": 50,
+  "plansUs": 9,
+  "p95Us": 57
+ },
+ {
+  "theme": "open-bike-basket",
+  "actors": 22,
+  "loadMs": 2.5,
+  "tickUs": 50,
+  "plansUs": 12,
+  "p95Us": 59
+ },
+ {
+  "theme": "open-stroller",
+  "actors": 21,
+  "loadMs": 1.8,
+  "tickUs": 50,
+  "plansUs": 9,
+  "p95Us": 61
+ },
+ {
+  "theme": "toothbrush",
+  "actors": 22,
+  "loadMs": 2.9,
+  "tickUs": 50,
+  "plansUs": 13,
+  "p95Us": 70
+ },
+ {
+  "theme": "close-job-bus-driver",
+  "actors": 22,
+  "loadMs": 5.1,
+  "tickUs": 49,
+  "plansUs": 9,
+  "p95Us": 61
+ },
+ {
+  "theme": "close-job-librarian",
+  "actors": 21,
+  "loadMs": 2.6,
+  "tickUs": 49,
+  "plansUs": 10,
+  "p95Us": 62
+ },
+ {
+  "theme": "close-job-nurse",
+  "actors": 23,
+  "loadMs": 2.7,
+  "tickUs": 49,
+  "plansUs": 14,
+  "p95Us": 61
+ },
+ {
+  "theme": "close-mechanic",
+  "actors": 20,
+  "loadMs": 2.1,
+  "tickUs": 49,
+  "plansUs": 8,
+  "p95Us": 56
+ },
+ {
+  "theme": "egg-dino-valley",
+  "actors": 22,
+  "loadMs": 3.8,
+  "tickUs": 49,
+  "plansUs": 17,
+  "p95Us": 63
+ },
+ {
+  "theme": "fix-pilot-panel",
+  "actors": 20,
+  "loadMs": 2,
+  "tickUs": 49,
+  "plansUs": 9,
+  "p95Us": 66
+ },
+ {
+  "theme": "games-bowling",
+  "actors": 21,
+  "loadMs": 3.5,
+  "tickUs": 49,
+  "plansUs": 10,
+  "p95Us": 81
+ },
+ {
+  "theme": "games-swim",
+  "actors": 23,
+  "loadMs": 2.9,
+  "tickUs": 49,
+  "plansUs": 6,
+  "p95Us": 63
+ },
+ {
+  "theme": "in-gift",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 49,
+  "plansUs": 11,
+  "p95Us": 62
+ },
+ {
+  "theme": "in-locker",
+  "actors": 22,
+  "loadMs": 1.6,
+  "tickUs": 49,
+  "plansUs": 8,
+  "p95Us": 58
+ },
+ {
+  "theme": "in-plane-trolley",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 49,
+  "plansUs": 13,
+  "p95Us": 58
+ },
+ {
+  "theme": "in-shopping-bag",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 49,
+  "plansUs": 12,
+  "p95Us": 61
+ },
+ {
+  "theme": "in-tool-trolley",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 49,
+  "plansUs": 13,
+  "p95Us": 64
+ },
+ {
+  "theme": "openb-in-craft-drawers",
+  "actors": 22,
+  "loadMs": 2,
+  "tickUs": 49,
+  "plansUs": 13,
+  "p95Us": 58
+ },
+ {
+  "theme": "close-haul-dump",
+  "actors": 22,
+  "loadMs": 2.5,
+  "tickUs": 48,
+  "plansUs": 10,
+  "p95Us": 62
+ },
+ {
+  "theme": "close-vehair-cargo-hold",
+  "actors": 23,
+  "loadMs": 3.2,
+  "tickUs": 48,
+  "plansUs": 17,
+  "p95Us": 64
+ },
+ {
+  "theme": "fix-cleaner-floor",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 48,
+  "plansUs": 14,
+  "p95Us": 69
+ },
+ {
+  "theme": "in-bread-oven",
+  "actors": 24,
+  "loadMs": 1.9,
+  "tickUs": 48,
+  "plansUs": 14,
+  "p95Us": 61
+ },
+ {
+  "theme": "in-ice-cream-truck",
+  "actors": 22,
+  "loadMs": 1.6,
+  "tickUs": 48,
+  "plansUs": 13,
+  "p95Us": 61
+ },
+ {
+  "theme": "in-snack-cart",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 48,
+  "plansUs": 13,
+  "p95Us": 56
+ },
+ {
+  "theme": "in-sports-bag",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 48,
+  "plansUs": 12,
+  "p95Us": 61
+ },
+ {
+  "theme": "open-camera-bag",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 48,
+  "plansUs": 17,
+  "p95Us": 64
+ },
+ {
+  "theme": "open-mixing-bowl",
+  "actors": 21,
+  "loadMs": 1.7,
+  "tickUs": 48,
+  "plansUs": 13,
+  "p95Us": 64
+ },
+ {
+  "theme": "openb-in-ball-cart",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 48,
+  "plansUs": 13,
+  "p95Us": 58
+ },
+ {
+  "theme": "close-haul-pickup",
+  "actors": 21,
+  "loadMs": 5.3,
+  "tickUs": 47,
+  "plansUs": 12,
+  "p95Us": 60
+ },
+ {
+  "theme": "close-job-electrician",
+  "actors": 22,
+  "loadMs": 2.6,
+  "tickUs": 47,
+  "plansUs": 15,
+  "p95Us": 63
+ },
+ {
+  "theme": "close-vehroad-bike-garage",
+  "actors": 34,
+  "loadMs": 2.7,
+  "tickUs": 47,
+  "plansUs": 10,
+  "p95Us": 64
+ },
+ {
+  "theme": "egg-snow-globe-town",
+  "actors": 37,
+  "loadMs": 3.7,
+  "tickUs": 47,
+  "plansUs": 19,
+  "p95Us": 68
+ },
+ {
+  "theme": "in-vending-machine",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 47,
+  "plansUs": 18,
+  "p95Us": 58
+ },
+ {
+  "theme": "open-nest",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 47,
+  "plansUs": 13,
+  "p95Us": 60
+ },
+ {
+  "theme": "open-wheelbarrow",
+  "actors": 22,
+  "loadMs": 2,
+  "tickUs": 47,
+  "plansUs": 12,
+  "p95Us": 57
+ },
+ {
+  "theme": "close-doctor-room",
+  "actors": 24,
+  "loadMs": 2.4,
+  "tickUs": 46,
+  "plansUs": 13,
+  "p95Us": 59
+ },
+ {
+  "theme": "close-job-bank-teller",
+  "actors": 21,
+  "loadMs": 2.5,
+  "tickUs": 46,
+  "plansUs": 13,
+  "p95Us": 62
+ },
+ {
+  "theme": "close-job-courier",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 46,
+  "plansUs": 13,
+  "p95Us": 59
+ },
+ {
+  "theme": "close-job-programmer",
+  "actors": 21,
+  "loadMs": 2.4,
+  "tickUs": 46,
+  "plansUs": 9,
+  "p95Us": 60
+ },
+ {
+  "theme": "close-vehrail-model-railway",
+  "actors": 37,
+  "loadMs": 2.6,
+  "tickUs": 46,
+  "plansUs": 15,
+  "p95Us": 60
+ },
+ {
+  "theme": "games-fruit",
+  "actors": 24,
+  "loadMs": 2.6,
+  "tickUs": 46,
+  "plansUs": 7,
+  "p95Us": 72
+ },
+ {
+  "theme": "games-sheep",
+  "actors": 20,
+  "loadMs": 2.9,
+  "tickUs": 46,
+  "plansUs": 9,
+  "p95Us": 80
+ },
+ {
+  "theme": "in-mailbag",
+  "actors": 23,
+  "loadMs": 1.7,
+  "tickUs": 46,
+  "plansUs": 13,
+  "p95Us": 59
+ },
+ {
+  "theme": "in-mailbox",
+  "actors": 23,
+  "loadMs": 1.8,
+  "tickUs": 46,
+  "plansUs": 13,
+  "p95Us": 59
+ },
+ {
+  "theme": "in-washing-machine",
+  "actors": 23,
+  "loadMs": 2,
+  "tickUs": 46,
+  "plansUs": 19,
+  "p95Us": 63
+ },
+ {
+  "theme": "open-leaf-pile",
+  "actors": 21,
+  "loadMs": 1.8,
+  "tickUs": 46,
+  "plansUs": 13,
+  "p95Us": 59
+ },
+ {
+  "theme": "open-van",
+  "actors": 21,
+  "loadMs": 1.6,
+  "tickUs": 46,
+  "plansUs": 12,
+  "p95Us": 56
+ },
+ {
+  "theme": "close-job-fisher",
+  "actors": 22,
+  "loadMs": 2.6,
+  "tickUs": 45,
+  "plansUs": 9,
+  "p95Us": 55
+ },
+ {
+  "theme": "close-job-pilot",
+  "actors": 20,
+  "loadMs": 2.1,
+  "tickUs": 45,
+  "plansUs": 12,
+  "p95Us": 59
+ },
+ {
+  "theme": "close-job-taxi-driver",
+  "actors": 20,
+  "loadMs": 2.4,
+  "tickUs": 45,
+  "plansUs": 13,
+  "p95Us": 53
+ },
+ {
+  "theme": "in-cash-register",
+  "actors": 22,
+  "loadMs": 1.7,
+  "tickUs": 45,
+  "plansUs": 13,
+  "p95Us": 57
+ },
+ {
+  "theme": "in-flight-bag",
+  "actors": 23,
+  "loadMs": 2.1,
+  "tickUs": 45,
+  "plansUs": 13,
+  "p95Us": 65
+ },
+ {
+  "theme": "openc-sandpit",
+  "actors": 23,
+  "loadMs": 5.2,
+  "tickUs": 45,
+  "plansUs": 18,
+  "p95Us": 60
+ },
+ {
+  "theme": "close-job-builder",
+  "actors": 20,
+  "loadMs": 2.4,
+  "tickUs": 44,
+  "plansUs": 12,
+  "p95Us": 62
+ },
+ {
+  "theme": "close-job-carpenter",
+  "actors": 22,
+  "loadMs": 5.1,
+  "tickUs": 44,
+  "plansUs": 9,
+  "p95Us": 61
+ },
+ {
+  "theme": "close-job-factory",
+  "actors": 21,
+  "loadMs": 3.5,
+  "tickUs": 44,
+  "plansUs": 18,
+  "p95Us": 70
+ },
+ {
+  "theme": "close-job-market-seller",
+  "actors": 22,
+  "loadMs": 6.5,
+  "tickUs": 44,
+  "plansUs": 14,
+  "p95Us": 69
+ },
+ {
+  "theme": "close-job-office-worker",
+  "actors": 21,
+  "loadMs": 2.8,
+  "tickUs": 44,
+  "plansUs": 18,
+  "p95Us": 68
+ },
+ {
+  "theme": "fix-gardener-flowerbed",
+  "actors": 24,
+  "loadMs": 2.1,
+  "tickUs": 44,
+  "plansUs": 14,
+  "p95Us": 61
+ },
+ {
+  "theme": "fix-pharmacist-shelf",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 44,
+  "plansUs": 8,
+  "p95Us": 57
+ },
+ {
+  "theme": "fix-police-lost",
+  "actors": 20,
+  "loadMs": 1.9,
+  "tickUs": 44,
+  "plansUs": 8,
+  "p95Us": 52
+ },
+ {
+  "theme": "fix-vet-puppy",
+  "actors": 23,
+  "loadMs": 1.9,
+  "tickUs": 44,
+  "plansUs": 9,
+  "p95Us": 61
+ },
+ {
+  "theme": "games-basketball",
+  "actors": 22,
+  "loadMs": 3,
+  "tickUs": 44,
+  "plansUs": 7,
+  "p95Us": 72
+ },
+ {
+  "theme": "in-suitcase",
+  "actors": 23,
+  "loadMs": 1.9,
+  "tickUs": 44,
+  "plansUs": 19,
+  "p95Us": 59
+ },
+ {
+  "theme": "open-soup-pot",
+  "actors": 22,
+  "loadMs": 4.8,
+  "tickUs": 44,
+  "plansUs": 12,
+  "p95Us": 57
+ },
+ {
+  "theme": "shop-boutique",
+  "actors": 21,
+  "loadMs": 2.6,
+  "tickUs": 44,
+  "plansUs": 16,
+  "p95Us": 66
+ },
+ {
+  "theme": "egg-cloud-kingdom",
+  "actors": 40,
+  "loadMs": 4.5,
+  "tickUs": 43,
+  "plansUs": 18,
+  "p95Us": 64
+ },
+ {
+  "theme": "fix-courier-doorsteps",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 43,
+  "plansUs": 8,
+  "p95Us": 86
+ },
+ {
+  "theme": "fix-doctor-patient",
+  "actors": 24,
+  "loadMs": 2,
+  "tickUs": 43,
+  "plansUs": 9,
+  "p95Us": 58
+ },
+ {
+  "theme": "fix-plumber-pipes",
+  "actors": 21,
+  "loadMs": 2.5,
+  "tickUs": 43,
+  "plansUs": 21,
+  "p95Us": 72
+ },
+ {
+  "theme": "fix-taxi-driver-town",
+  "actors": 20,
+  "loadMs": 2,
+  "tickUs": 43,
+  "plansUs": 13,
+  "p95Us": 60
+ },
+ {
+  "theme": "in-wallet",
+  "actors": 23,
+  "loadMs": 1.7,
+  "tickUs": 43,
+  "plansUs": 19,
+  "p95Us": 62
+ },
+ {
+  "theme": "open-bucket",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 43,
+  "plansUs": 18,
+  "p95Us": 60
+ },
+ {
+  "theme": "open-tea",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 43,
+  "plansUs": 17,
+  "p95Us": 58
+ },
+ {
+  "theme": "close-job-astronaut",
+  "actors": 20,
+  "loadMs": 5,
+  "tickUs": 42,
+  "plansUs": 9,
+  "p95Us": 55
+ },
+ {
+  "theme": "close-job-dentist",
+  "actors": 21,
+  "loadMs": 2.3,
+  "tickUs": 42,
+  "plansUs": 13,
+  "p95Us": 59
+ },
+ {
+  "theme": "close-job-hairdresser",
+  "actors": 20,
+  "loadMs": 2.4,
+  "tickUs": 42,
+  "plansUs": 8,
+  "p95Us": 54
+ },
+ {
+  "theme": "close-vehsea-submarine",
+  "actors": 31,
+  "loadMs": 3.6,
+  "tickUs": 42,
+  "plansUs": 13,
+  "p95Us": 67
+ },
+ {
+  "theme": "fix-nanny-nursery",
+  "actors": 21,
+  "loadMs": 2,
+  "tickUs": 42,
+  "plansUs": 7,
+  "p95Us": 55
+ },
+ {
+  "theme": "fix-baker-cakes",
+  "actors": 23,
+  "loadMs": 2,
+  "tickUs": 41,
+  "plansUs": 14,
+  "p95Us": 51
+ },
+ {
+  "theme": "games-penalty",
+  "actors": 20,
+  "loadMs": 2.3,
+  "tickUs": 41,
+  "plansUs": 21,
+  "p95Us": 76
+ },
+ {
+  "theme": "in-pencil-case",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 41,
+  "plansUs": 18,
+  "p95Us": 58
+ },
+ {
+  "theme": "close-job-scientist",
+  "actors": 20,
+  "loadMs": 1.9,
+  "tickUs": 40,
+  "plansUs": 13,
+  "p95Us": 62
+ },
+ {
+  "theme": "fix-firefighter-house",
+  "actors": 20,
+  "loadMs": 1.7,
+  "tickUs": 40,
+  "plansUs": 8,
+  "p95Us": 54
+ },
+ {
+  "theme": "fix-security-guard-building",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 40,
+  "plansUs": 13,
+  "p95Us": 49
+ },
+ {
+  "theme": "close-job-waiter",
+  "actors": 21,
+  "loadMs": 2.8,
+  "tickUs": 39,
+  "plansUs": 18,
+  "p95Us": 54
+ },
+ {
+  "theme": "fix-farmer-field",
+  "actors": 22,
+  "loadMs": 2.1,
+  "tickUs": 39,
+  "plansUs": 12,
+  "p95Us": 49
+ },
+ {
+  "theme": "fix-scientist-bench",
+  "actors": 20,
+  "loadMs": 1.6,
+  "tickUs": 39,
+  "plansUs": 7,
+  "p95Us": 46
+ },
+ {
+  "theme": "openb-in-feed-bin",
+  "actors": 23,
+  "loadMs": 2,
+  "tickUs": 39,
+  "plansUs": 18,
+  "p95Us": 60
+ },
+ {
+  "theme": "close-job-cashier",
+  "actors": 21,
+  "loadMs": 5.5,
+  "tickUs": 38,
+  "plansUs": 13,
+  "p95Us": 58
+ },
+ {
+  "theme": "close-job-teacher",
+  "actors": 21,
+  "loadMs": 2.3,
+  "tickUs": 38,
+  "plansUs": 18,
+  "p95Us": 51
+ },
+ {
+  "theme": "fix-electrician-wall",
+  "actors": 22,
+  "loadMs": 1.8,
+  "tickUs": 38,
+  "plansUs": 12,
+  "p95Us": 50
+ },
+ {
+  "theme": "games-race",
+  "actors": 25,
+  "loadMs": 2.3,
+  "tickUs": 38,
+  "plansUs": 17,
+  "p95Us": 62
+ },
+ {
+  "theme": "fix-carpenter-shelf",
+  "actors": 22,
+  "loadMs": 2,
+  "tickUs": 37,
+  "plansUs": 12,
+  "p95Us": 56
+ },
+ {
+  "theme": "fix-cashier-belt",
+  "actors": 21,
+  "loadMs": 3.7,
+  "tickUs": 37,
+  "plansUs": 13,
+  "p95Us": 50
+ },
+ {
+  "theme": "fix-postman-mailboxes",
+  "actors": 20,
+  "loadMs": 1.5,
+  "tickUs": 37,
+  "plansUs": 8,
+  "p95Us": 40
+ },
+ {
+  "theme": "fix-zookeeper-feeding",
+  "actors": 21,
+  "loadMs": 2,
+  "tickUs": 37,
+  "plansUs": 13,
+  "p95Us": 51
+ },
+ {
+  "theme": "games-tidy",
+  "actors": 21,
+  "loadMs": 2.3,
+  "tickUs": 37,
+  "plansUs": 7,
+  "p95Us": 51
+ },
+ {
+  "theme": "fix-artist-canvas",
+  "actors": 20,
+  "loadMs": 1.9,
+  "tickUs": 36,
+  "plansUs": 13,
+  "p95Us": 52
+ },
+ {
+  "theme": "fix-dentist-mouth",
+  "actors": 21,
+  "loadMs": 1.7,
+  "tickUs": 36,
+  "plansUs": 12,
+  "p95Us": 51
+ },
+ {
+  "theme": "fix-office-desk",
+  "actors": 21,
+  "loadMs": 1.9,
+  "tickUs": 36,
+  "plansUs": 12,
+  "p95Us": 53
+ },
+ {
+  "theme": "fix-tailor-shirt",
+  "actors": 22,
+  "loadMs": 1.9,
+  "tickUs": 36,
+  "plansUs": 13,
+  "p95Us": 50
+ },
+ {
+  "theme": "fix-teller-window",
+  "actors": 21,
+  "loadMs": 5.4,
+  "tickUs": 36,
+  "plansUs": 19,
+  "p95Us": 59
+ },
+ {
+  "theme": "fix-hairdresser-hair",
+  "actors": 20,
+  "loadMs": 2.1,
+  "tickUs": 35,
+  "plansUs": 12,
+  "p95Us": 54
+ },
+ {
+  "theme": "fix-librarian-shelves",
+  "actors": 21,
+  "loadMs": 5.1,
+  "tickUs": 35,
+  "plansUs": 8,
+  "p95Us": 52
+ },
+ {
+  "theme": "fix-waiter-table",
+  "actors": 21,
+  "loadMs": 2,
+  "tickUs": 34,
+  "plansUs": 12,
+  "p95Us": 42
+ },
+ {
+  "theme": "games-eggs",
+  "actors": 25,
+  "loadMs": 2.3,
+  "tickUs": 34,
+  "plansUs": 7,
+  "p95Us": 52
+ },
+ {
+  "theme": "fix-mechanic-car",
+  "actors": 20,
+  "loadMs": 4.7,
+  "tickUs": 33,
+  "plansUs": 16,
+  "p95Us": 51
+ },
+ {
+  "theme": "fix-programmer-robot",
+  "actors": 21,
+  "loadMs": 1.7,
+  "tickUs": 33,
+  "plansUs": 12,
+  "p95Us": 46
+ },
+ {
+  "theme": "fix-factory-toys",
+  "actors": 21,
+  "loadMs": 1.8,
+  "tickUs": 32,
+  "plansUs": 16,
+  "p95Us": 51
+ },
+ {
+  "theme": "fix-nurse-patient",
+  "actors": 23,
+  "loadMs": 2,
+  "tickUs": 32,
+  "plansUs": 17,
+  "p95Us": 49
+ },
+ {
+  "theme": "games-golf",
+  "actors": 21,
+  "loadMs": 2.2,
+  "tickUs": 32,
+  "plansUs": 11,
+  "p95Us": 59
+ },
+ {
+  "theme": "fix-chef-pass",
+  "actors": 20,
+  "loadMs": 1.7,
+  "tickUs": 31,
+  "plansUs": 26,
+  "p95Us": 50
+ }
+]

@@ -1,0 +1,131 @@
+{
+ "kind": "web",
+ "label": "l2s",
+ "reps": 1,
+ "rows": [
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "idle",
+   "actors": 95,
+   "seconds": 7.24,
+   "frames": 129,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 49.9,
+    "p99": 50.1,
+    "max": 66.6
+   },
+   "droppedPct": 43.41,
+   "longFrames": 2,
+   "longFrameMs": 267.3,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   },
+   "memory": {
+    "jsHeapMB": 72.85,
+    "domNodes": 36283,
+    "layoutObjects": 33581,
+    "listeners": 654
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-slow",
+   "actors": 95,
+   "seconds": 23.48,
+   "frames": 507,
+   "frameMs": {
+    "p50": 33.3,
+    "p95": 66.8,
+    "p99": 100,
+    "max": 200
+   },
+   "droppedPct": 76.92,
+   "longFrames": 26,
+   "longFrameMs": 2161.8,
+   "inputLatencyMs": {
+    "p50": 78.9,
+    "p95": 169.1
+   },
+   "memory": {
+    "jsHeapMB": 73.26,
+    "domNodes": 37410,
+    "layoutObjects": 34697,
+    "listeners": 658
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "idle",
+   "actors": 92,
+   "seconds": 4.63,
+   "frames": 152,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.4,
+    "max": 50
+   },
+   "droppedPct": 26.32,
+   "longFrames": 3,
+   "longFrameMs": 621.4,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   },
+   "memory": {
+    "jsHeapMB": 68.16,
+    "domNodes": 16362,
+    "layoutObjects": 14072,
+    "listeners": 651
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-slow",
+   "actors": 92,
+   "seconds": 19.59,
+   "frames": 538,
+   "frameMs": {
+    "p50": 33.3,
+    "p95": 50.1,
+    "p99": 100,
+    "max": 216.7
+   },
+   "droppedPct": 67.29,
+   "longFrames": 15,
+   "longFrameMs": 1240.4,
+   "inputLatencyMs": {
+    "p50": 70.1,
+    "p95": 130.6
+   },
+   "memory": {
+    "jsHeapMB": 68.78,
+    "domNodes": 18498,
+    "layoutObjects": 15799,
+    "listeners": 657
+   }
+  }
+ ],
+ "opens": [
+  {
+   "device": "low",
+   "theme": "market",
+   "openMs": 8947.5,
+   "jsHeapMB": 72.27,
+   "domNodes": 34398
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "openMs": 3418.4,
+   "jsHeapMB": 67.54,
+   "domNodes": 14797
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "$comment": "Frame budgets for the shape-actors stage (Dunyati worlds). Engine and recording times are measured on the runner and projected onto each device class by its CPU slowdown (scripts/perf/scenarios.ts DEVICES): projected = measured p95 x slowdown. A 60 Hz frame is 16.7 ms; the JS share (engine + Skia recording) must leave room for React, gestures and the bridge. Node and web rows are gated against perf-baseline.json (ratchet: a regression fails); absolute projections are gated with --strict. Web because a shared VM without a GPU cannot prove absolute 60 fps; their absolute targets are reported, not gated, unless --strict.",
+  "frameMs": 16.7,
+  "node": {
+    "engineP95ProjectedMs": { "low": 6, "mid": 4, "high": 3 },
+    "recordP95ProjectedMs": { "low": 8, "mid": 5, "high": 4 },
+    "canvasCallsP95": 1500,
+    "allocsP95": 250,
+    "ratchetTolerancePct": 40,
+    "noiseFloorMs": 0.4
+  },
+  "web": {
+    "ratchetTolerancePct": 25,
+    "targets": {
+      "low": { "droppedPct": 10, "inputLatencyP95Ms": 50 },
+      "mid": { "droppedPct": 5, "inputLatencyP95Ms": 34 },
+      "high": { "droppedPct": 2, "inputLatencyP95Ms": 25 }
+    }
+  }
+}

@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.2.0
+
+- **Learnings**: `learn --title --lesson --from EXP-...`; rendered first in LEDGER.md; `list
+  --learnings`; merges renumber colliding learning ids and follow renumbered experiments.
+- **Metrics**: `record --metric name:before:after[:unit[:higher]]` (repeatable), shown with their
+  trend (improved / regressed / unchanged).
+- **check**: complete entries from `completeFrom` on (hypothesis, method, before, after,
+  evidence, numbers), learnings cite real experiments, LEDGER.md up to date. Exit 1 on any
+  problem: for CI and agents.
+- Example `shape-actors-web`: three more entries (EXP-036 rig cost measured, EXP-037 rule-lookup
+  index, EXP-038 door load and first draw on separate frames); the raw results every entry points
+  to; the perf suite that produced them (`suite/`); before/after recordings (`videos/`); and
+  `LEARNINGS.md`.
+- Example: EXP-039..045 (will-change and particle half-rate rejected, the attribute census, the
+  canvas transform stack, the --gpu method, the software-GL probe, canvas placement), 38 learnings
+  recorded with `learn`, and `completeFrom: EXP-039`.
+
 ## 0.1.0
 
 - First release, extracted from the performance work on a web + native 2D stage (35 experiments).

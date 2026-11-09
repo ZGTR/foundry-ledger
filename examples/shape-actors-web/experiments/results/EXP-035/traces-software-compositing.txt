@@ -1,0 +1,16 @@
+drag playground svg:  10 ms 10× UpdateLayoutTree in FireAnimationFrame q3  11753 ms RunTask  3862 ms FireAnimationFrame  1477 ms Commit  1225 ms Paint 
+drag playground canvas:  9 ms 16× UpdateLayoutTree in FireAnimationFrame q3  10196 ms RunTask  3769 ms FireAnimationFrame  2154 ms Commit  404 ms Paint 
+drag playground svg:  8 ms 23× UpdateLayoutTree in FireAnimationFrame q3  10877 ms RunTask  3486 ms FireAnimationFrame  1446 ms Commit  1084 ms Paint 
+drag playground canvas:  8 ms 20× UpdateLayoutTree in FireAnimationFrame q2  10106 ms RunTask  3690 ms FireAnimationFrame  2141 ms Commit  417 ms Paint 
+swipe playground svg:  3 ms 5× UpdateLayoutTree in FireAnimationFrame q3  8171 ms RunTask  2394 ms FireAnimationFrame  1063 ms Commit  751 ms Paint 
+swipe playground canvas:  6 ms 15× UpdateLayoutTree in FireAnimationFrame q3  7233 ms RunTask  2433 ms FireAnimationFrame  1413 ms Commit  333 ms Paint 
+swipe playground svg:  5 ms 8× UpdateLayoutTree in FireAnimationFrame q3  8242 ms RunTask  2402 ms FireAnimationFrame  1025 ms Commit  742 ms Paint 
+swipe playground canvas:  2 ms 5× UpdateLayoutTree in FireAnimationFrame q3  8382 ms RunTask  2875 ms FireAnimationFrame  1536 ms Commit  433 ms Paint 
+drag market svg:  7 ms 18× UpdateLayoutTree in FireAnimationFrame q0  10061 ms RunTask  2707 ms FireAnimationFrame  2489 ms Commit  686 ms Paint 
+drag market canvas:  11 ms 19× UpdateLayoutTree in FireAnimationFrame q2  9319 ms RunTask  3720 ms FireAnimationFrame  2102 ms Commit  158 ms Paint 
+drag market svg:  9 ms 17× UpdateLayoutTree in FireAnimationFrame q1  9891 ms RunTask  2956 ms FireAnimationFrame  2011 ms Commit  701 ms Paint 
+drag market canvas:  8 ms 19× UpdateLayoutTree in FireAnimationFrame q3  8958 ms RunTask  3583 ms FireAnimationFrame  2010 ms Commit  193 ms Paint 
+idle playground svg:  13 ms 23× UpdateLayoutTree in FireAnimationFrame q0  2585 ms RunTask  911 ms FireAnimationFrame  295 ms Paint  110 ms Commit 
+idle playground canvas:  7 ms 22× UpdateLayoutTree in FireAnimationFrame q2  3243 ms RunTask  1150 ms FireAnimationFrame  827 ms Commit  141 ms Paint 
+idle playground svg:  7 ms 25× UpdateLayoutTree in FireAnimationFrame q0  2779 ms RunTask  1027 ms FireAnimationFrame  326 ms Paint  118 ms Commit 
+idle playground canvas:  9 ms 21× UpdateLayoutTree in FireAnimationFrame q2  3004 ms RunTask  1249 ms FireAnimationFrame  720 ms Commit  136 ms Paint 
