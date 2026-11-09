@@ -4,6 +4,10 @@ What the experiments in [`LEDGER.md`](LEDGER.md) taught, beyond each entry's own
 point names the entries it comes from. The general rules are in the
 [repository README](../../README.md#the-rules-the-ledger-encodes); these are the specific ones.
 
+The same lessons are also recorded in the ledger itself (`learn`), as L-001 to L-038, each citing the
+entries it rests on, so `check` refuses a learning whose evidence is missing. They render at the top
+of [`LEDGER.md`](LEDGER.md); this page is the longer prose.
+
 ## Measuring
 
 1. **One machine, one session, interleaved, more than once.** On the shared 4-vCPU VM the same

@@ -13,6 +13,9 @@
   index, EXP-038 door load and first draw on separate frames); the raw results every entry points
   to; the perf suite that produced them (`suite/`); before/after recordings (`videos/`); and
   `LEARNINGS.md`.
+- Example: EXP-039..045 (will-change and particle half-rate rejected, the attribute census, the
+  canvas transform stack, the --gpu method, the software-GL probe, canvas placement), 38 learnings
+  recorded with `learn`, and `completeFrom: EXP-039`.
 
 ## 0.1.0
 

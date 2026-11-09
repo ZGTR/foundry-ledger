@@ -4,6 +4,51 @@ _Generated from `ledger.json` by foundry-performance-ledger. Do not edit by hand
 
 Every performance experiment on a web + native 2D stage (a kids' game engine), kept or rejected, so later work starts from what was already measured. Numbers come from the project's perf suite on a 4-vCPU cloud VM with Chromium CPU throttling (6x = low-end phone, 3x = mid-range): compare within one row, not across rows run on different days.
 
+## Learnings
+
+What the experiments below taught, each with the experiments it came from.
+
+- **L-001 · Measure first, then change one thing** Every kept change started from a trace or a bench row that named the cost; guesses (the rig, nightfall, will-change) were measured and dropped. _(EXP-022, EXP-036, EXP-041)_
+- **L-002 · One machine, one session, interleaved, more than once** The same build moved ~30 % between runs on the shared VM. Only before/after/before/after in one session, reported as a median, held up; re-measure after a rebase. _(EXP-034, EXP-035)_
+- **L-003 · A committed baseline from another machine is a ratchet, not a verdict** The node rail's absolute gate failed for develop and the change alike; only the same-run comparison judged the change. _(EXP-034)_
+- **L-004 · Report dropped frames and input p95, never a mean** Means hid the frames a child feels. The bench reports dropped % and input-latency p95 per device, world and scenario. _(EXP-006, EXP-013, EXP-035)_
+- **L-005 · Name the frame, not the average** p95 hid every door: 1-3 ms frames at p95 while one door frame cost 50-324 ms. A worst-frame list (frame, tick, draw) found it. _(EXP-037, EXP-038)_
+- **L-006 · Profile with the tool that sees the code** An inspector session blamed a whole loop on post; node --cpu-prof saw it. Transpiled one-line modules hide line ticks: read the inclusive tree. _(EXP-034, EXP-037)_
+- **L-007 · Trace forced style with stacks, then bisect with CSS** The zone arrows' keyframe animation forced style every frame; the trace's stack named it and toggling the CSS confirmed it before any code change. _(EXP-031)_
+- **L-008 · Prototype in the page with --eval before building** A one-line override evaluated in the bench page priced the underlay idea before it was built properly. _(EXP-033)_
+- **L-009 · Micro-benchmarks suggest; the frame decides** Composing part transforms into one matrix was faster in isolation and changed nothing in the frame. _(EXP-032)_
+- **L-010 · Suspect the harness first** Two apparent regressions were the rig: a test suite running beside the bench, and a capture of an element that no longer held the pixels. _(EXP-031, EXP-035)_
+- **L-011 · Separate the environment from the product** The VM composites in software; the canvas's main-thread copy does not exist on a phone GPU. Measure both paths (--gpu) and say which one a number is. _(EXP-030, EXP-035, EXP-043)_
+- **L-012 · Platform probes can lie** failIfMajorPerformanceCaveat accepted SwiftShader; only the renderer string told software GL apart. Test a probe on the hosts it must refuse. _(EXP-044)_
+- **L-013 · Record failed measurements so they are not retried every frame** A tap pad whose measurement failed was measured again every frame; caching the failure removed the repeat. _(EXP-018)_
+- **L-014 · A guard test must be red on the old code** Every regression test was run against the reverted fix first; one that passes both ways guards nothing. _(EXP-001, EXP-037, EXP-038)_
+- **L-015 · A speed-up is kept only with an identity check that could have failed** World open was fingerprinted over 561 worlds at two sizes (1 122 scenes) against the base: 0 differences, before and after the merge. _(EXP-034)_
+- **L-016 · Parity checks with threshold zero, and a same-build control** Pixel parity on frozen frames, with two captures of one build as the control for noise (8-34 px); hide what is meant to move. _(EXP-008, EXP-009, EXP-016, EXP-033, EXP-035, EXP-045)_
+- **L-017 · Make sure the check can see the thing** A blank capture matched perfectly in both builds. Check a capture has content (its standard deviation) before trusting a zero diff. _(EXP-033, EXP-034)_
+- **L-018 · Frozen-frame parity across renderers** The canvas renderer was accepted on frozen frames diffed against svg (<= 0.6 % px, edge AA) and on hit parity (actor >= 99.95 %). _(EXP-035, EXP-045)_
+- **L-019 · Replay loops must reset per-iteration state** A hit-test replay leaked one part's transform into the next until each iteration reset it; the parity run caught it. _(EXP-035, EXP-042)_
+- **L-020 · Per-frame values do not belong in React state** The native stage re-rendered React every frame for a picture that only Skia needed; moving it out of state cut the drag cost. _(EXP-001)_
+- **L-021 · Read layout once before writing** Interleaved reads and writes forced a sync layout per object; batching all reads before writes removed it. _(EXP-004, EXP-018)_
+- **L-022 · Coalesce input once per frame** Gaze and hover picking ran per pointer event; once per frame is all the screen can show. _(EXP-003)_
+- **L-023 · Cull the drawing, keep the contract** Hide off-screen bodies but keep roots and tap pads, so hit tests, tests and state still see every object. _(EXP-005, EXP-011, EXP-012, EXP-027)_
+- **L-024 · Stride idle animation by measured quality** An adaptive governor slows idle redraw only when frames are measured slow, never on a device guess. _(EXP-006, EXP-013, EXP-028)_
+- **L-025 · Separate what is static from what moves** One paint layer per lifetime: tiles and an underlay for scenery, the cast on its own; will-change alone did not composite here. _(EXP-010, EXP-016, EXP-019, EXP-029, EXP-033, EXP-039)_
+- **L-026 · Remove work, do not just hide it** Hidden scenery vectors still cost style and layout; removing them once their tile covered them did not. _(EXP-019, EXP-029)_
+- **L-027 · Do not simulate the unseen, but keep moving things moving** Far objects at rest sleep and far swipes skip, but anything already in motion finishes, so nothing freezes when it comes back into view. _(EXP-024, EXP-026)_
+- **L-028 · Look for work done twice** World open built the backdrop twice (load and fit), and the second build threw away tiles mid-raster. _(EXP-034)_
+- **L-029 · Per-object facts are computed once per object** Shape boxes, pivots and a linear scan over ~4 400 interaction rules were recomputed per load or pair; a WeakMap and an ordered index fixed both. _(EXP-015, EXP-034, EXP-037)_
+- **L-030 · Spread one-off work over frames nobody is watching** A closed door iris hides the scene, so the next world is built in <= 1 ms slices behind it and first drawn on a later frame. _(EXP-038)_
+- **L-031 · Measure memory after GC, and dispose what native holds** Heap after a forced GC over a reload loop found no leak; native pictures and chunks are disposed explicitly. _(EXP-020, EXP-025)_
+- **L-032 · Count attribute writes before choosing a fix** The census named transform and data-* writes as the svg path's cost, which pointed to moving the cast off the DOM. _(EXP-041, EXP-032, EXP-035)_
+- **L-033 · Reuse a renderer through an adapter and injection** The native Skia renderer draws the web canvas through a 2D-canvas adapter, so one drawing path serves both platforms. _(EXP-035, EXP-042)_
+- **L-034 · Ship a hardware-dependent win as a measured policy** Canvas wins with a GPU and loses under software compositing, so renderer 'auto' picks per host, with svg as the fallback. _(EXP-035, EXP-044)_
+- **L-035 · Keep the web's z-order semantics when sharing a renderer** Native draws a part that precedes its parent nested (ostrich tuft over head); the web canvas keeps DOM order. Native parity is open. _(EXP-035)_
+- **L-036 · Record rejections and read the ledger first** will-change was tried again after EXP-010 had rejected it; the ledger already held the answer. _(EXP-010, EXP-039, EXP-040)_
+- **L-037 · Parallel branches converge: merge ledgers and re-measure** Two branches each wrote an EXP-034; develop landed fixes already in flight. Merge ledgers with renumbering and claim only the gain over the new base. _(EXP-015, EXP-021, EXP-034, EXP-035, EXP-038)_
+- **L-038 · Separate flakes from failures by rerunning alone; a stale node_modules looks like a bug** Suites that failed once under 4 workers passed 3/3 alone; seven failures were one missing package fixed by npm ci. _(EXP-034)_
+
+## Experiments
+
 | id | date | area | experiment | before | after | decision | evidence |
 |---|---|---|---|---|---|---|---|
 | EXP-001 | 2026-11-07 | native | **Native stage: per-frame picture out of React state**<br>setPicture in the stage root re-renders the whole stage tree each frame on the JS thread | 60 renders / 60 frames | 0 renders / 60 frames | kept (#763) | lib/shape-actors/__tests__/ShapeActorStage.native.perf.test.tsx (red on old file) |
@@ -44,6 +89,13 @@ Every performance experiment on a web + native 2D stage (a kids' game engine), k
 | EXP-036 | 2026-11-07 | engine+native | **Rig: riders carried by their host's bones (cost measured, no action)**<br>The rig pass (every rider's world transform composed from its host's bone each frame, plus Skia's per-rider SVD decompose) could cost real frame time once every carrier in a world is loaded and driven. | unloaded worlds: frame p95 0.8-2.6 ms | loaded worlds: rig pass p95 0.017-0.135 ms per frame; frame p95 0.8-3.1 ms; loaded vs unloaded within run-to-run noise | no action (measured: not a cost) (#767) | results/EXP-036/rig-*.json (perf-rig output). The only frame drops in the run were door frames, unrelated to the rig: see EXP-037. Not verified on a device: CanvasKit on a 4-vCPU VM. |
 | EXP-037 | 2026-11-07 | engine | **Engine: interaction-rule lookup indexed by actor selector (door frame 218 ms → 11 ms)**<br>A 50-324 ms tick spike when a door opens (in loaded and unloaded worlds alike) is not the rig: the scene load asks ruleFor for every pair of the new cast (hasSnapKit), and ruleFor scanned all ~4 400 interaction rules per new pair. | door frame (veh-railway) tick 218 ms; worst frame over 15 worlds 324 ms (haul-farm) | door frame 11 ms (16.7 ms with the profiler attached); worst frame over 15 worlds 39 ms; all 561 worlds: mean tick 73 µs, worst p95 0.69 ms, worst load 17 ms | kept (#767) | ruleIndex.test.ts (red with reversed merge order); results: rig before/after, engine over 561 worlds. Absolute numbers from a 4-vCPU VM; compare within the run. |
 | EXP-038 | 2026-11-08 | native+engine | **Door: the scene load and the new scene's first draw on separate frames**<br>After EXP-037 the door frame still paid the scene load (tick 5-9 ms) AND the new scene's first draw (4-9 ms) together; under a fully closed iris nothing of the scene is visible, and the ~45 frames a door waits and its iris closes are idle. | door frame 9-17 ms (load and first draw in one frame) | load frame 4.4-8 ms with ~0.03 ms draw; first draw on the next frame 5.7-10.7 ms: worst single door frame about a third lower | kept (#811) | skia-parity: 0 differing channels (42 camera positions); doorWarmup.test.ts. Develop had independently landed lazy chunk recording (EXP-021), so the gain is the iris skip + path warm-up + look-ahead only. |
+| EXP-039 | 2026-11-08 | web | **Web: will-change on the static layers or the cast to cut compositor commit (rejected)**<br>after EXP-035 the canvas path pays a compositor commit each frame; promoting the static underlay or the cast to their own layers with will-change should let the compositor reuse them and cut commit | commit 2 376 / 2 010 ms (two runs) | static layers: 2 409 / 2 414 ms; cast: 2 189 / 2 320 ms | rejected (commit moved within noise or rose; same lesson as EXP-010) | traces in the session; within run-to-run spread, no change kept. EXP-010 had already rejected will-change on the backdrop: this retry was avoidable by reading the ledger first |
+| EXP-040 | 2026-11-08 | web | **Web: particles updated at half rate on slow frames (rejected)**<br>particle simulation and drawing are a visible share of the swipe frame; at adaptive quality 2+ halving their update rate should cut commit | swipe commit 845 / 804 ms | swipe commit 811 / 728 ms | rejected (the gain was within noise and the particles visibly stuttered) | traces in the session; under 10 % and inside run-to-run spread, with visible stutter in the recording; EXP-028 (1 device px canvas) stays the particle policy |
+| EXP-041 | 2026-11-08 | web | **Web: attribute-write census of a swipe and a drag (measurement)**<br>the svg path's main-thread time after EXP-033 is the attributes written per frame, not the paint; counting writes by name says which ones | unknown split of rAF time | swipe: transform 7 444 writes, data-sx / data-sy 1 775 each, x 1 394, data-x 1 355; setAttribute self time 683 ms (swipe) / 834 ms (drag) | measured: attribute writes are the cost; led to EXP-032 and EXP-035 | counter output in the session. Composing the matrix (EXP-032) did not cut the count enough; moving the cast off the DOM (EXP-035) removed the writes |
+| EXP-042 | 2026-11-08 | web | **Web canvas: own transform stack, no hidden svg writes, calm-frame stride**<br>the first canvas build still paid for svg bookkeeping it no longer showed (hidden attribute writes) and for ctx.save/restore per part | ctx.save 376 ms self; canvas drag rAF 4 052 / 4 196 ms | canvas drag rAF 3 769 / 3 690 ms; parity unchanged | kept | profiles in the session; canvas-parity <= 0.6 % px; part of the EXP-035 renderer as merged |
+| EXP-043 | 2026-11-08 | method | **Method: measure the GPU path with --gpu (SwiftShader) as well as software compositing**<br>the VM has no GPU, so Chromium composites in software and the canvas copies each frame on the main thread; that cost does not exist on a phone, so the software path alone misjudges the canvas | canvas idle commit 749 ms (software compositing) | canvas idle commit 247 ms (--gpu) | kept (both paths reported for any renderer change) | results/EXP-035/gpu-*.json; SwiftShader shares the CPU, so the magnitude is indicative only, not a phone number |
+| EXP-044 | 2026-11-08 | web | **Web: renderer 'auto' probe rejects software GL (failIfMajorPerformanceCaveat accepted SwiftShader)**<br>auto must pick svg where the browser composites in software; failIfMajorPerformanceCaveat should refuse a context there | probe said GPU on SwiftShader (the caveat flag did not refuse it): auto would pick canvas on software GL | renderer string matched against software rasterisers (SwiftShader, llvmpipe, Software): auto picks svg there, canvas on a hardware GPU | kept (correctness of the auto policy) | probe unit tests in the app; e2e under both renderers |
+| EXP-045 | 2026-11-08 | web | **Web canvas placement: device-pixel snap, getScreenCTM mapping, frozen-frame parity**<br>canvas drawing must land on the same pixels as the svg it replaces | 0.67 % of pixels differed; a 1 CSS px offset at some view sizes | snap: 0.64 % (neutral, dropped); getScreenCTM removed the offset; same-frame parity <= 0.6 % of pixels > 24/255 (edge anti-aliasing) | kept (correctness; the snap was neutral and is not kept) | results/EXP-035/canvas-parity.json, hit-parity.txt |
 
 ## Runs
 
@@ -642,3 +694,80 @@ Every performance experiment on a web + native 2D stage (a kids' game engine), k
 - **Decision:** kept (#811)
 - **Evidence:** skia-parity: 0 differing channels (42 camera positions); doorWarmup.test.ts. Develop had independently landed lazy chunk recording (EXP-021), so the gain is the iris skip + path warm-up + look-ahead only.
 - **Commit:** ZGTR/foundry-mobileapps@7f4f2c8a
+
+### EXP-039 · Web: will-change on the static layers or the cast to cut compositor commit (rejected)
+
+- **Area:** web
+- **Hypothesis:** after EXP-035 the canvas path pays a compositor commit each frame; promoting the static underlay or the cast to their own layers with will-change should let the compositor reuse them and cut commit
+- **Method:** web-trace interleaved x2 on the low-end playground drag, svg vs canvas, will-change:transform on the underlay svg (static) or the moving-layer root (cast)
+- **Before:** commit 2 376 / 2 010 ms (two runs)
+- **After:** static layers: 2 409 / 2 414 ms; cast: 2 189 / 2 320 ms
+- **Decision:** rejected (commit moved within noise or rose; same lesson as EXP-010)
+- **Evidence:** traces in the session; within run-to-run spread, no change kept. EXP-010 had already rejected will-change on the backdrop: this retry was avoidable by reading the ledger first
+- **Metrics:** commit (static) 2376 → 2409 ms (regressed); commit (cast) 2010 → 2189 ms (regressed)
+
+### EXP-040 · Web: particles updated at half rate on slow frames (rejected)
+
+- **Area:** web
+- **Hypothesis:** particle simulation and drawing are a visible share of the swipe frame; at adaptive quality 2+ halving their update rate should cut commit
+- **Method:** web-trace swipe on the low-end playground, before/after interleaved x2
+- **Before:** swipe commit 845 / 804 ms
+- **After:** swipe commit 811 / 728 ms
+- **Decision:** rejected (the gain was within noise and the particles visibly stuttered)
+- **Evidence:** traces in the session; under 10 % and inside run-to-run spread, with visible stutter in the recording; EXP-028 (1 device px canvas) stays the particle policy
+- **Metrics:** swipe commit 845 → 811 ms (improved)
+
+### EXP-041 · Web: attribute-write census of a swipe and a drag (measurement)
+
+- **Area:** web
+- **Hypothesis:** the svg path's main-thread time after EXP-033 is the attributes written per frame, not the paint; counting writes by name says which ones
+- **Method:** setAttribute wrapped with a counter by attribute name and a self-time timer, one low-end swipe and one drag
+- **Before:** unknown split of rAF time
+- **After:** swipe: transform 7 444 writes, data-sx / data-sy 1 775 each, x 1 394, data-x 1 355; setAttribute self time 683 ms (swipe) / 834 ms (drag)
+- **Decision:** measured: attribute writes are the cost; led to EXP-032 and EXP-035
+- **Evidence:** counter output in the session. Composing the matrix (EXP-032) did not cut the count enough; moving the cast off the DOM (EXP-035) removed the writes
+- **Metrics:** setAttribute swipe 683 → 683 ms (unchanged); setAttribute drag 834 → 834 ms (unchanged)
+
+### EXP-042 · Web canvas: own transform stack, no hidden svg writes, calm-frame stride
+
+- **Area:** web
+- **Hypothesis:** the first canvas build still paid for svg bookkeeping it no longer showed (hidden attribute writes) and for ctx.save/restore per part
+- **Method:** canvas-mode profile on the low-end playground drag; the adapter keeps its own transform stack (setTransform) instead of ctx.save; svg attribute writes skipped while the canvas renders; idle frames drawn on the quality stride; canvas-parity on frozen frames
+- **Before:** ctx.save 376 ms self; canvas drag rAF 4 052 / 4 196 ms
+- **After:** canvas drag rAF 3 769 / 3 690 ms; parity unchanged
+- **Decision:** kept
+- **Evidence:** profiles in the session; canvas-parity <= 0.6 % px; part of the EXP-035 renderer as merged
+- **Metrics:** canvas drag rAF 4052 → 3769 ms (improved); ctx.save self 376 → 0 ms (improved)
+
+### EXP-043 · Method: measure the GPU path with --gpu (SwiftShader) as well as software compositing
+
+- **Area:** method
+- **Hypothesis:** the VM has no GPU, so Chromium composites in software and the canvas copies each frame on the main thread; that cost does not exist on a phone, so the software path alone misjudges the canvas
+- **Method:** web-bench and web-trace with --gpu (GPU raster and compositing on SwiftShader) beside the default software path, interleaved
+- **Before:** canvas idle commit 749 ms (software compositing)
+- **After:** canvas idle commit 247 ms (--gpu)
+- **Decision:** kept (both paths reported for any renderer change)
+- **Evidence:** results/EXP-035/gpu-*.json; SwiftShader shares the CPU, so the magnitude is indicative only, not a phone number
+- **Metrics:** canvas idle commit 749 → 247 ms (improved)
+
+### EXP-044 · Web: renderer 'auto' probe rejects software GL (failIfMajorPerformanceCaveat accepted SwiftShader)
+
+- **Area:** web
+- **Hypothesis:** auto must pick svg where the browser composites in software; failIfMajorPerformanceCaveat should refuse a context there
+- **Method:** probe run on the VM with and without --gpu; read the WebGL UNMASKED_RENDERER string
+- **Before:** probe said GPU on SwiftShader (the caveat flag did not refuse it): auto would pick canvas on software GL
+- **After:** renderer string matched against software rasterisers (SwiftShader, llvmpipe, Software): auto picks svg there, canvas on a hardware GPU
+- **Decision:** kept (correctness of the auto policy)
+- **Evidence:** probe unit tests in the app; e2e under both renderers
+- **Metrics:** software-GL hosts picking canvas 1 → 0 (improved)
+
+### EXP-045 · Web canvas placement: device-pixel snap, getScreenCTM mapping, frozen-frame parity
+
+- **Area:** web
+- **Hypothesis:** canvas drawing must land on the same pixels as the svg it replaces
+- **Method:** canvas-parity.mjs on frozen frames at DPR 1 and 2; device-pixel snap tried; screen mapping taken from the browser's getScreenCTM instead of recomputed
+- **Before:** 0.67 % of pixels differed; a 1 CSS px offset at some view sizes
+- **After:** snap: 0.64 % (neutral, dropped); getScreenCTM removed the offset; same-frame parity <= 0.6 % of pixels > 24/255 (edge anti-aliasing)
+- **Decision:** kept (correctness; the snap was neutral and is not kept)
+- **Evidence:** results/EXP-035/canvas-parity.json, hit-parity.txt
+- **Metrics:** pixels differing 0.67 → 0.6 % (improved)

@@ -1392,6 +1392,177 @@
    "evidence": "skia-parity: 0 differing channels (42 camera positions); doorWarmup.test.ts. Develop had independently landed lazy chunk recording (EXP-021), so the gain is the iris skip + path warm-up + look-ahead only.",
    "commit": "ZGTR/foundry-mobileapps@7f4f2c8a",
    "pr": "#811"
+  },
+  {
+   "id": "EXP-039",
+   "date": "2026-11-08",
+   "title": "Web: will-change on the static layers or the cast to cut compositor commit (rejected)",
+   "area": "web",
+   "hypothesis": "after EXP-035 the canvas path pays a compositor commit each frame; promoting the static underlay or the cast to their own layers with will-change should let the compositor reuse them and cut commit",
+   "method": "web-trace interleaved x2 on the low-end playground drag, svg vs canvas, will-change:transform on the underlay svg (static) or the moving-layer root (cast)",
+   "before": "commit 2 376 / 2 010 ms (two runs)",
+   "after": "static layers: 2 409 / 2 414 ms; cast: 2 189 / 2 320 ms",
+   "decision": "rejected (commit moved within noise or rose; same lesson as EXP-010)",
+   "evidence": "traces in the session; within run-to-run spread, no change kept. EXP-010 had already rejected will-change on the backdrop: this retry was avoidable by reading the ledger first",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "commit (static)",
+     "before": 2376,
+     "after": 2409,
+     "unit": "ms"
+    },
+    {
+     "name": "commit (cast)",
+     "before": 2010,
+     "after": 2189,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-040",
+   "date": "2026-11-08",
+   "title": "Web: particles updated at half rate on slow frames (rejected)",
+   "area": "web",
+   "hypothesis": "particle simulation and drawing are a visible share of the swipe frame; at adaptive quality 2+ halving their update rate should cut commit",
+   "method": "web-trace swipe on the low-end playground, before/after interleaved x2",
+   "before": "swipe commit 845 / 804 ms",
+   "after": "swipe commit 811 / 728 ms",
+   "decision": "rejected (the gain was within noise and the particles visibly stuttered)",
+   "evidence": "traces in the session; under 10 % and inside run-to-run spread, with visible stutter in the recording; EXP-028 (1 device px canvas) stays the particle policy",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "swipe commit",
+     "before": 845,
+     "after": 811,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-041",
+   "date": "2026-11-08",
+   "title": "Web: attribute-write census of a swipe and a drag (measurement)",
+   "area": "web",
+   "hypothesis": "the svg path's main-thread time after EXP-033 is the attributes written per frame, not the paint; counting writes by name says which ones",
+   "method": "setAttribute wrapped with a counter by attribute name and a self-time timer, one low-end swipe and one drag",
+   "before": "unknown split of rAF time",
+   "after": "swipe: transform 7 444 writes, data-sx / data-sy 1 775 each, x 1 394, data-x 1 355; setAttribute self time 683 ms (swipe) / 834 ms (drag)",
+   "decision": "measured: attribute writes are the cost; led to EXP-032 and EXP-035",
+   "evidence": "counter output in the session. Composing the matrix (EXP-032) did not cut the count enough; moving the cast off the DOM (EXP-035) removed the writes",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "setAttribute swipe",
+     "before": 683,
+     "after": 683,
+     "unit": "ms"
+    },
+    {
+     "name": "setAttribute drag",
+     "before": 834,
+     "after": 834,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-042",
+   "date": "2026-11-08",
+   "title": "Web canvas: own transform stack, no hidden svg writes, calm-frame stride",
+   "area": "web",
+   "hypothesis": "the first canvas build still paid for svg bookkeeping it no longer showed (hidden attribute writes) and for ctx.save/restore per part",
+   "method": "canvas-mode profile on the low-end playground drag; the adapter keeps its own transform stack (setTransform) instead of ctx.save; svg attribute writes skipped while the canvas renders; idle frames drawn on the quality stride; canvas-parity on frozen frames",
+   "before": "ctx.save 376 ms self; canvas drag rAF 4 052 / 4 196 ms",
+   "after": "canvas drag rAF 3 769 / 3 690 ms; parity unchanged",
+   "decision": "kept",
+   "evidence": "profiles in the session; canvas-parity <= 0.6 % px; part of the EXP-035 renderer as merged",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "canvas drag rAF",
+     "before": 4052,
+     "after": 3769,
+     "unit": "ms"
+    },
+    {
+     "name": "ctx.save self",
+     "before": 376,
+     "after": 0,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-043",
+   "date": "2026-11-08",
+   "title": "Method: measure the GPU path with --gpu (SwiftShader) as well as software compositing",
+   "area": "method",
+   "hypothesis": "the VM has no GPU, so Chromium composites in software and the canvas copies each frame on the main thread; that cost does not exist on a phone, so the software path alone misjudges the canvas",
+   "method": "web-bench and web-trace with --gpu (GPU raster and compositing on SwiftShader) beside the default software path, interleaved",
+   "before": "canvas idle commit 749 ms (software compositing)",
+   "after": "canvas idle commit 247 ms (--gpu)",
+   "decision": "kept (both paths reported for any renderer change)",
+   "evidence": "results/EXP-035/gpu-*.json; SwiftShader shares the CPU, so the magnitude is indicative only, not a phone number",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "canvas idle commit",
+     "before": 749,
+     "after": 247,
+     "unit": "ms"
+    }
+   ]
+  },
+  {
+   "id": "EXP-044",
+   "date": "2026-11-08",
+   "title": "Web: renderer 'auto' probe rejects software GL (failIfMajorPerformanceCaveat accepted SwiftShader)",
+   "area": "web",
+   "hypothesis": "auto must pick svg where the browser composites in software; failIfMajorPerformanceCaveat should refuse a context there",
+   "method": "probe run on the VM with and without --gpu; read the WebGL UNMASKED_RENDERER string",
+   "before": "probe said GPU on SwiftShader (the caveat flag did not refuse it): auto would pick canvas on software GL",
+   "after": "renderer string matched against software rasterisers (SwiftShader, llvmpipe, Software): auto picks svg there, canvas on a hardware GPU",
+   "decision": "kept (correctness of the auto policy)",
+   "evidence": "probe unit tests in the app; e2e under both renderers",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "software-GL hosts picking canvas",
+     "before": 1,
+     "after": 0
+    }
+   ]
+  },
+  {
+   "id": "EXP-045",
+   "date": "2026-11-08",
+   "title": "Web canvas placement: device-pixel snap, getScreenCTM mapping, frozen-frame parity",
+   "area": "web",
+   "hypothesis": "canvas drawing must land on the same pixels as the svg it replaces",
+   "method": "canvas-parity.mjs on frozen frames at DPR 1 and 2; device-pixel snap tried; screen mapping taken from the browser's getScreenCTM instead of recomputed",
+   "before": "0.67 % of pixels differed; a 1 CSS px offset at some view sizes",
+   "after": "snap: 0.64 % (neutral, dropped); getScreenCTM removed the offset; same-frame parity <= 0.6 % of pixels > 24/255 (edge anti-aliasing)",
+   "decision": "kept (correctness; the snap was neutral and is not kept)",
+   "evidence": "results/EXP-035/canvas-parity.json, hit-parity.txt",
+   "commit": null,
+   "pr": null,
+   "metrics": [
+    {
+     "name": "pixels differing",
+     "before": 0.67,
+     "after": 0.6,
+     "unit": "%"
+    }
+   ]
   }
  ],
  "runs": [
@@ -1428,6 +1599,434 @@
     "experiments/results/EXP-026/after-web-low.json"
    ],
    "pr": "#803"
+  }
+ ],
+ "learnings": [
+  {
+   "id": "L-001",
+   "date": "2026-11-09",
+   "title": "Measure first, then change one thing",
+   "lesson": "Every kept change started from a trace or a bench row that named the cost; guesses (the rig, nightfall, will-change) were measured and dropped.",
+   "area": "method",
+   "experiments": [
+    "EXP-022",
+    "EXP-036",
+    "EXP-041"
+   ]
+  },
+  {
+   "id": "L-002",
+   "date": "2026-11-09",
+   "title": "One machine, one session, interleaved, more than once",
+   "lesson": "The same build moved ~30 % between runs on the shared VM. Only before/after/before/after in one session, reported as a median, held up; re-measure after a rebase.",
+   "area": "method",
+   "experiments": [
+    "EXP-034",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-003",
+   "date": "2026-11-09",
+   "title": "A committed baseline from another machine is a ratchet, not a verdict",
+   "lesson": "The node rail's absolute gate failed for develop and the change alike; only the same-run comparison judged the change.",
+   "area": "method",
+   "experiments": [
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-004",
+   "date": "2026-11-09",
+   "title": "Report dropped frames and input p95, never a mean",
+   "lesson": "Means hid the frames a child feels. The bench reports dropped % and input-latency p95 per device, world and scenario.",
+   "area": "method",
+   "experiments": [
+    "EXP-006",
+    "EXP-013",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-005",
+   "date": "2026-11-09",
+   "title": "Name the frame, not the average",
+   "lesson": "p95 hid every door: 1-3 ms frames at p95 while one door frame cost 50-324 ms. A worst-frame list (frame, tick, draw) found it.",
+   "area": "method",
+   "experiments": [
+    "EXP-037",
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-006",
+   "date": "2026-11-09",
+   "title": "Profile with the tool that sees the code",
+   "lesson": "An inspector session blamed a whole loop on post; node --cpu-prof saw it. Transpiled one-line modules hide line ticks: read the inclusive tree.",
+   "area": "method",
+   "experiments": [
+    "EXP-034",
+    "EXP-037"
+   ]
+  },
+  {
+   "id": "L-007",
+   "date": "2026-11-09",
+   "title": "Trace forced style with stacks, then bisect with CSS",
+   "lesson": "The zone arrows' keyframe animation forced style every frame; the trace's stack named it and toggling the CSS confirmed it before any code change.",
+   "area": "method",
+   "experiments": [
+    "EXP-031"
+   ]
+  },
+  {
+   "id": "L-008",
+   "date": "2026-11-09",
+   "title": "Prototype in the page with --eval before building",
+   "lesson": "A one-line override evaluated in the bench page priced the underlay idea before it was built properly.",
+   "area": "method",
+   "experiments": [
+    "EXP-033"
+   ]
+  },
+  {
+   "id": "L-009",
+   "date": "2026-11-09",
+   "title": "Micro-benchmarks suggest; the frame decides",
+   "lesson": "Composing part transforms into one matrix was faster in isolation and changed nothing in the frame.",
+   "area": "method",
+   "experiments": [
+    "EXP-032"
+   ]
+  },
+  {
+   "id": "L-010",
+   "date": "2026-11-09",
+   "title": "Suspect the harness first",
+   "lesson": "Two apparent regressions were the rig: a test suite running beside the bench, and a capture of an element that no longer held the pixels.",
+   "area": "method",
+   "experiments": [
+    "EXP-031",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-011",
+   "date": "2026-11-09",
+   "title": "Separate the environment from the product",
+   "lesson": "The VM composites in software; the canvas's main-thread copy does not exist on a phone GPU. Measure both paths (--gpu) and say which one a number is.",
+   "area": "method",
+   "experiments": [
+    "EXP-030",
+    "EXP-035",
+    "EXP-043"
+   ]
+  },
+  {
+   "id": "L-012",
+   "date": "2026-11-09",
+   "title": "Platform probes can lie",
+   "lesson": "failIfMajorPerformanceCaveat accepted SwiftShader; only the renderer string told software GL apart. Test a probe on the hosts it must refuse.",
+   "area": "method",
+   "experiments": [
+    "EXP-044"
+   ]
+  },
+  {
+   "id": "L-013",
+   "date": "2026-11-09",
+   "title": "Record failed measurements so they are not retried every frame",
+   "lesson": "A tap pad whose measurement failed was measured again every frame; caching the failure removed the repeat.",
+   "area": "method",
+   "experiments": [
+    "EXP-018"
+   ]
+  },
+  {
+   "id": "L-014",
+   "date": "2026-11-09",
+   "title": "A guard test must be red on the old code",
+   "lesson": "Every regression test was run against the reverted fix first; one that passes both ways guards nothing.",
+   "area": "proof",
+   "experiments": [
+    "EXP-001",
+    "EXP-037",
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-015",
+   "date": "2026-11-09",
+   "title": "A speed-up is kept only with an identity check that could have failed",
+   "lesson": "World open was fingerprinted over 561 worlds at two sizes (1 122 scenes) against the base: 0 differences, before and after the merge.",
+   "area": "proof",
+   "experiments": [
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-016",
+   "date": "2026-11-09",
+   "title": "Parity checks with threshold zero, and a same-build control",
+   "lesson": "Pixel parity on frozen frames, with two captures of one build as the control for noise (8-34 px); hide what is meant to move.",
+   "area": "proof",
+   "experiments": [
+    "EXP-008",
+    "EXP-009",
+    "EXP-016",
+    "EXP-033",
+    "EXP-035",
+    "EXP-045"
+   ]
+  },
+  {
+   "id": "L-017",
+   "date": "2026-11-09",
+   "title": "Make sure the check can see the thing",
+   "lesson": "A blank capture matched perfectly in both builds. Check a capture has content (its standard deviation) before trusting a zero diff.",
+   "area": "proof",
+   "experiments": [
+    "EXP-033",
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-018",
+   "date": "2026-11-09",
+   "title": "Frozen-frame parity across renderers",
+   "lesson": "The canvas renderer was accepted on frozen frames diffed against svg (<= 0.6 % px, edge AA) and on hit parity (actor >= 99.95 %).",
+   "area": "proof",
+   "experiments": [
+    "EXP-035",
+    "EXP-045"
+   ]
+  },
+  {
+   "id": "L-019",
+   "date": "2026-11-09",
+   "title": "Replay loops must reset per-iteration state",
+   "lesson": "A hit-test replay leaked one part's transform into the next until each iteration reset it; the parity run caught it.",
+   "area": "proof",
+   "experiments": [
+    "EXP-035",
+    "EXP-042"
+   ]
+  },
+  {
+   "id": "L-020",
+   "date": "2026-11-09",
+   "title": "Per-frame values do not belong in React state",
+   "lesson": "The native stage re-rendered React every frame for a picture that only Skia needed; moving it out of state cut the drag cost.",
+   "area": "react",
+   "experiments": [
+    "EXP-001"
+   ]
+  },
+  {
+   "id": "L-021",
+   "date": "2026-11-09",
+   "title": "Read layout once before writing",
+   "lesson": "Interleaved reads and writes forced a sync layout per object; batching all reads before writes removed it.",
+   "area": "web",
+   "experiments": [
+    "EXP-004",
+    "EXP-018"
+   ]
+  },
+  {
+   "id": "L-022",
+   "date": "2026-11-09",
+   "title": "Coalesce input once per frame",
+   "lesson": "Gaze and hover picking ran per pointer event; once per frame is all the screen can show.",
+   "area": "engine",
+   "experiments": [
+    "EXP-003"
+   ]
+  },
+  {
+   "id": "L-023",
+   "date": "2026-11-09",
+   "title": "Cull the drawing, keep the contract",
+   "lesson": "Hide off-screen bodies but keep roots and tap pads, so hit tests, tests and state still see every object.",
+   "area": "web",
+   "experiments": [
+    "EXP-005",
+    "EXP-011",
+    "EXP-012",
+    "EXP-027"
+   ]
+  },
+  {
+   "id": "L-024",
+   "date": "2026-11-09",
+   "title": "Stride idle animation by measured quality",
+   "lesson": "An adaptive governor slows idle redraw only when frames are measured slow, never on a device guess.",
+   "area": "engine",
+   "experiments": [
+    "EXP-006",
+    "EXP-013",
+    "EXP-028"
+   ]
+  },
+  {
+   "id": "L-025",
+   "date": "2026-11-09",
+   "title": "Separate what is static from what moves",
+   "lesson": "One paint layer per lifetime: tiles and an underlay for scenery, the cast on its own; will-change alone did not composite here.",
+   "area": "web",
+   "experiments": [
+    "EXP-010",
+    "EXP-016",
+    "EXP-019",
+    "EXP-029",
+    "EXP-033",
+    "EXP-039"
+   ]
+  },
+  {
+   "id": "L-026",
+   "date": "2026-11-09",
+   "title": "Remove work, do not just hide it",
+   "lesson": "Hidden scenery vectors still cost style and layout; removing them once their tile covered them did not.",
+   "area": "web",
+   "experiments": [
+    "EXP-019",
+    "EXP-029"
+   ]
+  },
+  {
+   "id": "L-027",
+   "date": "2026-11-09",
+   "title": "Do not simulate the unseen, but keep moving things moving",
+   "lesson": "Far objects at rest sleep and far swipes skip, but anything already in motion finishes, so nothing freezes when it comes back into view.",
+   "area": "engine",
+   "experiments": [
+    "EXP-024",
+    "EXP-026"
+   ]
+  },
+  {
+   "id": "L-028",
+   "date": "2026-11-09",
+   "title": "Look for work done twice",
+   "lesson": "World open built the backdrop twice (load and fit), and the second build threw away tiles mid-raster.",
+   "area": "engine",
+   "experiments": [
+    "EXP-034"
+   ]
+  },
+  {
+   "id": "L-029",
+   "date": "2026-11-09",
+   "title": "Per-object facts are computed once per object",
+   "lesson": "Shape boxes, pivots and a linear scan over ~4 400 interaction rules were recomputed per load or pair; a WeakMap and an ordered index fixed both.",
+   "area": "engine",
+   "experiments": [
+    "EXP-015",
+    "EXP-034",
+    "EXP-037"
+   ]
+  },
+  {
+   "id": "L-030",
+   "date": "2026-11-09",
+   "title": "Spread one-off work over frames nobody is watching",
+   "lesson": "A closed door iris hides the scene, so the next world is built in <= 1 ms slices behind it and first drawn on a later frame.",
+   "area": "engine",
+   "experiments": [
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-031",
+   "date": "2026-11-09",
+   "title": "Measure memory after GC, and dispose what native holds",
+   "lesson": "Heap after a forced GC over a reload loop found no leak; native pictures and chunks are disposed explicitly.",
+   "area": "memory",
+   "experiments": [
+    "EXP-020",
+    "EXP-025"
+   ]
+  },
+  {
+   "id": "L-032",
+   "date": "2026-11-09",
+   "title": "Count attribute writes before choosing a fix",
+   "lesson": "The census named transform and data-* writes as the svg path's cost, which pointed to moving the cast off the DOM.",
+   "area": "web",
+   "experiments": [
+    "EXP-041",
+    "EXP-032",
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-033",
+   "date": "2026-11-09",
+   "title": "Reuse a renderer through an adapter and injection",
+   "lesson": "The native Skia renderer draws the web canvas through a 2D-canvas adapter, so one drawing path serves both platforms.",
+   "area": "web",
+   "experiments": [
+    "EXP-035",
+    "EXP-042"
+   ]
+  },
+  {
+   "id": "L-034",
+   "date": "2026-11-09",
+   "title": "Ship a hardware-dependent win as a measured policy",
+   "lesson": "Canvas wins with a GPU and loses under software compositing, so renderer 'auto' picks per host, with svg as the fallback.",
+   "area": "web",
+   "experiments": [
+    "EXP-035",
+    "EXP-044"
+   ]
+  },
+  {
+   "id": "L-035",
+   "date": "2026-11-09",
+   "title": "Keep the web's z-order semantics when sharing a renderer",
+   "lesson": "Native draws a part that precedes its parent nested (ostrich tuft over head); the web canvas keeps DOM order. Native parity is open.",
+   "area": "web",
+   "experiments": [
+    "EXP-035"
+   ]
+  },
+  {
+   "id": "L-036",
+   "date": "2026-11-09",
+   "title": "Record rejections and read the ledger first",
+   "lesson": "will-change was tried again after EXP-010 had rejected it; the ledger already held the answer.",
+   "area": "process",
+   "experiments": [
+    "EXP-010",
+    "EXP-039",
+    "EXP-040"
+   ]
+  },
+  {
+   "id": "L-037",
+   "date": "2026-11-09",
+   "title": "Parallel branches converge: merge ledgers and re-measure",
+   "lesson": "Two branches each wrote an EXP-034; develop landed fixes already in flight. Merge ledgers with renumbering and claim only the gain over the new base.",
+   "area": "process",
+   "experiments": [
+    "EXP-015",
+    "EXP-021",
+    "EXP-034",
+    "EXP-035",
+    "EXP-038"
+   ]
+  },
+  {
+   "id": "L-038",
+   "date": "2026-11-09",
+   "title": "Separate flakes from failures by rerunning alone; a stale node_modules looks like a bug",
+   "lesson": "Suites that failed once under 4 workers passed 3/3 alone; seven failures were one missing package fixed by npm ci.",
+   "area": "process",
+   "experiments": [
+    "EXP-034"
+   ]
   }
  ]
 }

@@ -1,6 +1,6 @@
 # Examples
 
-- `shape-actors-web/`: the ledger foundry-performance-ledger was extracted from: 38 experiments (kept,
+- `shape-actors-web/`: the ledger foundry-performance-ledger was extracted from: 45 experiments and 38 learnings (kept,
   rejected and measured-not-a-cost) on a web + native 2D stage, from low-end-device work dated
   7–8 November 2026.
   - `ledger.json`, `LEDGER.md`: the ledger and its rendering.
