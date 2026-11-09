@@ -1,0 +1,44 @@
+{
+  "ledger": "ledger.json",
+  "markdown": "LEDGER.md",
+  "results": "experiments/results",
+  "title": "Performance ledger: shape-actors environments, scenery and catalogue (Nov 2026)",
+  "intro": "Experiments from redrawing every environment of a code-drawn 2D stage (kids' learning app) and then paying back what the richer art cost: scenery loaded per environment, objects prepared on first use, no hidden drawing under painted scenes. Numbers come from the suite in suite/ on a 4-vCPU cloud VM (Node 22; Chromium CPU throttling for browser recordings: 6x = low-end phone). Each A/B was measured in one session, interleaved: compare within a row, not across rows. Raw files: runs/ and experiments/results/.",
+  "bench": {
+    "sources": [
+      {
+        "rows": "rows",
+        "key": [
+          "scenario"
+        ],
+        "metrics": {
+          "engine p95": "engineMs.p95",
+          "record p95": "renderMs.p95",
+          "raster p95": "rasterMs.p95",
+          "canvas calls p95": "canvasCallsPerFrame.p95"
+        }
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "name": "engine p95",
+      "unit": "ms",
+      "digits": 2
+    },
+    {
+      "name": "record p95",
+      "unit": "ms",
+      "digits": 2
+    },
+    {
+      "name": "raster p95",
+      "unit": "ms",
+      "digits": 1
+    },
+    {
+      "name": "canvas calls p95",
+      "digits": 0
+    }
+  ]
+}
