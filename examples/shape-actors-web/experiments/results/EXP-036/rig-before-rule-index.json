@@ -1,0 +1,752 @@
+[
+ {
+  "theme": "veh-roads",
+  "actors": 71,
+  "carriers": 45,
+  "riders": 20,
+  "base": {
+   "tick": {
+    "mean": 0.304,
+    "p95": 0.839,
+    "max": 12.33
+   },
+   "draw": {
+    "mean": 0.971,
+    "p95": 1.652,
+    "max": 19.525
+   },
+   "frame": {
+    "mean": 1.275,
+    "p95": 2.253,
+    "max": 31.856
+   },
+   "over4ms": 6
+  },
+  "loaded": {
+   "actors": 71,
+   "carriers": 45,
+   "riders": 20,
+   "tick": {
+    "mean": 0.19,
+    "p95": 0.402,
+    "max": 6.783
+   },
+   "rig": {
+    "mean": 0.013,
+    "p95": 0.083,
+    "max": 0.144
+   },
+   "draw": {
+    "mean": 0.74,
+    "p95": 1.066,
+    "max": 10.433
+   },
+   "frame": {
+    "mean": 0.93,
+    "p95": 1.528,
+    "max": 17.216
+   },
+   "over4ms": 2
+  }
+ },
+ {
+  "theme": "veh-airport",
+  "actors": 77,
+  "carriers": 33,
+  "riders": 25,
+  "base": {
+   "tick": {
+    "mean": 0.189,
+    "p95": 0.296,
+    "max": 7.57
+   },
+   "draw": {
+    "mean": 0.607,
+    "p95": 0.908,
+    "max": 15.621
+   },
+   "frame": {
+    "mean": 0.796,
+    "p95": 1.127,
+    "max": 23.191
+   },
+   "over4ms": 2
+  },
+  "loaded": {
+   "actors": 77,
+   "carriers": 33,
+   "riders": 25,
+   "tick": {
+    "mean": 0.177,
+    "p95": 0.325,
+    "max": 5.939
+   },
+   "rig": {
+    "mean": 0.007,
+    "p95": 0.037,
+    "max": 0.107
+   },
+   "draw": {
+    "mean": 0.579,
+    "p95": 1.414,
+    "max": 13.234
+   },
+   "frame": {
+    "mean": 0.756,
+    "p95": 1.725,
+    "max": 19.174
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "veh-harbour",
+  "actors": 69,
+  "carriers": 30,
+  "riders": 20,
+  "base": {
+   "tick": {
+    "mean": 0.184,
+    "p95": 0.317,
+    "max": 5.667
+   },
+   "draw": {
+    "mean": 0.793,
+    "p95": 1.234,
+    "max": 18.565
+   },
+   "frame": {
+    "mean": 0.977,
+    "p95": 1.542,
+    "max": 24.233
+   },
+   "over4ms": 2
+  },
+  "loaded": {
+   "actors": 69,
+   "carriers": 30,
+   "riders": 20,
+   "tick": {
+    "mean": 0.168,
+    "p95": 0.282,
+    "max": 5.107
+   },
+   "rig": {
+    "mean": 0.009,
+    "p95": 0.06,
+    "max": 0.109
+   },
+   "draw": {
+    "mean": 0.709,
+    "p95": 1.166,
+    "max": 16.045
+   },
+   "frame": {
+    "mean": 0.878,
+    "p95": 1.437,
+    "max": 21.153
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "veh-railway",
+  "actors": 26,
+  "carriers": 31,
+  "riders": 30,
+  "base": {
+   "tick": {
+    "mean": 0.446,
+    "p95": 0.273,
+    "max": 178.258
+   },
+   "draw": {
+    "mean": 0.298,
+    "p95": 0.771,
+    "max": 2.831
+   },
+   "frame": {
+    "mean": 0.744,
+    "p95": 1.022,
+    "max": 181.089
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 26,
+   "carriers": 31,
+   "riders": 30,
+   "tick": {
+    "mean": 0.402,
+    "p95": 0.323,
+    "max": 171.917
+   },
+   "rig": {
+    "mean": 0.017,
+    "p95": 0.043,
+    "max": 1.011
+   },
+   "draw": {
+    "mean": 0.273,
+    "p95": 0.91,
+    "max": 2.439
+   },
+   "frame": {
+    "mean": 0.675,
+    "p95": 1.215,
+    "max": 174.355
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "vehicle-show",
+  "actors": 73,
+  "carriers": 29,
+  "riders": 21,
+  "base": {
+   "tick": {
+    "mean": 0.2,
+    "p95": 0.263,
+    "max": 4.683
+   },
+   "draw": {
+    "mean": 0.766,
+    "p95": 1.326,
+    "max": 10.775
+   },
+   "frame": {
+    "mean": 0.966,
+    "p95": 1.553,
+    "max": 15.458
+   },
+   "over4ms": 2
+  },
+  "loaded": {
+   "actors": 73,
+   "carriers": 29,
+   "riders": 21,
+   "tick": {
+    "mean": 0.197,
+    "p95": 0.283,
+    "max": 5.86
+   },
+   "rig": {
+    "mean": 0.007,
+    "p95": 0.031,
+    "max": 0.072
+   },
+   "draw": {
+    "mean": 0.753,
+    "p95": 1.342,
+    "max": 13.187
+   },
+   "frame": {
+    "mean": 0.95,
+    "p95": 1.594,
+    "max": 19.047
+   },
+   "over4ms": 2
+  }
+ },
+ {
+  "theme": "haul-site",
+  "actors": 31,
+  "carriers": 26,
+  "riders": 26,
+  "base": {
+   "tick": {
+    "mean": 0.205,
+    "p95": 0.195,
+    "max": 55.91
+   },
+   "draw": {
+    "mean": 0.66,
+    "p95": 1.229,
+    "max": 4.297
+   },
+   "frame": {
+    "mean": 0.865,
+    "p95": 1.319,
+    "max": 60.207
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 31,
+   "carriers": 26,
+   "riders": 26,
+   "tick": {
+    "mean": 0.184,
+    "p95": 0.272,
+    "max": 51.211
+   },
+   "rig": {
+    "mean": 0.007,
+    "p95": 0.054,
+    "max": 0.121
+   },
+   "draw": {
+    "mean": 0.556,
+    "p95": 1.058,
+    "max": 4.092
+   },
+   "frame": {
+    "mean": 0.741,
+    "p95": 1.184,
+    "max": 55.303
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "haul-farm",
+  "actors": 28,
+  "carriers": 17,
+  "riders": 17,
+  "base": {
+   "tick": {
+    "mean": 0.479,
+    "p95": 0.217,
+    "max": 198.647
+   },
+   "draw": {
+    "mean": 0.484,
+    "p95": 1.224,
+    "max": 5.028
+   },
+   "frame": {
+    "mean": 0.962,
+    "p95": 1.389,
+    "max": 203.675
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 28,
+   "carriers": 17,
+   "riders": 17,
+   "tick": {
+    "mean": 0.696,
+    "p95": 0.399,
+    "max": 319.071
+   },
+   "rig": {
+    "mean": 0.02,
+    "p95": 0.052,
+    "max": 0.654
+   },
+   "draw": {
+    "mean": 0.607,
+    "p95": 1.565,
+    "max": 4.962
+   },
+   "frame": {
+    "mean": 1.303,
+    "p95": 1.937,
+    "max": 324.033
+   },
+   "over4ms": 2
+  }
+ },
+ {
+  "theme": "close-haul-crane",
+  "actors": 23,
+  "carriers": 12,
+  "riders": 12,
+  "base": {
+   "tick": {
+    "mean": 0.17,
+    "p95": 0.168,
+    "max": 44.297
+   },
+   "draw": {
+    "mean": 0.596,
+    "p95": 1.207,
+    "max": 3.13
+   },
+   "frame": {
+    "mean": 0.766,
+    "p95": 1.344,
+    "max": 47.427
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 23,
+   "carriers": 12,
+   "riders": 12,
+   "tick": {
+    "mean": 0.194,
+    "p95": 0.202,
+    "max": 48.961
+   },
+   "rig": {
+    "mean": 0.02,
+    "p95": 0.035,
+    "max": 1.213
+   },
+   "draw": {
+    "mean": 0.69,
+    "p95": 1.603,
+    "max": 4.323
+   },
+   "frame": {
+    "mean": 0.884,
+    "p95": 1.774,
+    "max": 53.283
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "close-haul-dump",
+  "actors": 22,
+  "carriers": 11,
+  "riders": 11,
+  "base": {
+   "tick": {
+    "mean": 0.154,
+    "p95": 0.087,
+    "max": 53.47
+   },
+   "draw": {
+    "mean": 0.414,
+    "p95": 0.899,
+    "max": 4.088
+   },
+   "frame": {
+    "mean": 0.567,
+    "p95": 0.963,
+    "max": 56.363
+   },
+   "over4ms": 2
+  },
+  "loaded": {
+   "actors": 22,
+   "carriers": 11,
+   "riders": 11,
+   "tick": {
+    "mean": 0.236,
+    "p95": 0.163,
+    "max": 87.507
+   },
+   "rig": {
+    "mean": 0.018,
+    "p95": 0.03,
+    "max": 0.997
+   },
+   "draw": {
+    "mean": 0.637,
+    "p95": 1.355,
+    "max": 22.478
+   },
+   "frame": {
+    "mean": 0.873,
+    "p95": 1.506,
+    "max": 92.413
+   },
+   "over4ms": 4
+  }
+ },
+ {
+  "theme": "close-haul-pickup",
+  "actors": 21,
+  "carriers": 11,
+  "riders": 11,
+  "base": {
+   "tick": {
+    "mean": 0.144,
+    "p95": 0.089,
+    "max": 47.88
+   },
+   "draw": {
+    "mean": 0.25,
+    "p95": 0.725,
+    "max": 4.035
+   },
+   "frame": {
+    "mean": 0.393,
+    "p95": 0.797,
+    "max": 51.915
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 21,
+   "carriers": 11,
+   "riders": 11,
+   "tick": {
+    "mean": 0.138,
+    "p95": 0.106,
+    "max": 46.732
+   },
+   "rig": {
+    "mean": 0.01,
+    "p95": 0.017,
+    "max": 0.047
+   },
+   "draw": {
+    "mean": 0.257,
+    "p95": 0.739,
+    "max": 2.717
+   },
+   "frame": {
+    "mean": 0.395,
+    "p95": 0.809,
+    "max": 49.449
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "close-build-car",
+  "actors": 22,
+  "carriers": 1,
+  "riders": 1,
+  "base": {
+   "tick": {
+    "mean": 0.117,
+    "p95": 0.189,
+    "max": 5.501
+   },
+   "draw": {
+    "mean": 1.448,
+    "p95": 2.459,
+    "max": 3.706
+   },
+   "frame": {
+    "mean": 1.565,
+    "p95": 2.642,
+    "max": 7.174
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 22,
+   "carriers": 1,
+   "riders": 1,
+   "tick": {
+    "mean": 0.126,
+    "p95": 0.116,
+    "max": 14.552
+   },
+   "rig": {
+    "mean": 0.019,
+    "p95": 0.022,
+    "max": 0.768
+   },
+   "draw": {
+    "mean": 1.303,
+    "p95": 1.842,
+    "max": 2.665
+   },
+   "frame": {
+    "mean": 1.429,
+    "p95": 1.975,
+    "max": 16.042
+   },
+   "over4ms": 2
+  }
+ },
+ {
+  "theme": "close-vehroad-bike-garage",
+  "actors": 23,
+  "carriers": 11,
+  "riders": 11,
+  "base": {
+   "tick": {
+    "mean": 0.146,
+    "p95": 0.105,
+    "max": 49.504
+   },
+   "draw": {
+    "mean": 0.339,
+    "p95": 1.13,
+    "max": 2.991
+   },
+   "frame": {
+    "mean": 0.485,
+    "p95": 1.237,
+    "max": 52.495
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 23,
+   "carriers": 11,
+   "riders": 11,
+   "tick": {
+    "mean": 0.152,
+    "p95": 0.129,
+    "max": 48.888
+   },
+   "rig": {
+    "mean": 0.016,
+    "p95": 0.02,
+    "max": 1.103
+   },
+   "draw": {
+    "mean": 0.332,
+    "p95": 1.046,
+    "max": 3.083
+   },
+   "frame": {
+    "mean": 0.484,
+    "p95": 1.2,
+    "max": 51.97
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "construction",
+  "actors": 73,
+  "carriers": 27,
+  "riders": 27,
+  "base": {
+   "tick": {
+    "mean": 0.233,
+    "p95": 0.336,
+    "max": 4.536
+   },
+   "draw": {
+    "mean": 0.945,
+    "p95": 1.796,
+    "max": 16.481
+   },
+   "frame": {
+    "mean": 1.178,
+    "p95": 2.091,
+    "max": 21.017
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 73,
+   "carriers": 27,
+   "riders": 27,
+   "tick": {
+    "mean": 0.201,
+    "p95": 0.339,
+    "max": 5.603
+   },
+   "rig": {
+    "mean": 0.01,
+    "p95": 0.058,
+    "max": 0.219
+   },
+   "draw": {
+    "mean": 0.71,
+    "p95": 1.116,
+    "max": 10.353
+   },
+   "frame": {
+    "mean": 0.912,
+    "p95": 1.488,
+    "max": 15.955
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "farm",
+  "actors": 22,
+  "carriers": 12,
+  "riders": 12,
+  "base": {
+   "tick": {
+    "mean": 0.162,
+    "p95": 0.227,
+    "max": 50.863
+   },
+   "draw": {
+    "mean": 0.178,
+    "p95": 0.642,
+    "max": 3.346
+   },
+   "frame": {
+    "mean": 0.339,
+    "p95": 0.855,
+    "max": 54.209
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 22,
+   "carriers": 12,
+   "riders": 12,
+   "tick": {
+    "mean": 0.171,
+    "p95": 0.283,
+    "max": 55.543
+   },
+   "rig": {
+    "mean": 0.014,
+    "p95": 0.026,
+    "max": 0.796
+   },
+   "draw": {
+    "mean": 0.191,
+    "p95": 0.766,
+    "max": 3.472
+   },
+   "frame": {
+    "mean": 0.362,
+    "p95": 1.051,
+    "max": 59.015
+   },
+   "over4ms": 1
+  }
+ },
+ {
+  "theme": "harbor",
+  "actors": 69,
+  "carriers": 14,
+  "riders": 14,
+  "base": {
+   "tick": {
+    "mean": 0.168,
+    "p95": 0.203,
+    "max": 3.961
+   },
+   "draw": {
+    "mean": 0.649,
+    "p95": 0.877,
+    "max": 16.57
+   },
+   "frame": {
+    "mean": 0.817,
+    "p95": 1.045,
+    "max": 20.531
+   },
+   "over4ms": 1
+  },
+  "loaded": {
+   "actors": 69,
+   "carriers": 14,
+   "riders": 14,
+   "tick": {
+    "mean": 0.169,
+    "p95": 0.225,
+    "max": 4.358
+   },
+   "rig": {
+    "mean": 0.007,
+    "p95": 0.028,
+    "max": 0.071
+   },
+   "draw": {
+    "mean": 0.661,
+    "p95": 0.878,
+    "max": 15.473
+   },
+   "frame": {
+    "mean": 0.83,
+    "p95": 1.091,
+    "max": 19.832
+   },
+   "over4ms": 1
+  }
+ }
+]

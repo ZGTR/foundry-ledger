@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Example `shape-actors-web`: three more entries (EXP-036 rig cost measured, EXP-037 rule-lookup
+  index, EXP-038 door load and first draw on separate frames); the raw results every entry points
+  to; the perf suite that produced them (`suite/`); before/after recordings (`videos/`); and
+  `LEARNINGS.md`.
+
 ## 0.1.0
 
 - First release, extracted from the performance work on a web + native 2D stage (35 experiments).

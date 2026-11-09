@@ -1,0 +1,259 @@
+{
+ "kind": "web",
+ "label": "base",
+ "reps": 3,
+ "rows": [
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "idle",
+   "actors": 92,
+   "seconds": 3.32,
+   "frames": 83,
+   "frameMs": {
+    "p50": 33.4,
+    "p95": 50.1,
+    "p99": 66.7,
+    "max": 66.7
+   },
+   "droppedPct": 93.98,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-slow",
+   "actors": 92,
+   "seconds": 29.73,
+   "frames": 491,
+   "frameMs": {
+    "p50": 50.1,
+    "p95": 100,
+    "p99": 116.7,
+    "max": 166.7
+   },
+   "droppedPct": 99.18,
+   "longFrames": 23,
+   "longFrameMs": 1653.9,
+   "inputLatencyMs": {
+    "p50": 125.4,
+    "p95": 240.9
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-240hz",
+   "actors": 92,
+   "seconds": 96.12,
+   "frames": 1990,
+   "frameMs": {
+    "p50": 50,
+    "p95": 83.3,
+    "p99": 100,
+    "max": 183.4
+   },
+   "droppedPct": 97.64,
+   "longFrames": 24,
+   "longFrameMs": 1522,
+   "inputLatencyMs": {
+    "p50": 120.4,
+    "p95": 200.3
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-hold",
+   "actors": 92,
+   "seconds": 41.62,
+   "frames": 801,
+   "frameMs": {
+    "p50": 50,
+    "p95": 83.3,
+    "p99": 100,
+    "max": 166.8
+   },
+   "droppedPct": 98.9,
+   "longFrames": 4,
+   "longFrameMs": 369.1,
+   "inputLatencyMs": {
+    "p50": 114.4,
+    "p95": 183.7
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "tap-spam",
+   "actors": 92,
+   "seconds": 11.03,
+   "frames": 237,
+   "frameMs": {
+    "p50": 50,
+    "p95": 66.7,
+    "p99": 83.4,
+    "max": 100
+   },
+   "droppedPct": 95.83,
+   "longFrames": 3,
+   "longFrameMs": 183.4,
+   "inputLatencyMs": {
+    "p50": 107.3,
+    "p95": 163.9
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-edge-scroll",
+   "actors": 92,
+   "seconds": 9.08,
+   "frames": 158,
+   "frameMs": {
+    "p50": 50,
+    "p95": 83.4,
+    "p99": 100,
+    "max": 100.1
+   },
+   "droppedPct": 99.4,
+   "longFrames": 5,
+   "longFrameMs": 345.1,
+   "inputLatencyMs": {
+    "p50": 119.1,
+    "p95": 174.1
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "idle",
+   "actors": 95,
+   "seconds": 3.32,
+   "frames": 64,
+   "frameMs": {
+    "p50": 50,
+    "p95": 66.7,
+    "p99": 83.4,
+    "max": 83.4
+   },
+   "droppedPct": 100,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-slow",
+   "actors": 95,
+   "seconds": 32.95,
+   "frames": 464,
+   "frameMs": {
+    "p50": 66.7,
+    "p95": 116.6,
+    "p99": 150,
+    "max": 333.3
+   },
+   "droppedPct": 99.16,
+   "longFrames": 16,
+   "longFrameMs": 1709.2,
+   "inputLatencyMs": {
+    "p50": 148.1,
+    "p95": 273.8
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-240hz",
+   "actors": 95,
+   "seconds": 110.2,
+   "frames": 1884,
+   "frameMs": {
+    "p50": 50.1,
+    "p95": 83.4,
+    "p99": 100.1,
+    "max": 200
+   },
+   "droppedPct": 99.47,
+   "longFrames": 12,
+   "longFrameMs": 877.9,
+   "inputLatencyMs": {
+    "p50": 144.5,
+    "p95": 223.7
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-hold",
+   "actors": 95,
+   "seconds": 42.07,
+   "frames": 744,
+   "frameMs": {
+    "p50": 50,
+    "p95": 83.4,
+    "p99": 100,
+    "max": 183.4
+   },
+   "droppedPct": 99.6,
+   "longFrames": 2,
+   "longFrameMs": 230.3,
+   "inputLatencyMs": {
+    "p50": 115.3,
+    "p95": 183.4
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "tap-spam",
+   "actors": 95,
+   "seconds": 8.18,
+   "frames": 289,
+   "frameMs": {
+    "p50": 33.2,
+    "p95": 50,
+    "p99": 83.3,
+    "max": 166.6
+   },
+   "droppedPct": 50.17,
+   "longFrames": 2,
+   "longFrameMs": 285.8,
+   "inputLatencyMs": {
+    "p50": 65.7,
+    "p95": 137.8
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-edge-scroll",
+   "actors": 22,
+   "seconds": 6.49,
+   "frames": 254,
+   "frameMs": {
+    "p50": 16.8,
+    "p95": 49.9,
+    "p99": 50.1,
+    "max": 100
+   },
+   "droppedPct": 45.67,
+   "longFrames": 1,
+   "longFrameMs": 59.5,
+   "inputLatencyMs": {
+    "p50": 68.1,
+    "p95": 103.6
+   }
+  }
+ ]
+}
