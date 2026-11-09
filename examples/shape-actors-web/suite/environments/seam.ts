@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import { createRequire } from 'node:module';
+const R = '/home/user/foundry-mobileapps/';
+const require = createRequire(R + 'package.json');
+const { LoadSkiaWeb } = require(R + 'node_modules/@shopify/react-native-skia/lib/commonjs/web/LoadSkiaWeb');
+(async () => {
+  await LoadSkiaWeb();
+  const H = require(R + 'node_modules/@shopify/react-native-skia/lib/commonjs/headless');
+  const { Skia } = H.getSkiaExports();
+  const { createShapeActorKit } = require(R + 'packages/shape-actors/src/kit');
+  const { ALL_DECOR } = require(R + 'packages/shape-actors/src/catalog/decorAll.js');
+  const { SkiaStageRenderer } = require(R + 'packages/shape-actors/src/view/SkiaStageRenderer');
+  const { ManualClock } = require(R + 'packages/shape-actors/src/core/clock');
+  const [out, list] = process.argv.slice(2);
+  const pairs = list.split(',').map((p) => p.split(':'));
+  const VW = 746, VH = 420;
+  const surf = H.makeOffscreenSurface(VW, VH * pairs.length); const cv = surf.getCanvas(); cv.clear(Skia.Color('#FFFFFF'));
+  pairs.forEach(([theme, zone], i) => {
+    const clock = new ManualClock();
+    const kit = createShapeActorKit({ decor: ALL_DECOR, clock, random: () => 0.42, sound: { play() {} }, haptics: { pulse() {} }, speech: { say() {} }, appearance: 'round-friends-color' });
+    const c = kit.createController(VW, VH); c.load({ theme, height: VH }); c.start(); clock.advance(1);
+    const z = c.world.zones.find((q: any) => q.id === zone);
+    const seam = z.x0 + (z.tile ?? VW);
+    c.camera(seam); clock.advance(0.05);
+    const r = new SkiaStageRenderer(Skia, c);
+    cv.save(); cv.translate(0, i * VH); cv.clipRect(Skia.XYWHRect(0, 0, VW, VH), 1, true); cv.translate(-(seam - VW / 2), 0); r.draw(cv, 1); cv.restore();
+    cv.drawRect(Skia.XYWHRect(VW / 2 - 1, i * VH, 2, 14), (() => { const p = Skia.Paint(); p.setColor(Skia.Color('#FF0000')); return p; })());
+  });
+  surf.flush(); fs.writeFileSync(out, surf.makeImageSnapshot().encodeToBytes()); process.exit(0);
+})().catch((e) => { console.error(e); process.exit(1); });

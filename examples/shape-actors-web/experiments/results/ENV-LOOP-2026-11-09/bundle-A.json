@@ -1,0 +1,14 @@
+{
+  "kind": "bundle",
+  "version": "0.23.3",
+  "upFront": {
+    "files": 3,
+    "MB": 24.3,
+    "gzipMB": 3.43
+  },
+  "sceneryChunks": {
+    "files": 0,
+    "MB": 0,
+    "gzipMB": 0
+  }
+}

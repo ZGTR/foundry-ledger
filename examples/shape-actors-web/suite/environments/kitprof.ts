@@ -1,0 +1,14 @@
+import { BUILTIN_CATALOG } from '/home/user/foundry-mobileapps/packages/shape-actors/src/catalog';
+import { Catalog } from '/home/user/foundry-mobileapps/packages/shape-actors/src/core/catalog';
+import { roundFriendsCatalog } from '/home/user/foundry-mobileapps/packages/shape-actors/src/core/roundFriends';
+import { createShapeActorKit } from '/home/user/foundry-mobileapps/packages/shape-actors/src/kit';
+const med = (f: () => void, n = 5) => { const t: number[] = []; for (let i = 0; i < n; i++) { const a = performance.now(); f(); t.push(performance.now() - a); } t.sort((x, y) => x - y); return t[n >> 1].toFixed(0); };
+const data = BUILTIN_CATALOG as never;
+console.log('blueprint JSON MB', (JSON.stringify((BUILTIN_CATALOG as any).blueprints).length / 1e6).toFixed(1), 'skins MB', (JSON.stringify((BUILTIN_CATALOG as any).skins).length / 1e6).toFixed(1));
+console.log('parse blueprints ms', med(() => JSON.parse(JSON.stringify((BUILTIN_CATALOG as any).blueprints))));
+console.log('roundFriends transform ms', med(() => roundFriendsCatalog(data, 'color')));
+console.log('new Catalog(raw) ms', med(() => new Catalog(data)));
+const rf = roundFriendsCatalog(data, 'color');
+console.log('new Catalog(roundFriends) ms', med(() => new Catalog(rf)));
+const q = { sound: { play() {} }, haptics: { pulse() {} }, speech: { say() {} }, decor: false as const };
+console.log('kit (round-friends-color) ms', med(() => createShapeActorKit({ ...q, appearance: 'round-friends-color' })));

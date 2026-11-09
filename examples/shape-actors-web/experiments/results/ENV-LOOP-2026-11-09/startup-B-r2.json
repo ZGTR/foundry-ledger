@@ -1,0 +1,13 @@
+{
+  "kind": "startup",
+  "version": "0.24.0",
+  "node": "v22.23.4",
+  "reps": 9,
+  "kitMs": {
+    "original": 222.5,
+    "round-friends-color": 347.5
+  },
+  "kitOpenMarketMs": 329.2,
+  "parseMB": 11.93,
+  "parseMs": 114.5
+}
