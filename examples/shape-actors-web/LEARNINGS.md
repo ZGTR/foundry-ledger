@@ -76,3 +76,76 @@ of [`LEDGER.md`](LEDGER.md); this page is the longer prose.
     suites failed once and then passed 3/3 alone; the real failures failed alone too.
 16. **A stale `node_modules` looks like a code bug.** Seven build-CLI test failures were one missing
     plugin package; `npm ci` fixed them, not a commit.
+
+## Environments, scenery and catalogue (EXP-046 … EXP-053, Nov 2026)
+
+Redrawing every environment, then paying back what the richer art cost. Recorded with `learn` as
+L-039 to L-048; the suite is [`suite/environments`](suite/environments).
+
+
+### Measure before you pick the fix
+
+17. **The obvious fix was the wrong one (EXP-048, rejected).** Fetching object files per
+   environment looked like the next step after splitting the scenery. Measured first: parsing all
+   6.3 MB of object data cost ~45 ms, while *preparing* the 3 697 objects (inheritance, validation,
+   measuring, styling, particle effects) cost ~340 ms. Splitting the bytes would have saved the small
+   part and made a dozen synchronous callers asynchronous. Preparing on first use (EXP-049) took the
+   big part and changed no caller.
+18. **Look for work nobody sees (EXP-047).** 499 areas drew generated scenery *under* a painted scene
+   that covered it; it showed only as a strip on the ground line and cost raster time every frame.
+   Occluded drawing is invisible in screenshots and obvious in a per-frame op count.
+19. **Art changes are performance changes (EXP-052).** Redrawing ~550 environments doubled the
+   environment data (8.2 → 14.8 MB minified, 1.1 → 2.0 MB gzip) before any code changed. Measure the
+   catalogue after a content PR, not only after a code PR.
+
+### Split along what is shown, keep the rest synchronous
+
+20. **Only one environment's scenery is on screen at a time (EXP-046).** That made scenery the right
+   thing to load on demand: half the bytes, purely visual, needed by one environment. Everything a
+   game rule, a door or a word list reads stayed synchronous, so no caller had to change.
+21. **Lazy is an implementation detail when the API stays the same (EXP-049).** A registry that
+   builds an item on first `get` kept every `catalog.blueprints.get(id)` call site as it was. The
+   catalogue-wide checks a lazy build skips moved into a test, so they still run on every change.
+
+### Prove "nothing changed" instead of eyeballing it
+
+22. **Equivalence checks are cheap and decisive.** Merging every split scenery file back gave the
+   old environment JSON for all 561 environments; the backdrop plan was identical for all 1 122 loads;
+   every object, skin, particle effect and rule was identical lazy vs eager in all three art styles.
+   A screenshot would have caught none of a dropped field.
+23. **Byte-identical output is the proof for a refactor (EXP-053).** Moving the drawing helpers the agents
+   had copied into ten packs into one shared kit was accepted because the rebuilt catalogue was
+   byte-identical, not because it looked right.
+
+### Asynchronous loading needs a "not yet" state, handled on purpose
+
+24. **Never show the empty state (EXP-050).** A web stage stays hidden until its scenery is here (at
+   most 0.8 s); a door holds its closed iris until the next scenery is here (at most 0.6 s), and the
+   fetch starts at the tap, so the wait is usually zero. Both have a cap: slow networks still get a
+   world.
+25. **"No store" is not "not loaded" (bug found by the existing door tests).** `store?.peek(id) ===
+   undefined` is also true when there is no store, so every door waited 0.6 s on stages without
+   one. Tri-state values need an explicit presence check.
+26. **A loader that answers at once must count as ready at once.** Treating every source as
+    asynchronous delayed scenery that was already in memory.
+
+### Tooling and test lessons
+
+27. **Proof scripts must follow the renderer (EXP-046).** After the renderer started replaying only
+    on-screen chunks, a proof script that moved the canvas without moving the camera drew far areas
+    empty, on develop too. Scripts now point the camera at what they draw, and all 24 proof and check
+    scripts load every environment's scenery up front (`ALL_DECOR`), which apps never import.
+28. **Test runners need the same module features as the app.** Jest could not run a real `import()`
+    (the per-environment scenery loaders); the repository's existing test-only rewrite now lists the
+    generated catalogue index, guarded by its coverage test.
+29. **Separate flaky from broken.** Under a full parallel run, two suites failed that pass alone, and
+    two failed on plain develop too. Re-running alone and on the base branch, every time, kept real
+    regressions apart from noise.
+30. **Look before changing what "might" be wrong (EXP-051).** Repeated scenery tiles were suspected of
+    doubling or cutting items at their seams. Views centred on the seams of four environments showed
+    neither, so the repeat logic was left alone (recorded as neutral, EXP-051).
+
+### What was not verified
+
+- Real devices: all timings are Node or Chromium-throttled numbers on a GPU-less 4-vCPU VM.
+- The production website: deploys were blocked by the hosting account during this work.

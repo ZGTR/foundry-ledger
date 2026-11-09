@@ -46,6 +46,16 @@ What the experiments below taught, each with the experiments it came from.
 - **L-036 · Record rejections and read the ledger first** will-change was tried again after EXP-010 had rejected it; the ledger already held the answer. _(EXP-010, EXP-039, EXP-040)_
 - **L-037 · Parallel branches converge: merge ledgers and re-measure** Two branches each wrote an EXP-034; develop landed fixes already in flight. Merge ledgers with renumbering and claim only the gain over the new base. _(EXP-015, EXP-021, EXP-034, EXP-035, EXP-038)_
 - **L-038 · Separate flakes from failures by rerunning alone; a stale node_modules looks like a bug** Suites that failed once under 4 workers passed 3/3 alone; seven failures were one missing package fixed by npm ci. _(EXP-034)_
+- **L-039 · Measure where start-up goes before choosing what to split** Splitting the object bytes looked like the next step; measured, parsing them cost ~45 ms and preparing them ~340 ms. Preparing on first use took the large part and changed no caller. _(EXP-048, EXP-049)_
+- **L-040 · Look for drawing nobody sees** 499 areas drew generated scenery under a painted scene that covered it. It showed only as a strip on the ground line and cost raster time every frame; occluded work is invisible in screenshots and obvious in a per-frame op count. _(EXP-047)_
+- **L-041 · Art changes are performance changes** Redrawing ~550 environments grew the catalogue by 80 % before any code changed. Measure the catalogue after a content change, not only after a code change. _(EXP-052, EXP-046)_
+- **L-042 · Split along what is on screen; keep everything else synchronous** Only one environment's scenery is on screen at a time, and it is purely visual: loading it per environment halved what is loaded up front while rules, doors and word lists stayed synchronous, so no caller changed. _(EXP-046)_
+- **L-043 · Make it lazy behind the same API** A registry that builds an item on first get kept every catalog.blueprints.get call site as it was; the catalogue-wide checks a lazy build skips moved into a test that runs on every change. _(EXP-049)_
+- **L-044 · Prove 'nothing changed' with an equality that could fail** Every split file merged back into its environment (561), every backdrop plan compared (1 122), every object, skin, effect and rule compared lazy vs eager in 3 looks, and a byte-identical rebuild for the refactor: a screenshot would have caught none of a dropped field. _(EXP-046, EXP-049, EXP-053)_
+- **L-045 · Never show the empty state, and cap the wait** Hold the stage (0.8 s) or the closed iris (0.6 s) until the scenery is here, start the fetch at the tap so the wait is usually zero, and still show the world after the cap on a slow network. _(EXP-050)_
+- **L-046 · 'No store' is not 'not loaded'** store?.peek(id) === undefined is also true when there is no store, so every door waited on stages without one; tri-state values need an explicit presence check, and a loader that answers at once must count as ready at once. _(EXP-050)_
+- **L-047 · Look before reworking what might be wrong** Repeated scenery was suspected of doubling or cutting items at seams; views centred on four seams showed neither, so nothing was changed and the check is recorded instead. _(EXP-051)_
+- **L-048 · Proof scripts and test runners must follow the app** After the renderer replayed only on-screen chunks, a proof script that moved the canvas but not the camera drew far areas empty; and jest needed the repository's import() rewrite for the per-environment loaders. 24 scripts now load all scenery up front (ALL_DECOR), which apps never import. _(EXP-046)_
 
 ## Experiments
 
@@ -96,6 +106,14 @@ What the experiments below taught, each with the experiments it came from.
 | EXP-043 | 2026-11-08 | method | **Method: measure the GPU path with --gpu (SwiftShader) as well as software compositing**<br>the VM has no GPU, so Chromium composites in software and the canvas copies each frame on the main thread; that cost does not exist on a phone, so the software path alone misjudges the canvas | canvas idle commit 749 ms (software compositing) | canvas idle commit 247 ms (--gpu) | kept (both paths reported for any renderer change) | results/EXP-035/gpu-*.json; SwiftShader shares the CPU, so the magnitude is indicative only, not a phone number |
 | EXP-044 | 2026-11-08 | web | **Web: renderer 'auto' probe rejects software GL (failIfMajorPerformanceCaveat accepted SwiftShader)**<br>auto must pick svg where the browser composites in software; failIfMajorPerformanceCaveat should refuse a context there | probe said GPU on SwiftShader (the caveat flag did not refuse it): auto would pick canvas on software GL | renderer string matched against software rasterisers (SwiftShader, llvmpipe, Software): auto picks svg there, canvas on a hardware GPU | kept (correctness of the auto policy) | probe unit tests in the app; e2e under both renderers |
 | EXP-045 | 2026-11-08 | web | **Web canvas placement: device-pixel snap, getScreenCTM mapping, frozen-frame parity**<br>canvas drawing must land on the same pixels as the svg it replaces | 0.67 % of pixels differed; a 1 CSS px offset at some view sizes | snap: 0.64 % (neutral, dropped); getScreenCTM removed the offset; same-frame parity <= 0.6 % of pixels > 24/255 (edge anti-aliasing) | kept (correctness; the snap was neutral and is not kept) | results/EXP-035/canvas-parity.json, hit-parity.txt |
+| EXP-046 | 2026-11-09 | bundle | **Scenery loaded per environment (decor split into its own chunk per environment)**<br>drawn scenery is half the catalogue and only one environment is on screen at a time, so loading it per environment cuts what every app downloads and parses up front | 24.3 MB up front (gzip 3.43 MB); catalogue parse 216 ms | 13.1 MB up front (gzip 1.69 MB) + 458 scenery chunks of ~25 KB; parse 110 ms | kept (foundry-mobileapps#815) | experiments/results/ENV-LOOP-2026-11-09/bundle-A.json, bundle-B.json, startup-*-r*.json; catalog-bundle.test.mjs (chunks split out); decor.test.ts; 0 differences in 1 122 backdrop plans |
+| EXP-047 | 2026-11-09 | native | **Painted scenes skip generated scenery underneath**<br>499 areas draw generated scenery under a painted scene that covers it; it only peeks out along the ground line but is replayed every frame | raster p95 idle 44.2 ms, drag-slow 64.7 ms, drop-chain 53.2 ms | 38.3 ms, 58.6 ms, 48.8 ms (lower in 11 of 13 scenarios, 4-14 %) | kept (foundry-mobileapps#815) | experiments/results/ENV-LOOP-2026-11-09/frames-A.json, frames-B.json; decor.test.ts 'an area that paints its own scene'; videos/EXP-047-drag-market-6x.mp4 |
+| EXP-048 | 2026-11-09 | bundle | **Fetch object files per environment (split the object bytes)**<br>objects are the next largest block loaded up front (6.3 MB); fetching them per environment would halve start-up again | kit start-up 378 ms in the app look | parse of all object data ~45 ms of it; preparing the objects ~340 ms; splitting the bytes would save the ~45 ms and make previews, discovery, deep links, auto-games and launch casts asynchronous | rejected | kitprof.ts output (ENV-LOOP notes); superseded by EXP-049 |
+| EXP-049 | 2026-11-09 | startup | **Objects prepared on first use (lazy catalogue)**<br>start-up pays to resolve, validate, measure and style all 3 697 objects while a world uses a few dozen | kit 329 ms (app look), 230 ms (original); kit + opening the market 331 ms | kit 7.8 ms, 11.7 ms; kit + market 19.9 ms | kept (foundry-mobileapps#846) | experiments/results/ENV-LOOP-2026-11-09/startup-B-r*.json, startup-C-r*.json, frames-B.json/frames-C.json startup; catalogLazy.test.ts; videos/EXP-049-world-open-farm-6x.mp4 |
+| EXP-050 | 2026-11-09 | web | **Never open on an empty backdrop: web stage waits for its scenery, a door's iris waits for the next**<br>with scenery loaded per environment (EXP-046), a stage or a close-up could appear for a moment without scenery and then fill in | stage shown on an empty backdrop, then filled in; every door on a stage without a scenery store held 0.6 s (bug found by the door tests) | first frame shows the full world, or the world without scenery after the cap; doors wait only when scenery is actually on its way | kept (foundry-mobileapps#846) | sceneryReady.webdom.test.ts; decor.test.ts 'a door waits…' (held, cap); doors.test.ts green again after the no-store fix |
+| EXP-051 | 2026-11-09 | visual | **Rework the per-screen scenery repeat (suspected doubled or cut items at seams)**<br>decor authored for one screen and repeated per screen doubles or cuts items where two repeats meet | suspected doubled frames/plants and cut buildings at seams | no doubled or cut item in any of the 4 seams; the repeat logic was left as it is | neutral | seam.ts output (4 seams); no code change |
+| EXP-052 | 2026-11-09 | bundle | **Cost of redrawing every environment in the toy style (content, not code)**<br>richer, layered scenery for ~550 environments grows the catalogue every app loads | theme data 8.2 MB minified, 1.07 MB gzip | 14.8 MB minified, 2.04 MB gzip (+80 %), all loaded up front | superseded (foundry-mobileapps#755) | measured on the redraw PR (foundry-mobileapps#755); paid back by EXP-046 (scenery per environment) |
+| EXP-053 | 2026-11-09 | authoring | **One shared scenery kit instead of a copy per pack (authoring refactor)**<br>the decor helpers copied into 10 packs can live once without changing a single byte of the built catalogue | 10 copies of the helpers | 1 shared kit; rebuilt catalogue byte-identical | neutral (foundry-mobileapps#815) | diff -rq of the rebuilt catalogue: identical (foundry-mobileapps 468b5829a) |
 
 ## Runs
 
@@ -771,3 +789,91 @@ What the experiments below taught, each with the experiments it came from.
 - **Decision:** kept (correctness; the snap was neutral and is not kept)
 - **Evidence:** results/EXP-035/canvas-parity.json, hit-parity.txt
 - **Metrics:** pixels differing 0.67 → 0.6 % (improved)
+
+### EXP-046 · Scenery loaded per environment (decor split into its own chunk per environment)
+
+- **Area:** bundle
+- **Hypothesis:** drawn scenery is half the catalogue and only one environment is on screen at a time, so loading it per environment cuts what every app downloads and parses up front
+- **Method:** catalogue build writes decor/<id>.json; one dynamic import per environment; published bundle measured (bundle.mjs) and catalogue JSON.parse timed (startup.ts, median of 9, 2 interleaved rounds) on A=0.23.3 vs B=0.24.0 in one session; lossless merge-back of all 561 environments; backdrop plan equality for 1 122 loads (decor-eq.ts)
+- **Before:** 24.3 MB up front (gzip 3.43 MB); catalogue parse 216 ms
+- **After:** 13.1 MB up front (gzip 1.69 MB) + 458 scenery chunks of ~25 KB; parse 110 ms
+- **Decision:** kept (foundry-mobileapps#815)
+- **Evidence:** experiments/results/ENV-LOOP-2026-11-09/bundle-A.json, bundle-B.json, startup-*-r*.json; catalog-bundle.test.mjs (chunks split out); decor.test.ts; 0 differences in 1 122 backdrop plans
+- **Metrics:** up-front JS 24.3 → 13.1 MB (improved); up-front gzip 3.43 → 1.69 MB (improved); catalogue parse 216 → 110 ms (improved)
+
+### EXP-047 · Painted scenes skip generated scenery underneath
+
+- **Area:** native
+- **Hypothesis:** 499 areas draw generated scenery under a painted scene that covers it; it only peeks out along the ground line but is replayed every frame
+- **Method:** backdrop rule: an area whose first decor shape covers the sky edge to edge down to the horizon gets no generated scenery; native frame bench (node-bench.ts, 8 heavy worlds, 13 scenarios) on A vs B in one session; before/after sheets of 6 environments
+- **Before:** raster p95 idle 44.2 ms, drag-slow 64.7 ms, drop-chain 53.2 ms
+- **After:** 38.3 ms, 58.6 ms, 48.8 ms (lower in 11 of 13 scenarios, 4-14 %)
+- **Decision:** kept (foundry-mobileapps#815)
+- **Evidence:** experiments/results/ENV-LOOP-2026-11-09/frames-A.json, frames-B.json; decor.test.ts 'an area that paints its own scene'; videos/EXP-047-drag-market-6x.mp4
+- **Metrics:** raster p95 idle 44.2 → 38.3 ms (improved); raster p95 drag-slow 64.7 → 58.6 ms (improved); raster p95 drop-chain 53.2 → 48.8 ms (improved)
+
+### EXP-048 · Fetch object files per environment (split the object bytes)
+
+- **Area:** bundle
+- **Hypothesis:** objects are the next largest block loaded up front (6.3 MB); fetching them per environment would halve start-up again
+- **Method:** kitprof.ts: kit start-up split into object JSON parse, Round Friends styling and catalogue build (median of 5); audit of synchronous callers of catalog.blueprints outside the open environment
+- **Before:** kit start-up 378 ms in the app look
+- **After:** parse of all object data ~45 ms of it; preparing the objects ~340 ms; splitting the bytes would save the ~45 ms and make previews, discovery, deep links, auto-games and launch casts asynchronous
+- **Decision:** rejected
+- **Evidence:** kitprof.ts output (ENV-LOOP notes); superseded by EXP-049
+- **Metrics:** object JSON parse 45 → 45 ms (unchanged); object preparation 340 → 340 ms (unchanged)
+
+### EXP-049 · Objects prepared on first use (lazy catalogue)
+
+- **Area:** startup
+- **Hypothesis:** start-up pays to resolve, validate, measure and style all 3 697 objects while a world uses a few dozen
+- **Method:** Registry with a lazy source; Catalog lazy mode (per-object resolve, validation, metrics, styling, particle effects); catalogue-wide checks moved into a test; startup.ts on B=0.24.0 vs C=0.25.0 in one session (median of 9, 2 rounds); node-bench startup row; equality of every object, skin, particle effect, rule and id order lazy vs eager in 3 looks
+- **Before:** kit 329 ms (app look), 230 ms (original); kit + opening the market 331 ms
+- **After:** kit 7.8 ms, 11.7 ms; kit + market 19.9 ms
+- **Decision:** kept (foundry-mobileapps#846)
+- **Evidence:** experiments/results/ENV-LOOP-2026-11-09/startup-B-r*.json, startup-C-r*.json, frames-B.json/frames-C.json startup; catalogLazy.test.ts; videos/EXP-049-world-open-farm-6x.mp4
+- **Metrics:** kit start-up (app look) 329 → 7.8 ms (improved); kit start-up (original) 230 → 11.7 ms (improved); kit + open market 331 → 19.9 ms (improved)
+
+### EXP-050 · Never open on an empty backdrop: web stage waits for its scenery, a door's iris waits for the next
+
+- **Area:** web
+- **Hypothesis:** with scenery loaded per environment (EXP-046), a stage or a close-up could appear for a moment without scenery and then fill in
+- **Method:** web stage hidden until its environment's scenery is here (cap 800 ms); closed iris held until the next environment's scenery is here (cap 0.6 s; fetch starts at the door tap); a loader answering synchronously counts as ready; webdom + controller tests with a held loader, a slow loader and a ready one
+- **Before:** stage shown on an empty backdrop, then filled in; every door on a stage without a scenery store held 0.6 s (bug found by the door tests)
+- **After:** first frame shows the full world, or the world without scenery after the cap; doors wait only when scenery is actually on its way
+- **Decision:** kept (foundry-mobileapps#846)
+- **Evidence:** sceneryReady.webdom.test.ts; decor.test.ts 'a door waits…' (held, cap); doors.test.ts green again after the no-store fix
+- **Metrics:** frames shown on an empty backdrop (tests) 1 → 0 (improved); door wait without a store 0.6 → 0 s (improved)
+
+### EXP-051 · Rework the per-screen scenery repeat (suspected doubled or cut items at seams)
+
+- **Area:** visual
+- **Hypothesis:** decor authored for one screen and repeated per screen doubles or cuts items where two repeats meet
+- **Method:** seam.ts: views centred exactly on a repeat seam in 4 environments (library corner, Algiers casbah, airport tower, kitchen pantry), app look, read by eye with the seam marked
+- **Before:** suspected doubled frames/plants and cut buildings at seams
+- **After:** no doubled or cut item in any of the 4 seams; the repeat logic was left as it is
+- **Decision:** neutral
+- **Evidence:** seam.ts output (4 seams); no code change
+- **Metrics:** seams with a doubled or cut item 0 → 0 (unchanged)
+
+### EXP-052 · Cost of redrawing every environment in the toy style (content, not code)
+
+- **Area:** bundle
+- **Hypothesis:** richer, layered scenery for ~550 environments grows the catalogue every app loads
+- **Method:** minified and gzip size of all theme JSON before vs after the redraw commit (same script, same machine)
+- **Before:** theme data 8.2 MB minified, 1.07 MB gzip
+- **After:** 14.8 MB minified, 2.04 MB gzip (+80 %), all loaded up front
+- **Decision:** superseded (foundry-mobileapps#755)
+- **Evidence:** measured on the redraw PR (foundry-mobileapps#755); paid back by EXP-046 (scenery per environment)
+- **Metrics:** theme data minified 8.2 → 14.8 MB (regressed); theme data gzip 1.07 → 2.04 MB (regressed)
+
+### EXP-053 · One shared scenery kit instead of a copy per pack (authoring refactor)
+
+- **Area:** authoring
+- **Hypothesis:** the decor helpers copied into 10 packs can live once without changing a single byte of the built catalogue
+- **Method:** move sceneKit (3 identical copies) and the realism KIT core (7 identical copies) into scripts/authoring/kits/; rebuild the catalogue; diff -r against the previous build
+- **Before:** 10 copies of the helpers
+- **After:** 1 shared kit; rebuilt catalogue byte-identical
+- **Decision:** neutral (foundry-mobileapps#815)
+- **Evidence:** diff -rq of the rebuilt catalogue: identical (foundry-mobileapps 468b5829a)
+- **Metrics:** helper copies 10 → 1 (improved); catalogue bytes changed 0 → 0 (unchanged)
