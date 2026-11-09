@@ -1,0 +1,9 @@
+canvas-hit-parity.mjs, step 8 px, frozen svg-mode stage vs CanvasStage.hit on the same frame
+playground 0 / 0.5: actor 100 / 100 %, part 100 / 100 %
+market     0 / 0.5: actor 100 / 100 %, part 100 / 99.82 %
+zoo        0 / 0.5: actor 100 / 100 %, part 99.67 / 99.8 %
+kitchen    0 / 0.5: actor 100 / 100 %, part 100 / 99.95 %
+farm       0 / 0.5: actor 100 / 99.95 %, part 99.92 / 99.82 %
+library    0 / 0.5: actor 100 / 100 %, part 100 / 99.97 %
+e2e (packages/shape-actors, 108 tests, desktop + mobile): svg 84 passed / 24 failed, canvas 84 passed /
+24 failed, the same 24 (pre-existing on develop).

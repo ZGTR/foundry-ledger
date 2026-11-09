@@ -1,0 +1,112 @@
+{
+ "kind": "web",
+ "label": "loop0",
+ "reps": 2,
+ "rows": [
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "idle",
+   "actors": 95,
+   "seconds": 3.32,
+   "frames": 187,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 33.4,
+    "max": 33.4
+   },
+   "droppedPct": 4.84,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "drag-slow",
+   "actors": 95,
+   "seconds": 14.46,
+   "frames": 657,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 50,
+    "p99": 66.7,
+    "max": 433.3
+   },
+   "droppedPct": 28.25,
+   "longFrames": 4,
+   "longFrameMs": 608.2,
+   "inputLatencyMs": {
+    "p50": 49.6,
+    "p95": 106.3
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "drag-hold",
+   "actors": 95,
+   "seconds": 19.64,
+   "frames": 1120,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 33.4,
+    "max": 216.7
+   },
+   "droppedPct": 4.73,
+   "longFrames": 2,
+   "longFrameMs": 2985.2,
+   "inputLatencyMs": {
+    "p50": 48.3,
+    "p95": 58.8
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "tap-spam",
+   "actors": 95,
+   "seconds": 6.06,
+   "frames": 342,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 33.4,
+    "max": 166.7
+   },
+   "droppedPct": 3.22,
+   "longFrames": 1,
+   "longFrameMs": 174.8,
+   "inputLatencyMs": {
+    "p50": 43.7,
+    "p95": 87.7
+   }
+  },
+  {
+   "device": "mid",
+   "theme": "market",
+   "scenario": "swipe-nudge",
+   "actors": 22,
+   "seconds": 6.81,
+   "frames": 333,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 33.4,
+    "max": 33.4
+   },
+   "droppedPct": 22.12,
+   "longFrames": 0,
+   "longFrameMs": 0,
+   "inputLatencyMs": {
+    "p50": 40.2,
+    "p95": 45.9
+   }
+  }
+ ]
+}

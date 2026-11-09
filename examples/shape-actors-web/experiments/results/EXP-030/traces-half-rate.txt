@@ -1,0 +1,8 @@
+drag market before: drag · market · 6x CPU · adaptive quality 0  9707 ms RunTask  2683 ms FireAnimationFrame  2506 ms Commit  871 ms Paint 
+drag market after: drag · market · 6x CPU · adaptive quality 0  9253 ms RunTask  2624 ms FireAnimationFrame  2374 ms Commit  882 ms Paint 
+drag market before: drag · market · 6x CPU · adaptive quality 0  8945 ms RunTask  2483 ms FireAnimationFrame  2273 ms Commit  841 ms Paint 
+drag market after: drag · market · 6x CPU · adaptive quality 1  8666 ms RunTask  2701 ms FireAnimationFrame  1749 ms Commit  906 ms Paint 
+swipe playground before: swipe · playground · 6x CPU · adaptive quality 3  7012 ms RunTask  1940 ms FireAnimationFrame  1226 ms Paint  845 ms Commit 
+swipe playground after: swipe · playground · 6x CPU · adaptive quality 3  6999 ms RunTask  1932 ms FireAnimationFrame  1248 ms Paint  811 ms Commit 
+swipe playground before: swipe · playground · 6x CPU · adaptive quality 3  6324 ms RunTask  1688 ms FireAnimationFrame  1081 ms Paint  804 ms Commit 
+swipe playground after: swipe · playground · 6x CPU · adaptive quality 3  6400 ms RunTask  1739 ms FireAnimationFrame  1169 ms Paint  728 ms Commit 
