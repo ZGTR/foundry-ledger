@@ -1,0 +1,8 @@
+swipe playground before:  3 ms 4× UpdateLayoutTree in FireAnimationFrame  9077 ms RunTask  2434 ms FireAnimationFrame  1607 ms Paint  785 ms UpdateLayoutTree 
+swipe playground after:  5 ms 7× UpdateLayoutTree in FireAnimationFrame  9294 ms RunTask  2521 ms FireAnimationFrame  1659 ms Paint  784 ms UpdateLayoutTree 
+swipe playground before:  2 ms 8× UpdateLayoutTree in FireAnimationFrame  9000 ms RunTask  2424 ms FireAnimationFrame  1433 ms Paint  744 ms UpdateLayoutTree 
+swipe playground after:  5 ms 10× UpdateLayoutTree in FireAnimationFrame  8974 ms RunTask  2400 ms FireAnimationFrame  1497 ms Paint  740 ms UpdateLayoutTree 
+drag playground before:  6 ms 14× UpdateLayoutTree in FireAnimationFrame  13045 ms RunTask  3934 ms FireAnimationFrame  2412 ms Paint  1057 ms UpdateLayoutTree 
+drag playground after:  5 ms 10× UpdateLayoutTree in FireAnimationFrame  13181 ms RunTask  4084 ms FireAnimationFrame  2541 ms Paint  1063 ms UpdateLayoutTree 
+drag playground before:  9 ms 18× UpdateLayoutTree in FireAnimationFrame  12459 ms RunTask  3882 ms FireAnimationFrame  2248 ms Paint  1005 ms UpdateLayoutTree 
+drag playground after:  13 ms 17× UpdateLayoutTree in FireAnimationFrame  12365 ms RunTask  3792 ms FireAnimationFrame  2156 ms Paint  1025 ms UpdateLayoutTree 

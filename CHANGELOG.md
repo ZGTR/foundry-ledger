@@ -9,6 +9,10 @@
 - **check**: complete entries from `completeFrom` on (hypothesis, method, before, after,
   evidence, numbers), learnings cite real experiments, LEDGER.md up to date. Exit 1 on any
   problem: for CI and agents.
+- Example `shape-actors-web`: three more entries (EXP-036 rig cost measured, EXP-037 rule-lookup
+  index, EXP-038 door load and first draw on separate frames); the raw results every entry points
+  to; the perf suite that produced them (`suite/`); before/after recordings (`videos/`); and
+  `LEARNINGS.md`.
 
 ## 0.1.0
 

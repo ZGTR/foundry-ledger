@@ -1,0 +1,217 @@
+{
+ "kind": "web",
+ "label": "loop0",
+ "reps": 2,
+ "rows": [
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "idle",
+   "actors": 95,
+   "seconds": 3.33,
+   "frames": 91,
+   "frameMs": {
+    "p50": 49.9,
+    "p95": 66.6,
+    "p99": 66.7,
+    "max": 66.7
+   },
+   "droppedPct": 98.65,
+   "longFrames": 2,
+   "longFrameMs": 259,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-slow",
+   "actors": 95,
+   "seconds": 25.59,
+   "frames": 507,
+   "frameMs": {
+    "p50": 50,
+    "p95": 83.3,
+    "p99": 100,
+    "max": 249.9
+   },
+   "droppedPct": 98.82,
+   "longFrames": 29,
+   "longFrameMs": 9286,
+   "inputLatencyMs": {
+    "p50": 119.2,
+    "p95": 189.1
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "drag-hold",
+   "actors": 95,
+   "seconds": 25.24,
+   "frames": 777,
+   "frameMs": {
+    "p50": 33.3,
+    "p95": 50,
+    "p99": 66.7,
+    "max": 133.3
+   },
+   "droppedPct": 82.63,
+   "longFrames": 4,
+   "longFrameMs": 8412.8,
+   "inputLatencyMs": {
+    "p50": 66,
+    "p95": 98.6
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "tap-spam",
+   "actors": 95,
+   "seconds": 8.77,
+   "frames": 317,
+   "frameMs": {
+    "p50": 16.8,
+    "p95": 50,
+    "p99": 66.7,
+    "max": 399.9
+   },
+   "droppedPct": 48.9,
+   "longFrames": 5,
+   "longFrameMs": 695.3,
+   "inputLatencyMs": {
+    "p50": 60.9,
+    "p95": 134.9
+   }
+  },
+  {
+   "device": "low",
+   "theme": "market",
+   "scenario": "swipe-nudge",
+   "actors": 22,
+   "seconds": 8.85,
+   "frames": 324,
+   "frameMs": {
+    "p50": 16.7,
+    "p95": 33.4,
+    "p99": 50.1,
+    "max": 983.4
+   },
+   "droppedPct": 44.3,
+   "longFrames": 2,
+   "longFrameMs": 1019,
+   "inputLatencyMs": {
+    "p50": 45.5,
+    "p95": 82.5
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "idle",
+   "actors": 92,
+   "seconds": 3.33,
+   "frames": 97,
+   "frameMs": {
+    "p50": 33.3,
+    "p95": 50.1,
+    "p99": 300,
+    "max": 300
+   },
+   "droppedPct": 89.29,
+   "longFrames": 2,
+   "longFrameMs": 429.2,
+   "inputLatencyMs": {
+    "p50": 0,
+    "p95": 0
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-slow",
+   "actors": 92,
+   "seconds": 23.91,
+   "frames": 514,
+   "frameMs": {
+    "p50": 50,
+    "p95": 66.7,
+    "p99": 83.4,
+    "max": 383.4
+   },
+   "droppedPct": 97.86,
+   "longFrames": 10,
+   "longFrameMs": 997.7,
+   "inputLatencyMs": {
+    "p50": 109.1,
+    "p95": 169.9
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "drag-hold",
+   "actors": 92,
+   "seconds": 31.05,
+   "frames": 817,
+   "frameMs": {
+    "p50": 33.4,
+    "p95": 50.1,
+    "p99": 66.7,
+    "max": 400
+   },
+   "droppedPct": 95.82,
+   "longFrames": 4,
+   "longFrameMs": 626.4,
+   "inputLatencyMs": {
+    "p50": 84.3,
+    "p95": 119.4
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "tap-spam",
+   "actors": 92,
+   "seconds": 11.1,
+   "frames": 241,
+   "frameMs": {
+    "p50": 50,
+    "p95": 66.7,
+    "p99": 83.4,
+    "max": 116.6
+   },
+   "droppedPct": 99.57,
+   "longFrames": 3,
+   "longFrameMs": 289.5,
+   "inputLatencyMs": {
+    "p50": 119.2,
+    "p95": 177.5
+   }
+  },
+  {
+   "device": "low",
+   "theme": "playground",
+   "scenario": "swipe-nudge",
+   "actors": 92,
+   "seconds": 14.96,
+   "frames": 257,
+   "frameMs": {
+    "p50": 50.1,
+    "p95": 83.4,
+    "p99": 100.1,
+    "max": 366.7
+   },
+   "droppedPct": 100,
+   "longFrames": 16,
+   "longFrameMs": 3253.3,
+   "inputLatencyMs": {
+    "p50": 105.2,
+    "p95": 217.3
+   }
+  }
+ ]
+}

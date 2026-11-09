@@ -21,7 +21,8 @@ branch's ids and renumbers the incoming one, moving exactly its result files.
 
 It was extracted from the performance work on a web + native 2D stage for a children's learning
 app, where it held 35 experiments over three days; that ledger ships as the
-[example](examples/shape-actors-web/LEDGER.md).
+[example](examples/shape-actors-web/LEDGER.md), now with the suite that measured it, the raw
+results, before/after recordings and [what it taught](examples/shape-actors-web/LEARNINGS.md).
 
 ## Install
 

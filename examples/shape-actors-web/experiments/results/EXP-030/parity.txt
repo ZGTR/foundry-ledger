@@ -1,0 +1,12 @@
+{
+  outsideNewBox: 0,
+  drawnWhereOldEmpty: 0,
+  interiorMaxDelta: 40,
+  differingChannelsTotal: 20009,
+  inkPixelsTotal: 1345266,
+  interiorDifferingChannels: 2517,
+  cases: 160,
+  inked: 156,
+  worstDifferingChannels: 2294,
+  pixelAreaRatio: '0.585'
+}

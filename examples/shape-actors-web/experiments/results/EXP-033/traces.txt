@@ -1,0 +1,12 @@
+drag playground before:  14 ms 17× UpdateLayoutTree in FireAnimationFrame  10898 ms RunTask  3199 ms FireAnimationFrame  2093 ms Paint  1372 ms Commit 
+drag playground after:  8 ms 18× UpdateLayoutTree in FireAnimationFrame  10860 ms RunTask  3455 ms FireAnimationFrame  1425 ms Commit  1091 ms Paint 
+drag playground before:  10 ms 18× UpdateLayoutTree in FireAnimationFrame  11322 ms RunTask  3485 ms FireAnimationFrame  2060 ms Paint  1385 ms Commit 
+drag playground after:  9 ms 20× UpdateLayoutTree in FireAnimationFrame  10613 ms RunTask  3361 ms FireAnimationFrame  1450 ms Commit  1064 ms Paint 
+swipe playground before:  5 ms 4× UpdateLayoutTree in FireAnimationFrame  8789 ms RunTask  2333 ms FireAnimationFrame  1567 ms Paint  1021 ms Commit 
+swipe playground after:  3 ms 7× UpdateLayoutTree in FireAnimationFrame  7929 ms RunTask  2278 ms FireAnimationFrame  1023 ms Commit  716 ms Paint 
+swipe playground before:  6 ms 8× UpdateLayoutTree in FireAnimationFrame  8434 ms RunTask  2297 ms FireAnimationFrame  1534 ms Paint  987 ms Commit 
+swipe playground after:  1 ms 8× UpdateLayoutTree in FireAnimationFrame  7724 ms RunTask  2217 ms FireAnimationFrame  979 ms Commit  707 ms Paint 
+drag market before:  9 ms 23× UpdateLayoutTree in FireAnimationFrame  9960 ms RunTask  2569 ms FireAnimationFrame  2527 ms Commit  905 ms Paint 
+drag market after:  9 ms 16× UpdateLayoutTree in FireAnimationFrame  9799 ms RunTask  2618 ms FireAnimationFrame  2511 ms Commit  671 ms Paint 
+drag market before:  4 ms 16× UpdateLayoutTree in FireAnimationFrame  9560 ms RunTask  2549 ms FireAnimationFrame  2413 ms Commit  931 ms Paint 
+drag market after:  5 ms 21× UpdateLayoutTree in FireAnimationFrame  9902 ms RunTask  2642 ms FireAnimationFrame  2545 ms Commit  687 ms Paint 
