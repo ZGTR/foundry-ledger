@@ -1,9 +1,9 @@
-# perf-ledger
+# foundry-performance-ledger
 
 **A ledger of performance experiments, kept _and_ rejected.**
 
 Most performance work leaves two traces: the commits that stayed, and nothing at all for the ideas
-that were measured and thrown away. Six weeks later somebody tries the same idea again. perf-ledger
+that were measured and thrown away. Six weeks later somebody tries the same idea again. foundry-performance-ledger
 is a small, dependency-free tool that records every experiment as one entry, with:
 
 - **what** was tried and **why** (the hypothesis);
@@ -16,7 +16,7 @@ is a small, dependency-free tool that records every experiment as one entry, wit
 
 It renders the ledger as a reviewable `LEDGER.md` (one table row per experiment, then the details),
 and it **merges ledgers from parallel branches without id collisions**: two branches that both
-record "the next" experiment get `EXP-034` twice; `perf-ledger merge` keeps the integration
+record "the next" experiment get `EXP-034` twice; `foundry-performance-ledger merge` keeps the integration
 branch's ids and renumbers the incoming one, moving exactly its result files.
 
 It was extracted from the performance work on a web + native 2D stage for a children's learning
@@ -26,18 +26,19 @@ app, where it held 35 experiments over three days; that ledger ships as the
 ## Install
 
 ```sh
-npm install --save-dev perf-ledger      # or: npx perf-ledger ...
+npm install --save-dev foundry-performance-ledger      # or: npx foundry-performance-ledger ...
 ```
 
-Node 18.18 or newer. No runtime dependencies.
+Node 18.18 or newer. No runtime dependencies. The command is also installed under the short name
+`perf-ledger`, so `npx perf-ledger list` works too.
 
 ## Use
 
 ```sh
-npx perf-ledger init                    # perf-ledger.config.json + an empty ledger + LEDGER.md
+npx foundry-performance-ledger init                    # foundry-performance-ledger.config.json + an empty ledger + LEDGER.md
 
 # record an experiment (the next id, today's date)
-npx perf-ledger record \
+npx foundry-performance-ledger record \
   --title "Static layers paint from an underlay svg" --area web \
   --hypothesis "paint re-records the static backdrop every frame" \
   --method "layer ablation; interleaved traces x2; pixel parity" \
@@ -45,10 +46,10 @@ npx perf-ledger record \
   --decision kept --evidence "stage-parity.mjs; stageUnderlay test" --pr "#842" \
   --ab bench/before.json,bench/after.json   # summarised into the entry; raw files kept
 
-npx perf-ledger list --verdict rejected  # what did we already rule out?
-npx perf-ledger list --grep canvas
-npx perf-ledger show EXP-012
-npx perf-ledger render                   # regenerate LEDGER.md
+npx foundry-performance-ledger list --verdict rejected  # what did we already rule out?
+npx foundry-performance-ledger list --grep canvas
+npx foundry-performance-ledger show EXP-012
+npx foundry-performance-ledger render                   # regenerate LEDGER.md
 ```
 
 ### Merging branches
@@ -59,7 +60,7 @@ hand:
 ```sh
 git show :2:perf/ledger.json > /tmp/ours.json   # this branch's ledger
 git checkout --theirs perf/ledger.json          # the integration branch's ledger is the base
-npx perf-ledger merge /tmp/ours.json --dir perf # ours appended; colliding ids renumbered
+npx foundry-performance-ledger merge /tmp/ours.json --dir perf # ours appended; colliding ids renumbered
 git add perf/
 ```
 
@@ -128,7 +129,7 @@ container to swap any of them:
 
 ```ts
 import { LedgerController, EventBus, SequentialIds, AbSummarizer, LedgerMerger,
-  MarkdownLedgerView, renderOnChange } from 'perf-ledger';
+  MarkdownLedgerView, renderOnChange } from 'foundry-performance-ledger';
 
 const events = new EventBus();
 const ids = new SequentialIds('PERF-', 4);

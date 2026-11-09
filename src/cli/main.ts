@@ -2,16 +2,16 @@
 /**
  * The command line: parses arguments into controller calls. It holds no rules of its own.
  *
- *   perf-ledger init
- *   perf-ledger record --title "..." --decision kept [--area web] [--hypothesis ...] [--method ...]
+ *   foundry-performance-ledger init
+ *   foundry-performance-ledger record --title "..." --decision kept [--area web] [--hypothesis ...] [--method ...]
  *                      [--before ...] [--after ...] [--evidence ...] [--pr "#123"] [--commit sha]
  *                      [--ab before.json,after.json] [--attach file1,file2]
- *   perf-ledger render
- *   perf-ledger list [--verdict kept|rejected|neutral|open|superseded] [--area web] [--grep text]
- *   perf-ledger show EXP-012
- *   perf-ledger merge <incoming-ledger.json>
+ *   foundry-performance-ledger render
+ *   foundry-performance-ledger list [--verdict kept|rejected|neutral|open|superseded] [--area web] [--grep text]
+ *   foundry-performance-ledger show EXP-012
+ *   foundry-performance-ledger merge <incoming-ledger.json>
  *
- * Options for every command: --dir <dir with perf-ledger.config.json> (default: cwd), --quiet.
+ * Options for every command: --dir <dir with foundry-performance-ledger.config.json> (default: cwd), --quiet.
  */
 import { existsSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -36,7 +36,7 @@ export function parseArgs(argv: readonly string[]): ParsedArgs {
   return { command, positional, flags };
 }
 
-const USAGE = `perf-ledger: a ledger of performance experiments, kept or rejected.
+const USAGE = `foundry-performance-ledger: a ledger of performance experiments, kept or rejected.
 
   init                         write ${CONFIG_FILE} and an empty ledger here
   record --title T --decision D [--area --hypothesis --method --before --after --evidence --pr --commit]
@@ -99,5 +99,5 @@ export async function main(argv: readonly string[], log: (s: string) => void = (
   }
 }
 
-const invokedDirectly = process.argv[1] && /perf-ledger|main\.js$/.test(path.basename(process.argv[1]));
-if (invokedDirectly) main(process.argv.slice(2)).then((code) => { process.exitCode = code; }, (e: Error) => { process.stderr.write(`perf-ledger: ${e.message}\n`); process.exitCode = 1; });
+const invokedDirectly = process.argv[1] && /performance-ledger|perf-ledger|main\.js$/.test(path.basename(process.argv[1]));
+if (invokedDirectly) main(process.argv.slice(2)).then((code) => { process.exitCode = code; }, (e: Error) => { process.stderr.write(`foundry-performance-ledger: ${e.message}\n`); process.exitCode = 1; });

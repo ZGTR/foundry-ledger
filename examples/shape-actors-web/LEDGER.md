@@ -1,6 +1,6 @@
 # Performance experiment ledger
 
-_Generated from `ledger.json` by perf-ledger. Do not edit by hand._
+_Generated from `ledger.json` by foundry-performance-ledger. Do not edit by hand._
 
 Every performance experiment on a web + native 2D stage (a kids' game engine), kept or rejected, so later work starts from what was already measured. Numbers come from the project's perf suite on a 4-vCPU cloud VM with Chromium CPU throttling (6x = low-end phone, 3x = mid-range): compare within one row, not across rows run on different days.
 

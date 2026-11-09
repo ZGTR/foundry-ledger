@@ -24,8 +24,8 @@ test('compatibility: a ledger written by the original tool loads, and renders th
 });
 
 test('cli: init, record with an A/B, list, show, render, merge, end to end in a temp dir', async () => {
-  const dir = mkdtempSync(path.join(tmpdir(), 'perf-ledger-'));
-  cpSync(path.join(repo, 'examples/shape-actors-web/perf-ledger.config.json'), path.join(dir, 'perf-ledger.config.json'));
+  const dir = mkdtempSync(path.join(tmpdir(), 'foundry-performance-ledger-'));
+  cpSync(path.join(repo, 'examples/shape-actors-web/foundry-performance-ledger.config.json'), path.join(dir, 'foundry-performance-ledger.config.json'));
   const out: string[] = [];
   const run = (...argv: string[]) => main([...argv, '--dir', dir], (s) => out.push(s));
   assert.equal(await run('render'), 0);

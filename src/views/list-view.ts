@@ -10,7 +10,7 @@ export interface ListFilter {
   readonly text?: string;
 }
 
-/** A terminal list: id, verdict, area, title. What `perf-ledger list` prints. */
+/** A terminal list: id, verdict, area, title. What `foundry-performance-ledger list` prints. */
 export class ListView implements LedgerView {
   readonly name = 'list';
   constructor(private readonly filter: ListFilter = {}) {}

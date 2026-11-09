@@ -27,7 +27,7 @@ export class MarkdownLedgerView implements LedgerView {
     const o = this.options;
     const lines = [
       `# ${o.title ?? 'Performance experiment ledger'}`, '',
-      `_Generated from \`${o.source ?? 'ledger.json'}\` by perf-ledger. Do not edit by hand._`, '',
+      `_Generated from \`${o.source ?? 'ledger.json'}\` by foundry-performance-ledger. Do not edit by hand._`, '',
       ...(o.intro ? [o.intro, ''] : []),
       '| id | date | area | experiment | before | after | decision | evidence |',
       '|---|---|---|---|---|---|---|---|',

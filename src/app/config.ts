@@ -3,7 +3,7 @@ import path from 'node:path';
 import type { JsonBenchFormat } from '../adapters/json-bench-reader.js';
 import type { MetricFormat } from '../services/ab-summarizer.js';
 
-/** perf-ledger.config.json. Paths are relative to the config file. */
+/** foundry-performance-ledger.config.json. Paths are relative to the config file. */
 export interface LedgerConfig {
   /** The ledger data (default "ledger.json"). */
   readonly ledger?: string;
@@ -21,7 +21,7 @@ export interface LedgerConfig {
   readonly metrics?: readonly MetricFormat[];
 }
 
-export const CONFIG_FILE = 'perf-ledger.config.json';
+export const CONFIG_FILE = 'foundry-performance-ledger.config.json';
 
 export interface ResolvedConfig {
   readonly dir: string;
@@ -45,7 +45,7 @@ export function loadConfig(dir: string, file = CONFIG_FILE): ResolvedConfig {
   };
 }
 
-/** A starter config for `perf-ledger init`: a generic rows-of-cells bench format. */
+/** A starter config for `foundry-performance-ledger init`: a generic rows-of-cells bench format. */
 export const STARTER_CONFIG: LedgerConfig = {
   ledger: 'ledger.json',
   markdown: 'LEDGER.md',

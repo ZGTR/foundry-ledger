@@ -1,6 +1,6 @@
 # Architecture
 
-perf-ledger is small, but it is structured so each part has one reason to change and every
+foundry-performance-ledger is small, but it is structured so each part has one reason to change and every
 dependency points inwards, towards the model.
 
 ```mermaid

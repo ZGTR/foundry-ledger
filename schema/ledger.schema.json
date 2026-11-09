@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ZGTR/perf-ledger/schema/ledger.schema.json",
-  "title": "perf-ledger ledger (schema 1)",
+  "$id": "https://github.com/ZGTR/foundry-performance-ledger/schema/ledger.schema.json",
+  "title": "foundry-performance-ledger ledger (schema 1)",
   "type": "object",
   "required": ["schema", "experiments"],
   "properties": {
