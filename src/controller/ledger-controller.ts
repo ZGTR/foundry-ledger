@@ -1,5 +1,7 @@
 import { createExperiment, type AbComparison, type Experiment, type ExperimentDraft } from '../domain/experiment.js';
 import type { IdStrategy, Ledger } from '../domain/ledger.js';
+import { createLearning, type Learning, type LearningDraft } from '../domain/learning.js';
+import type { CheckOptions, CheckProblem, LedgerChecker } from '../services/ledger-checker.js';
 import type { EventBus } from '../events.js';
 import type { ArtifactStore, BenchReader, Clock, LedgerStore } from '../ports.js';
 import type { AbSummarizer } from '../services/ab-summarizer.js';
@@ -14,6 +16,9 @@ export interface ControllerDeps {
   readonly summarizer: AbSummarizer;
   readonly merger: LedgerMerger;
   readonly ids: IdStrategy;
+  /** Ids for learnings (default L-001, L-002...). */
+  readonly learningIds: IdStrategy;
+  readonly checker: LedgerChecker;
   readonly clock: Clock;
   readonly events: EventBus;
 }
@@ -53,6 +58,28 @@ export class LedgerController {
     await events.publish('experiment.recorded', { experiment, ledger });
     await events.publish('ledger.changed', { ledger, reason: `recorded ${id}` });
     return experiment;
+  }
+
+  /** Records a learning under the next learning id; every experiment it cites must exist. */
+  async learn(draft: LearningDraft): Promise<Learning> {
+    const { store, learningIds, clock, events } = this.deps;
+    const ledger = await store.load();
+    const learning = createLearning(ledger.nextLearningId(learningIds), draft.date ?? clock.today(), draft, ledger.ids);
+    ledger.addLearning(learning);
+    await store.save(ledger);
+    await events.publish('learning.recorded', { learning, ledger });
+    await events.publish('ledger.changed', { ledger, reason: `learned ${learning.id}` });
+    return learning;
+  }
+
+  /**
+   * What is wrong with the saved ledger. `render`, when given, is the view whose output should
+   * match `current` (the Markdown on disk): a stale render is a problem too.
+   */
+  async check(options: Omit<CheckOptions, 'rendered'> & { render?: { view: LedgerView; current: string | undefined } } = {}): Promise<CheckProblem[]> {
+    const ledger = await this.deps.store.load();
+    const rendered = options.render ? { expected: options.render.view.render(ledger), actual: options.render.current } : undefined;
+    return this.deps.checker.check(ledger, { completeFrom: options.completeFrom, rendered });
   }
 
   /** Re-renders every view from the saved ledger (views subscribe to ledger.changed). */

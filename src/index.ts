@@ -1,5 +1,5 @@
 /** Public API: the model, the ports, the services, the views, the controller and the wiring. */
-export { createExperiment, verdictOf, InvalidExperimentError, type Experiment, type ExperimentDraft, type AbComparison, type AbCell, type Verdict } from './domain/experiment.js';
+export { createExperiment, verdictOf, trendOf, type Metric, InvalidExperimentError, type Experiment, type ExperimentDraft, type AbComparison, type AbCell, type Verdict } from './domain/experiment.js';
 export { Ledger, SequentialIds, DuplicateExperimentError, LEDGER_SCHEMA, type IdStrategy, type Run } from './domain/ledger.js';
 export type { LedgerStore, ArtifactStore, BenchReader, BenchRun, BenchRow, Clock, Output } from './ports.js';
 export { EventBus, type LedgerEvents } from './events.js';
@@ -12,3 +12,5 @@ export { JsonFileLedgerStore, FsArtifactStore, SystemClock, FileOutput, ConsoleO
 export { JsonBenchReader, type JsonBenchFormat, type RowSource } from './adapters/json-bench-reader.js';
 export { loadConfig, STARTER_CONFIG, CONFIG_FILE, type LedgerConfig, type ResolvedConfig } from './app/config.js';
 export { createContainer, renderOnChange, type Container } from './app/container.js';
+export { createLearning, InvalidLearningError, type Learning, type LearningDraft } from './domain/learning.js';
+export { LedgerChecker, type CheckOptions, type CheckProblem } from './services/ledger-checker.js';

@@ -19,6 +19,12 @@ export interface LedgerConfig {
   readonly bench?: JsonBenchFormat;
   /** How each metric is written in an A/B cell. */
   readonly metrics?: readonly MetricFormat[];
+  /**
+   * `check` requires complete entries (hypothesis, method, before, after, evidence, and metrics
+   * or an A/B) from this experiment id on. Set it to the first id recorded under the rule, so
+   * history is not judged retroactively.
+   */
+  readonly completeFrom?: string;
 }
 
 export const CONFIG_FILE = 'foundry-performance-ledger.config.json';

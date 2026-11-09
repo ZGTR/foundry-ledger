@@ -20,6 +20,26 @@ export interface AbComparison {
   readonly cells: readonly AbCell[];
 }
 
+/**
+ * One headline number, before and after, in its unit ("dropped", 56, 25, "%"). Free-text before
+ * and after say what a reader needs; metrics let tools compare, chart and gate.
+ */
+export interface Metric {
+  readonly name: string;
+  readonly before: number;
+  readonly after: number;
+  readonly unit?: string;
+  /** Which direction is an improvement (default "lower": times, dropped frames, bytes). */
+  readonly better?: 'lower' | 'higher';
+}
+
+/** "improved", "regressed" or "unchanged", by the metric's own direction. */
+export function trendOf(m: Metric): 'improved' | 'regressed' | 'unchanged' {
+  if (m.after === m.before) return 'unchanged';
+  const lower = (m.better ?? 'lower') === 'lower';
+  return (m.after < m.before) === lower ? 'improved' : 'regressed';
+}
+
 export interface Experiment {
   readonly id: string;
   /** ISO date (YYYY-MM-DD) the experiment was recorded. */
@@ -40,6 +60,8 @@ export interface Experiment {
   readonly commit?: string | null;
   readonly pr?: string | null;
   readonly ab?: AbComparison;
+  /** Headline numbers, before and after (see Metric). */
+  readonly metrics?: readonly Metric[];
   /** Raw result files kept beside the ledger, relative to it. */
   readonly results?: readonly string[];
 }
@@ -72,6 +94,10 @@ export function createExperiment(id: string, date: string, draft: ExperimentDraf
   if (!draft.title?.trim()) problems.push('title is required');
   if (!ISO_DATE.test(date)) problems.push(`date must be YYYY-MM-DD (got "${date}")`);
   if (!draft.decision?.trim()) problems.push('decision is required (kept, rejected, neutral, open...)');
+  for (const m of draft.metrics ?? []) {
+    if (!m.name?.trim()) problems.push('every metric needs a name');
+    if (!Number.isFinite(m.before) || !Number.isFinite(m.after)) problems.push(`metric "${m.name}" needs numeric before and after`);
+  }
   if (problems.length) throw new InvalidExperimentError(problems);
   return Object.freeze({
     id, date,
@@ -79,6 +105,7 @@ export function createExperiment(id: string, date: string, draft: ExperimentDraf
     before: draft.before ?? '', after: draft.after ?? '', decision: draft.decision.trim(), evidence: draft.evidence ?? '',
     commit: draft.commit ?? null, pr: draft.pr ?? null,
     ...(draft.ab ? { ab: draft.ab } : {}),
+    ...(draft.metrics?.length ? { metrics: draft.metrics.map((m) => Object.freeze({ ...m })) } : {}),
     ...(draft.results?.length ? { results: [...draft.results] } : {}),
   });
 }

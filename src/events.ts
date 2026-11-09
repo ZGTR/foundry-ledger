@@ -5,11 +5,14 @@
  * case (open/closed).
  */
 import type { Experiment } from './domain/experiment.js';
+import type { Learning } from './domain/learning.js';
 import type { Ledger } from './domain/ledger.js';
 
 export interface LedgerEvents {
   /** A new experiment was appended and the ledger saved. */
   'experiment.recorded': { experiment: Experiment; ledger: Ledger };
+  /** A learning was recorded and the ledger saved. */
+  'learning.recorded': { learning: Learning; ledger: Ledger };
   /** Experiments were renumbered (a merge resolved an id collision). */
   'experiment.renumbered': { from: string; to: string };
   /** The ledger changed in some way (recorded, merged, imported); views re-render on this. */

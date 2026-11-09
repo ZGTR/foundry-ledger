@@ -1,6 +1,6 @@
 {
   "name": "foundry-performance-ledger",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A ledger of performance experiments, kept or rejected: record each one with its hypothesis, method, before/after numbers and evidence, keep the raw results, and render a reviewable LEDGER.md. Merges ledgers from parallel branches without id collisions.",
   "type": "module",
   "license": "MIT",

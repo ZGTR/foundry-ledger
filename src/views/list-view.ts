@@ -8,6 +8,8 @@ export interface ListFilter {
   readonly area?: string;
   /** Matches the title, hypothesis, decision or evidence (case-insensitive). */
   readonly text?: string;
+  /** List the learnings instead of the experiments. */
+  readonly learnings?: boolean;
 }
 
 /** A terminal list: id, verdict, area, title. What `foundry-performance-ledger list` prints. */
@@ -18,6 +20,10 @@ export class ListView implements LedgerView {
   render(ledger: Ledger): string {
     const f = this.filter;
     const text = f.text?.toLowerCase();
+    if (f.learnings) {
+      const rows = ledger.learnings.filter((l) => (!f.area || l.area.includes(f.area)) && (!text || `${l.title} ${l.lesson}`.toLowerCase().includes(text)));
+      return [...rows.map((l) => `${l.id}  ${l.title}  (${l.experiments.join(', ')})`), `${rows.length} learning(s)`].join('\n');
+    }
     const rows = ledger.experiments.filter((e) =>
       (!f.verdict || verdictOf(e) === f.verdict)
       && (!f.area || e.area.includes(f.area))

@@ -5,10 +5,11 @@ import { copyFile, mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import type { AbCell, Experiment } from '../domain/experiment.js';
+import type { Learning } from '../domain/learning.js';
 import { Ledger, LEDGER_SCHEMA, type Run } from '../domain/ledger.js';
 import type { ArtifactStore, Clock, LedgerStore, Output } from '../ports.js';
 
-interface LedgerFile { schema: number; experiments: Experiment[]; runs?: Run[] }
+interface LedgerFile { schema: number; experiments: Experiment[]; runs?: Run[]; learnings?: Learning[] }
 
 /** ledger.json: `{ schema, experiments, runs }`, written with one-space indent and a trailing newline. */
 export class JsonFileLedgerStore implements LedgerStore {
@@ -18,11 +19,11 @@ export class JsonFileLedgerStore implements LedgerStore {
     if (!existsSync(this.file)) return new Ledger();
     const data = JSON.parse(await readFile(this.file, 'utf8')) as LedgerFile;
     if (data.schema !== LEDGER_SCHEMA) throw new Error(`${this.file}: ledger schema ${data.schema} is not supported (expected ${LEDGER_SCHEMA})`);
-    return new Ledger((data.experiments ?? []).map(upgradeCells), data.runs ?? [], data.schema);
+    return new Ledger((data.experiments ?? []).map(upgradeCells), data.runs ?? [], data.schema, data.learnings ?? []);
   }
 
   async save(ledger: Ledger): Promise<void> {
-    const data: LedgerFile = { schema: ledger.schema, experiments: [...ledger.experiments], runs: [...ledger.runs] };
+    const data: LedgerFile = { schema: ledger.schema, experiments: [...ledger.experiments], runs: [...ledger.runs], ...(ledger.learnings.length ? { learnings: [...ledger.learnings] } : {}) };
     await mkdir(path.dirname(this.file), { recursive: true });
     await writeFile(this.file, `${JSON.stringify(data, null, 1)}\n`);
   }

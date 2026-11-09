@@ -1,5 +1,5 @@
 import type { Experiment } from '../domain/experiment.js';
-import { Ledger, type IdStrategy } from '../domain/ledger.js';
+import { Ledger, SequentialIds, type IdStrategy } from '../domain/ledger.js';
 
 export interface Renumbering {
   readonly from: string;
@@ -14,6 +14,8 @@ export interface MergeResult {
   readonly renumbered: readonly Renumbering[];
   /** Incoming experiments already in the base (shared history), left as they are. */
   readonly shared: readonly string[];
+  /** Incoming learnings given a new id because the base already used theirs. */
+  readonly renumberedLearnings: readonly { readonly from: string; readonly to: string }[];
 }
 
 /**
@@ -27,10 +29,10 @@ export interface MergeResult {
  * as its result paths, follows).
  */
 export class LedgerMerger {
-  constructor(private readonly ids: IdStrategy) {}
+  constructor(private readonly ids: IdStrategy, private readonly learningIds: IdStrategy = new SequentialIds('L-')) {}
 
   merge(base: Ledger, incoming: Ledger): MergeResult {
-    const out = new Ledger(base.experiments, base.runs, base.schema);
+    const out = new Ledger(base.experiments, base.runs, base.schema, base.learnings);
     const renumbered: Renumbering[] = [];
     const shared: string[] = [];
     for (const e of incoming.experiments) {
@@ -44,7 +46,18 @@ export class LedgerMerger {
     }
     const runIds = new Set(out.runs.map((r) => r.id));
     for (const r of incoming.runs) if (!runIds.has(r.id)) out.addRun(r);
-    return { ledger: out, renumbered, shared };
+    // Learnings: the same rules, and citations follow renumbered experiments.
+    const moved = new Map(renumbered.map((r) => [r.from, r.to]));
+    const renumberedLearnings: { from: string; to: string }[] = [];
+    for (const l of incoming.learnings) {
+      const cites = l.experiments.map((id) => moved.get(id) ?? id);
+      const there = out.learnings.find((x) => x.id === l.id);
+      if (there && there.title === l.title) continue;
+      const id = there ? out.nextLearningId(this.learningIds) : l.id;
+      if (there) renumberedLearnings.push({ from: l.id, to: id });
+      out.addLearning(Object.freeze({ ...l, id, experiments: Object.freeze(cites) }));
+    }
+    return { ledger: out, renumbered, shared, renumberedLearnings };
   }
 }
 

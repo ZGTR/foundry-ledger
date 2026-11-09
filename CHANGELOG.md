@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0
+
+- **Learnings**: `learn --title --lesson --from EXP-...`; rendered first in LEDGER.md; `list
+  --learnings`; merges renumber colliding learning ids and follow renumbered experiments.
+- **Metrics**: `record --metric name:before:after[:unit[:higher]]` (repeatable), shown with their
+  trend (improved / regressed / unchanged).
+- **check**: complete entries from `completeFrom` on (hypothesis, method, before, after,
+  evidence, numbers), learnings cite real experiments, LEDGER.md up to date. Exit 1 on any
+  problem: for CI and agents.
+
 ## 0.1.0
 
 - First release, extracted from the performance work on a web + native 2D stage (35 experiments).
