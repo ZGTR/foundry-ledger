@@ -30,7 +30,7 @@ results, before/after recordings and [what it taught](examples/shape-actors-web/
 npm install --save-dev foundry-performance-ledger      # or: npx foundry-performance-ledger ...
 ```
 
-Node 18.18 or newer. No runtime dependencies. The command is also installed under the short name
+Node 22 or newer. No runtime dependencies. The command is also installed under the short name
 `perf-ledger`, so `npx perf-ledger list` works too.
 
 ## Use
