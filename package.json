@@ -5,7 +5,7 @@
   "type": "module",
   "license": "MIT",
   "author": "Mohammad Shaker",
-  "repository": { "type": "git", "url": "git+https://github.com/ZGTR/foundry-performance-ledger.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/ZGTR/foundry-ledger.git" },
   "homepage": "https://github.com/ZGTR/foundry-performance-ledger#readme",
   "keywords": ["performance", "benchmark", "experiments", "ledger", "a/b", "web-performance", "profiling"],
   "bin": { "foundry-performance-ledger": "dist/src/cli/main.js", "perf-ledger": "dist/src/cli/main.js" },
